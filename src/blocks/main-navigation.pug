@@ -1,0 +1,13 @@
+include logo
+include site-navigation
+include button
+include user-navigation
+
+mixin main-navigation
+
+  nav.main-navigation
+    +logo
+    +site-navigation
+    +button('shortcut')
+    +user-navigation
+
