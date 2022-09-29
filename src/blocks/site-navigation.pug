@@ -1,0 +1,14 @@
+mixin site-navigation
+
+  -
+    name = 'site-navigation';
+    items = require('../../json/site-navigation.json');
+
+  ul.site-navigation
+    each item in items
+      li.site-navigation__item
+
+        -
+          linkClassName = item.active ? `${name}__link ${name}__link--active` : `${name}__link`
+
+        a(class=linkClassName href=item.reference) #{item.text}

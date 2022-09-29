@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Аренда",
+    "reference": "#",
+    "active": true
+  },
+  {
+    "text": "Покупка",
+    "reference": "#"
+  },
+  {
+    "text": "Новостройки",
+    "reference": "#"
+  },
+  {
+    "text": "Коммерческая",
+    "reference": "#"
+  },
+  {
+    "text": "Ипотека",
+    "reference": "#"
+  }
+]
