@@ -1,0 +1,12 @@
+mixin button(modifier)
+
+  -
+    name = 'button'
+    className = `${name} ${name}--modifier`
+
+  if(modifier === 'primary')
+    button(class=className type='button') Забронировать
+  if(modifier === 'secondary')
+    button(class=className type='button') Написать хозяину
+  if(modifier === 'shortcut')
+    a(class=className href="#") Разместить объявление
