@@ -1,0 +1,16 @@
+extends ../../templates/staffolding
+
+include ../../templates/getClassName
+
+include ../../blocks/page-header
+include ../../blocks/page-footer
+
+block variables
+  - title = "Page name"
+
+block header
+  +page-header
+block main
+  main.page-content
+block footer
+  +page-footer

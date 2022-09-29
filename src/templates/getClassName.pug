@@ -1,0 +1,6 @@
+mixin getClassName
+
+  -
+    const getClassName = (name, parent) => {
+      parent ? `${parent}__${name} ${name}` : name
+    }
