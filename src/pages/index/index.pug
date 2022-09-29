@@ -7,7 +7,9 @@ include ../../blocks/breadcrumbs
 include ../../blocks/page-footer
 
 block variables
-  - title = "Page name"
+  -
+    title = "Page name"
+    const data = require('./data.json')
 
 block header
   +page-header

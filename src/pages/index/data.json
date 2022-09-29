@@ -1,3 +1,44 @@
 {
-  "name": "index"
+  "name": "index",
+  "site-navigation": [
+    {
+      "text": "Аренда",
+      "reference": "#",
+      "active": true
+    },
+    {
+      "text": "Покупка",
+      "reference": "#"
+    },
+    {
+      "text": "Новостройки",
+      "reference": "#"
+    },
+    {
+      "text": "Коммерческая",
+      "reference": "#"
+    },
+    {
+      "text": "Ипотека",
+      "reference": "#"
+    }
+  ],
+  "user-navigation": {
+    "favorites": "3",
+    "notifications": "1"
+  },
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "reference": "#"
+    },
+    {
+      "text": "Аренда",
+      "reference": "#"
+    },
+    {
+      "text": "Посуточная",
+      "reference": "#"
+    }
+  ]
 }

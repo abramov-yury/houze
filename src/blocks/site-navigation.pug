@@ -2,10 +2,9 @@ mixin site-navigation
 
   -
     name = 'site-navigation';
-    items = require('../../json/site-navigation.json');
 
   ul.site-navigation
-    each item in items
+    each item in data['site-navigation']
       li.site-navigation__item
 
         -
