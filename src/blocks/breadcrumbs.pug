@@ -1,0 +1,14 @@
+mixin breadcrumbs
+
+  -
+    name = 'breadcrumbs'
+    items = require('../../json/breadcrumbs.json')
+
+  ul.breadcrumbs
+    each item, index in items
+      li.breadcrumbs__item
+
+        -
+          linkClassName = index === items.length - 1 ? `${name}__link ${name}__link--active` : `${name}__link`
+
+        a(class=linkClassName href=item.reference) #{item.text}

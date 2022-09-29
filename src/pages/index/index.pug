@@ -3,6 +3,7 @@ extends ../../templates/staffolding
 include ../../templates/getClassName
 
 include ../../blocks/page-header
+include ../../blocks/breadcrumbs
 include ../../blocks/page-footer
 
 block variables
@@ -12,5 +13,6 @@ block header
   +page-header
 block main
   main.page-content
+    +breadcrumbs
 block footer
   +page-footer
