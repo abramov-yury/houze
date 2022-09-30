@@ -2,13 +2,12 @@ extends ../../templates/staffolding
 
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
-include ../../blocks/catalog
-include ../../blocks/pagination
+include ../../blocks/products-section
 include ../../blocks/page-footer
 
 block variables
   -
-    title = 'Page name'
+    title = 'Главная страница сервиса недвижимости «Houze»'
     const data = require('./data.json')
     const goods = require('./goods.json')
     const inflictWord = require('../../templates/inflictWord.js')
@@ -19,7 +18,6 @@ block header
 block main
   main.page-content
     +breadcrumbs
-    +catalog
-    +pagination
+    +products-section
 block footer
   +page-footer
