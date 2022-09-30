@@ -1,8 +1,8 @@
 include product-preview
 
-mixin catalog
+mixin catalog(arr, short)
 
   ul.catalog
-    each item in goods
+    each item in arr
       li.catalog__item
-        +product-preview(item)
+        +product-preview(item, short)

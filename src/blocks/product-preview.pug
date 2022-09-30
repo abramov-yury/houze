@@ -6,7 +6,7 @@ include button
 include favorite
 include badge
 
-mixin product-preview(product)
+mixin product-preview(product, short)
 
   -
     const name = 'product-preview'
@@ -19,18 +19,17 @@ mixin product-preview(product)
 
     p(class=`${name}__location`) #{product.location}
 
-    +rating(product.rating)
-
-    if(product.reviews)
-      a(class=`${name}__reviews` href=product.link) (#{product.reviews} #{inflictWord(product.reviews, ['Отзыв', 'Отзыва', 'Отзывов'])})
-    else
-      span(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
-
-    +capacity(name, product.capacity)
-
-    ul(class=`${name}__features`)
-      each item in product.features
-        li(class=`${name}__feactures-item`) #{item}
+    if(!short)
+      div(class=`${name}__container`)
+        +rating(product.rating)
+        if(product.reviews)
+          a(class=`${name}__reviews` href=product.link) (#{product.reviews} #{inflictWord(product.reviews, ['Отзыв', 'Отзыва', 'Отзывов'])})
+        else
+          span(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
+        +capacity(name, product.capacity)
+        ul(class=`${name}__features`)
+          each item in product.features
+            li(class=`${name}__feactures-item`) #{item}
 
     p(class=`${name}__price`) #{product.price.toLocaleString()} &#8381/сутки
 
