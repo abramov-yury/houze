@@ -1,0 +1,34 @@
+mixin pagination
+
+  -
+    name = 'pagination'
+
+  ul(class=name)
+
+    li(class=`${name}__item`)
+      button(class=`${name}__button ${name}__button--disabled`)
+        span.visually-hidden Назад
+        svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(d='M7 13 1 7l6-6' stroke='#979899' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+
+      li(class=`${name}__item`)
+        a(class=`${name}__link ${name}__link--active` href='#') 1
+      li(class=`${name}__item`)
+        a(class=`${name}__link ${name}__link--active` href='#') 2
+      li(class=`${name}__item`)
+        a(class=`${name}__link ${name}__link--active` href='#') 3
+      li(class=`${name}__item`)
+        a(class=`${name}__link ${name}__link--active` href='#') 4
+
+      li(class=`${name}__item`)
+        span(class=`${name}__ellipsis`) ...
+
+      li(class=`${name}__item`)
+        a(class=`${name}__link ${name}__link--active` href='#') 25
+
+    li(class=`${name}__item`)
+      button(class=`${name}__button`)
+        span.visually-hidden Вперёд
+        svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(d='m1 13 6-6-6-6' stroke='#F85A47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')

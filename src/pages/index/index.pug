@@ -3,6 +3,7 @@ extends ../../templates/staffolding
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
 include ../../blocks/catalog
+include ../../blocks/pagination
 include ../../blocks/page-footer
 
 block variables
@@ -19,5 +20,6 @@ block main
   main.page-content
     +breadcrumbs
     +catalog
+    +pagination
 block footer
   +page-footer
