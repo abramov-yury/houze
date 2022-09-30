@@ -1,0 +1,102 @@
+[
+  {
+    "title": "О нас",
+    "items": [
+      {
+        "text": "О сервисе",
+        "reference": "#"
+      },
+      {
+        "text": "Новости",
+        "reference": "#"
+      },
+      {
+        "text": "Вакансии",
+        "reference": "#"
+      },
+      {
+        "text": "Houze Premium",
+        "reference": "#"
+      },
+      {
+        "text": "Партнеры",
+        "reference": "#"
+      }
+    ]
+  },
+  {
+    "title": "Сдать жилье",
+    "items": [
+      {
+        "text": "Зарабатывайте с Houze",
+        "reference": "#"
+      },
+      {
+        "text": "Правила сдачи",
+        "reference": "#"
+      },
+      {
+        "text": "Помощь",
+        "reference": "#"
+      },
+      {
+        "text": "Обслуживание",
+        "reference": "#"
+      },
+      {
+        "text": "Тарифы",
+        "reference": "#"
+      }
+    ]
+  },
+  {
+    "title": "Справка",
+    "items": [
+      {
+        "text": "Помощь",
+        "reference": "#"
+      },
+      {
+        "text": "FAQ",
+        "reference": "#"
+      },
+      {
+        "text": "Сообщество",
+        "reference": "#"
+      },
+      {
+        "text": "Акции",
+        "reference": "#"
+      },
+      {
+        "text": "Отзывы",
+        "reference": "#"
+      }
+    ]
+  },
+  {
+    "title": "Правила",
+    "items": [
+      {
+        "text": "Условия бронирования",
+        "reference": "#"
+      },
+      {
+        "text": "Условия использования сайта",
+        "reference": "#"
+      },
+      {
+        "text": "Разрешение споров",
+        "reference": "#"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "reference": "#"
+      },
+      {
+        "text": "Карта сайта",
+        "reference": "#"
+      }
+    ]
+  }
+]

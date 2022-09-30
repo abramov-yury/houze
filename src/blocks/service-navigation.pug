@@ -1,0 +1,15 @@
+mixin service-navigation
+
+  -
+    const name = 'service-navigation'
+    categories = require('../../blocks/service-navigation.json')
+
+
+  nav(class=name)
+    each caterory, index in categories
+      div(class=`${name}__category`)
+        h3(class=`${name}__title`) #{caterory.title}
+        ul(class=`${name}__list`)
+          each item in caterory.items
+            li(class=`${name}__item`)
+              a(class=`${name}__link` href=item.reference) #{item.text}
