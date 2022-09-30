@@ -4,6 +4,7 @@ include ../../templates/getClassName
 
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
+include ../../blocks/rating
 include ../../blocks/page-footer
 
 block variables
@@ -16,5 +17,6 @@ block header
 block main
   main.page-content
     +breadcrumbs
+    +rating('4,95', true)
 block footer
   +page-footer
