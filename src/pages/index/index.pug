@@ -2,7 +2,7 @@ extends ../../templates/staffolding
 
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
-include ../../blocks/product-preview
+include ../../blocks/catalog
 include ../../blocks/page-footer
 
 block variables
@@ -18,6 +18,6 @@ block header
 block main
   main.page-content
     +breadcrumbs
-    +product-preview(goods[0])
+    +catalog
 block footer
   +page-footer

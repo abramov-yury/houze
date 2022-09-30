@@ -1,0 +1,8 @@
+include product-preview
+
+mixin catalog
+
+  ul.catalog
+    each item in goods
+      li.catalog__item
+        +product-preview(item)

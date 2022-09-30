@@ -14,14 +14,17 @@ mixin product-preview(product)
   article(class=name)
     h2(class=`${name}__title`)
       a(class=`${name}__link` href=product.link) #{product.title}
+
     +picture(product, name)
+
     p(class=`${name}__location`) #{product.location}
+
     +rating(product.rating)
 
     if(product.reviews)
       a(class=`${name}__reviews` href=product.link) (#{product.reviews} #{inflictWord(product.reviews, ['Отзыв', 'Отзыва', 'Отзывов'])})
     else
-      p(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
+      span(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
 
     +capacity(name, product.capacity)
 
