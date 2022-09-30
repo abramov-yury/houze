@@ -1,0 +1,24 @@
+mixin picture(obj, parent=false, size = {width:380, height: 315})
+
+  -
+    picturePath = "img/goods/";
+    alt = obj.title.split(',')[0];
+
+  picture
+    source(type="image/webp" srcset=`
+            ${picturePath}${obj.photo}.webp,
+            ${picturePath}${obj.photo}@2x.webp 2x,
+            ${picturePath}${obj.photo}@3x.webp 3x,
+            ${picturePath}${obj.photo}@4x.webp 4x,
+          `)
+    img(
+      srcset=`
+              ${picturePath}${obj.photo}@2x.jpg 2x,
+              ${picturePath}${obj.photo}@3x.jpg 3x,
+              ${picturePath}${obj.photo}@4x.jpg 4x,
+            `
+      src=`${picturePath}${obj.photo}.jpg`
+      alt=`${alt}`
+      data-img-name=`${obj.photo}`
+      loading="lazy"
+    )&attributes({"width" : size.width, "height" : size.height, "class" : `${parent}__image`})

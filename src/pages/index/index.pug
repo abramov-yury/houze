@@ -1,23 +1,23 @@
 extends ../../templates/staffolding
 
-include ../../templates/getClassName
-
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
-
+include ../../blocks/product-preview
 include ../../blocks/page-footer
 
 block variables
   -
-    title = "Page name"
+    title = 'Page name'
     const data = require('./data.json')
     const goods = require('./goods.json')
+    const inflictWord = require('../../templates/inflictWord.js')
+    const getClassName = require('../../templates/getClassName.js')
 
 block header
   +page-header
 block main
   main.page-content
     +breadcrumbs
-
+    +product-preview(goods[0])
 block footer
   +page-footer

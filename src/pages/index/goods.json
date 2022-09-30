@@ -66,7 +66,8 @@
     ],
     "features": ["Кухня", "Кондиционер", "Wi-Fi"],
     "price": 1800,
-    "badge": "beside-park"
+    "badge": "beside-park",
+    "favorite": true
   },
   {
     "id": 4,
@@ -155,7 +156,8 @@
       }
     ],
     "features": ["Кухня", "Кондиционер", "Wi-Fi"],
-    "price": 3900
+    "price": 3900,
+    "favorite": true
   },
   {
     "id": 8,
@@ -205,7 +207,8 @@
       }
     ],
     "features": ["Кухня", "Кондиционер", "Wi-Fi"],
-    "price": 4500
+    "price": 4500,
+    "favorite": true
   },
   {
     "id": 10,

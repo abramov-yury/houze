@@ -1,0 +1,20 @@
+mixin capacity(parent, arr)
+
+  -
+    const name = 'capacity';
+    words = [];
+
+  dl(class=getClassName(name, parent))
+    each item in arr
+      div(class=`${name}__item`)
+
+        -
+          if(item.name === 'guest')
+            words = ["Гость", "Гостя", "Гостей"]
+          if(item.name === 'sofa')
+            words = ["Диван", "Дивана", "Диванов"]
+          if(item.name === 'bed')
+            words = ["Кровать", "Кровати", "Кроватей"]
+
+        dt(class=`${name}__name`) #{inflictWord(item.value, words)}
+        dd(class=`${name}__value`) #{item.value}

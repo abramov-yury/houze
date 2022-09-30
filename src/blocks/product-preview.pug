@@ -1,0 +1,36 @@
+include ../templates/picture
+
+include rating
+include capacity
+include button
+include favorite
+include badge
+
+mixin product-preview(product)
+
+  -
+    const name = 'product-preview'
+
+  article(class=name)
+    h2(class=`${name}__title`)
+      a(class=`${name}__link` href=product.link) #{product.title}
+    +picture(product, name)
+    p(class=`${name}__location`) #{product.location}
+    +rating(product.rating)
+
+    if(product.reviews)
+      a(class=`${name}__reviews` href=product.link) (#{product.reviews} #{inflictWord(product.reviews, ['Отзыв', 'Отзыва', 'Отзывов'])})
+    else
+      p(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
+
+    +capacity(name, product.capacity)
+
+    ul(class=`${name}__features`)
+      each item in product.features
+        li(class=`${name}__feactures-item`) #{item}
+
+    p(class=`${name}__price`) #{product.price.toLocaleString()} &#8381/сутки
+
+    +button('primary')
+    +favorite(product.favorite)
+    +badge(product.badge)
