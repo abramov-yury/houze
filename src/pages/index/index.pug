@@ -4,19 +4,20 @@ include ../../templates/getClassName
 
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
-include ../../blocks/favorite
+
 include ../../blocks/page-footer
 
 block variables
   -
     title = "Page name"
     const data = require('./data.json')
+    const goods = require('./goods.json')
 
 block header
   +page-header
 block main
   main.page-content
     +breadcrumbs
-    +favorite
+
 block footer
   +page-footer

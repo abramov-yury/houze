@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "title" : "1-комн. кв., 27 м2, 9/16 этаж",
+    "link": "#",
+    "photo": "1",
+    "location": "г. Краснодар, ул. Ленина, 12",
+    "rating": 4.95,
+    "reviews": 55,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 1900,
+    "badge" : "super-household"
+  },
+  {
+    "id": 2,
+    "title" : "2-комн. кв., 52 м2, 16/16 этаж",
+    "link": "#",
+    "photo": "2",
+    "location": "г. Краснодар, ул. Кирова, 7",
+    "rating": 4.78,
+    "reviews": 12,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 4
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 4900
+  },
+  {
+    "id": 3,
+    "title" : "1-комн. кв., 35 м2, 7/15 этаж",
+    "link": "#",
+    "photo": "3",
+    "location": "г. Краснодар, ул. Южная, 24к1",
+    "rating": 4.68,
+    "reviews": 15,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 1800,
+    "badge": "beside-park"
+  },
+  {
+    "id": 4,
+    "title" : "1-комн. кв., 48 м2, 1/5 этаж",
+    "link": "#",
+    "photo": "4",
+    "location": "г. Краснодар, ул. Лермонтова, 1",
+    "rating": 4.86,
+    "reviews": 22,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 2300
+  },
+  {
+    "id": 5,
+    "title" : "1-комн. кв., 48 м2, 1/10 этаж",
+    "link": "#",
+    "photo": "5",
+    "location": "г. Краснодар, ул. Дмитриева, 12к2",
+    "rating": 4.96,
+    "reviews": 34,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 2700
+  },
+  {
+    "id": 6,
+    "title" : "1-комн. кв., 36 м2, 8/10 этаж",
+    "link": "#",
+    "photo": "6",
+    "location": "г. Краснодар, ул. Красный Путь, 44",
+    "rating": 4.84,
+    "reviews": 13,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 2800,
+    "badge": "beside-airport"
+  },
+  {
+    "id": 7,
+    "title" : "2-комн. кв., 54 м2, 9/12 этаж",
+    "link": "#",
+    "photo": "7",
+    "location": "г. Краснодар, ул. Думская, 27",
+    "rating": 4.93,
+    "reviews": 23,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 4
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 3900
+  },
+  {
+    "id": 8,
+    "title" : "2-комн. кв., 39 м2, 5/5 этаж",
+    "link": "#",
+    "photo": "8",
+    "location": "г. Краснодар, ул. Ватутина, 52",
+    "rating": 4.65,
+    "reviews": 22,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 4
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 3200
+  },
+  {
+    "id": 9,
+    "title" : "2-комн. кв., 64 м2, 3/5 этаж",
+    "link": "#",
+    "photo": "9",
+    "location": "г. Краснодар, ул. Пушкина, 17",
+    "rating": 4.96,
+    "reviews": 12,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 4
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 4500
+  },
+  {
+    "id": 10,
+    "title" : "2-комн. кв., 44 м2, 9/15 этаж",
+    "link": "#",
+    "photo": "10",
+    "location": "г. Краснодар, ул. Летняя, 35",
+    "rating": false,
+    "reviews": false,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 4300
+  },
+  {
+    "id": 11,
+    "title" : "1-комн. кв., 27 м2, 15/15 этаж",
+    "link": "#",
+    "photo": "11",
+    "location": "г. Краснодар, ул. Партизанская, 57",
+    "rating": 4.49,
+    "reviews": 25,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 2100
+  },
+  {
+    "id": 12,
+    "title" : "2-комн. кв., 62 м2, 4/5 этаж",
+    "link": "#",
+    "photo": "12",
+    "location": "г. Краснодар, ул. Лебедева, 62к4",
+    "rating": 4.95,
+    "reviews": 55,
+    "capacity" : [
+      {
+        "name": "guest",
+        "value": 2
+      },
+      {
+        "name": "bed",
+        "value": 1
+      },
+      {
+        "name": "sofa",
+        "value": 1
+      }
+    ],
+    "features": ["Кухня", "Кондиционер", "Wi-Fi"],
+    "price": 4600,
+    "badge": "beside-park"
+  }
+]
