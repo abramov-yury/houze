@@ -1,10 +1,14 @@
 include social
 include service-navigation
 include payment
+include logo
 
 mixin page-footer
 
   footer.page-footer
+    +logo
+    p.page-footer__description  Безопасный и надежный сервис онлайн-недвижимости №1 в России
     +social
     +service-navigation
     +payment
+    p.page-footer__copyright  ООО «Хауз» © 2021 Все права защищены
