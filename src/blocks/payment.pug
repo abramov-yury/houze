@@ -1,0 +1,22 @@
+mixin payment
+
+  -
+    const name = 'payment'
+    imgPath = 'img/icons'
+
+  ul(class=name)
+
+    li(class=`${name}__item`)
+      img(src=`${imgPath}/visa.svg` width='24' height='8' alt='visa')
+
+    li(class=`${name}__item`)
+      img(src=`${imgPath}/mastercard.svg` width='22' height='13' alt='mastercard')
+
+    li(class=`${name}__item`)
+      img(src=`${imgPath}/applepay.svg` width='24' height='10' alt='apple-pay')
+
+    li(class=`${name}__item`)
+      img(src=`${imgPath}/googlepay.svg` width='24' height='10' alt='google-pay')
+
+    li(class=`${name}__item`)
+      img(src=`${imgPath}/yandex.svg` width='13' height='13' alt='yandex')
