@@ -1,3 +1,7 @@
-mixin notification(value)
+mixin notification(value, parent)
 
-  span.notification #{value}
+  -
+    const name = 'notification'
+    className = getClassName(name, parent)
+
+  span(class=className) #{value}

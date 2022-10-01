@@ -1,0 +1,40 @@
+.user-navigation
+  display: flex
+  align-items: center
+  gap: 20px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.user-navigation__link
+  @include condition
+
+  position: relative
+  display: flex
+  align-items: center
+
+  color: inherit
+  text-decoration: none
+
+.user-navigation__container
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 40px
+  height: 40px
+
+  background-color: $color-white
+  border-radius: 50%
+
+.user-navigation__caption
+  margin-left: 8px
+
+.user-navigation__notification
+  z-index: 1
+  position: absolute
+
+  top: -5px
+  right: -5px
