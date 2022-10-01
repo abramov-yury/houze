@@ -5,9 +5,10 @@ include user-navigation
 
 mixin main-navigation
 
-  nav.main-navigation
-    +logo
-    +site-navigation
-    +button('shortcut')
-    +user-navigation
+  - const name = 'main-navigation'
 
+  nav.main-navigation
+    +logo(name)
+    +site-navigation
+    +button('shortcut', name)
+    +user-navigation

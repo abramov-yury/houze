@@ -1,8 +1,9 @@
-mixin button(modifier)
+mixin button(modifier, parent)
 
   -
     const name = 'button'
-    className = `${name} ${name}--${modifier}`
+    className = getClassName(name, parent)
+    className += ` ${name}--${modifier}`
 
   if(modifier === 'primary')
     button(class=className type='button') Забронировать

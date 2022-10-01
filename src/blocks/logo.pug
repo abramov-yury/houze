@@ -1,4 +1,8 @@
-mixin logo
+mixin logo(parent)
 
-  a.logo(href="/")
+  -
+    const name = 'logo'
+    className = getClassName(name, parent)
+
+  a(class=className href="/")
     img.logo__img(src=(require('../../assets/img/logo.svg')) width="130" height="30" alt="Awesome logotype")
