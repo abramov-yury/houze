@@ -1,14 +1,10 @@
 .logo
+  @include condition
+
   display: inline-flex
   align-items: center
 
   text-decoration: none
-
-  &:hover, &:focus
-    opacity: .7
-
-  &:active
-    opacity: .5
 
 .logo__img
   max-width: 100%

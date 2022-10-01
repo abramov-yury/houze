@@ -2,7 +2,7 @@ mixin button(modifier)
 
   -
     const name = 'button'
-    className = `${name} ${name}--modifier`
+    className = `${name} ${name}--${modifier}`
 
   if(modifier === 'primary')
     button(class=className type='button') Забронировать
