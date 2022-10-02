@@ -9,13 +9,13 @@ mixin picture(obj, parent=false, size = {width:380, height: 315})
             ${picturePath}${obj.photo}.webp,
             ${picturePath}${obj.photo}@2x.webp 2x,
             ${picturePath}${obj.photo}@3x.webp 3x,
-            ${picturePath}${obj.photo}@4x.webp 4x,
+            ${picturePath}${obj.photo}@4x.webp 4x
           `)
     img(
       srcset=`
               ${picturePath}${obj.photo}@2x.jpg 2x,
               ${picturePath}${obj.photo}@3x.jpg 3x,
-              ${picturePath}${obj.photo}@4x.jpg 4x,
+              ${picturePath}${obj.photo}@4x.jpg 4x
             `
       src=`${picturePath}${obj.photo}.jpg`
       alt=`${alt}`
