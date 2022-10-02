@@ -1,5 +1,8 @@
 extends ../../templates/staffolding
 
+include ../../templates/variables
+include ../../templates/helpers
+
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
 include ../../blocks/products-section
@@ -9,10 +12,9 @@ include ../../blocks/page-footer
 block variables
   -
     title = 'Главная страница сервиса недвижимости «Houze»'
-    const data = require('./data.json')
-    const goods = require('./goods.json')
-    const inflictWord = require('../../helpers/inflictWord.js')
-    const getClassName = require('../../helpers/getClassName.js')
+
+  +variables
+  +helpers
 
 block header
   +page-header
