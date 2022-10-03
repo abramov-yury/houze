@@ -3,22 +3,12 @@
   flex-wrap: wrap
   gap: 16px
 
-  font-size: 14px
-  line-height: 1.4
-  color: $color-gray
-
 .capacity__item
-  position: relative
+  @include trait
+
   display: flex
-  flex-direction: row-reverse
   gap: 4px
 
-  &:not(:last-child)::after
-    position: absolute
-    content: "•"
-    right: -6px
-    top: 50%
-    transform: translateX(100%) translateY(-50%)
 
 .capacity__value
   margin-left: 0

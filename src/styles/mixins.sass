@@ -8,3 +8,18 @@
 @mixin container
   width: 1640px
   margin: 0 auto
+
+@mixin trait($right: -6px)
+  position: relative
+  flex-direction: row-reverse
+
+  font-size: 14px
+  line-height: 1.4
+  color: $color-gray
+
+  &:not(:last-child)::after
+    position: absolute
+    content: "•"
+    right: $right
+    top: 50%
+    transform: translateX(100%) translateY(-50%)

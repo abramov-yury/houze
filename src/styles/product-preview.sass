@@ -1,0 +1,127 @@
+.product-preview
+  position: relative
+  overflow: hidden
+
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  padding-bottom: 30px
+
+  background-color: $color-white
+  border-radius: 8px
+
+.product-preview__link
+  @include condition
+
+  display: flex
+  flex-direction: column
+  gap: 25px
+
+  margin-bottom: 12px
+
+  color: inherit
+  text-decoration: none
+
+.product-preview__title
+  order: 2
+  display: inline-flex
+  margin: 0 0 0 20px
+
+  font-weight: 600
+  font-size: 22px
+  line-height: 1
+
+  & > sup
+    font-size: 14px
+    line-height: 1
+
+.product-preview__image
+  max-width: 100%
+  height: auto
+
+  vertical-align: middle
+
+.product-preview__location
+  margin: 0 0 15px 20px
+
+  font-size: 14px
+  line-height: 1
+  color: $color-gray
+
+.product-preview__container
+  display: flex
+  align-items: center
+  gap: 8px
+
+  margin-bottom: 15px
+  padding-left: 20px
+
+.product-preview__reviews
+  color: inherit
+  text-decoration: none
+
+  &--empty
+    color: $color-gray
+
+.product-preview__reviews-text
+  @include condition
+
+  position: relative
+  display: inline-flex
+
+  line-height: 1
+
+  &::after
+    position: absolute
+    content: ""
+
+    width: 100%
+    height: 1px
+
+    left: 50%
+    bottom: -1px
+    transform: translateX(-50%)
+
+    background-color: $color-gray
+
+.product-preview__capacity
+  margin-left: 20px
+
+.product-preview__features
+  display: flex
+  flex-wrap: wrap
+  gap: 16px
+
+  margin: 0 0 20px 20px
+  padding: 0
+
+  list-style: none
+
+.product-preview__feactures-item
+  @include trait(-4.6px)
+
+  display: flex
+
+.product-preview__price
+  margin: 0 0 20px 25px
+
+  font-weight: 600
+  font-size: 26px
+  line-height: 1
+
+.product-preview__price-currency
+  font-weight: 500
+
+.product-preview__button
+  margin: 0 0 0 20px
+
+.product-preview__favorite
+  position: absolute
+  top: 20px
+  right: 20px
+
+.product-preview__badge
+  position: absolute
+  top: 20px
+  left: 20px
