@@ -1,0 +1,25 @@
+.favorite
+  @include condition
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 36px
+  height: 36px
+  padding: 0
+
+  background-color: $color-white
+  border: none
+  border-radius: 50%
+
+  cursor: pointer
+
+.favorite--active
+  background-color: $color-tomato
+
+  & .favorite__img
+    fill: $color-white
+
+  & .favorite__img-path
+    stroke: $color-white
