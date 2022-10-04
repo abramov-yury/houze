@@ -11,19 +11,20 @@ mixin product-preview__title({rooms, square, storey})
     sup 2
     | , #{storey} этаж
 
-mixin product-preview(product, short)
+mixin product-preview(product, isShort)
 
   -
     const name = 'product-preview'
+    const className = isShort ? `${name} ${name}--short` : name
 
-  article(class=name)
+  article(class=className)
     a(class=`${name}__link` href=product.link)
       +product-preview__title(product.description)
       +picture(product, name)
 
     p(class=`${name}__location`) #{product.location}
 
-    if(!short)
+    if(!isShort)
       div(class=`${name}__container`)
         +rating(product.rating)
         if(product.reviews)
