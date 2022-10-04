@@ -1,11 +1,12 @@
-mixin service-navigation
+mixin service-navigation(parent)
 
   -
     const name = 'service-navigation'
     categories = require('../../blocks/service-navigation.json')
+    className = getClassName(name, parent)
 
 
-  nav(class=name)
+  nav(class=className)
     each caterory, index in categories
       div(class=`${name}__category`)
         h3(class=`${name}__title`) #{caterory.title}

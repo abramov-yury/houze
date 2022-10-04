@@ -6,9 +6,12 @@ include logo
 mixin page-footer
 
   footer.page-footer
-    +logo
-    p.page-footer__description  Безопасный и надежный сервис онлайн-недвижимости №1 в России
-    +social
-    +service-navigation
-    +payment
-    p.page-footer__copyright  ООО «Хауз» © 2021 Все права защищены
+    .page-footer__content
+      .page-footer__contacts
+        +logo('page-footer')
+        p.page-footer__description  Безопасный и надежный сервис онлайн-недвижимости №1 в России
+        +social
+      +service-navigation('page-footer')
+      .page-footer__bottom
+        p.page-footer__copyright  ООО «Хауз» © 2021 Все права защищены
+        +payment
