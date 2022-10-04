@@ -1,0 +1,61 @@
+.pagination
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 10px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.pagination__link,
+.pagination__ellipsis
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 40px
+  height: 40px
+
+  font-size: 16px
+  font-weight: 500
+  line-height: 1
+  color: inherit
+
+.pagination__link
+  text-decoration: none
+  border-radius: 50%
+
+  &:not(.pagination__link--active):hover,
+  &:not(.pagination__link--active):focus
+    opacity: .7
+
+  &:not(.pagination__link--active):active
+    opacity: .5
+
+.pagination__link--arrow-back
+    justify-content: flex-start
+
+.pagination__link--arrow-forward
+    justify-content: flex-end
+
+.pagination__link--active
+  pointer-events: none
+  color: $color-white
+  background-color: $color-tomato
+  cursor: default
+
+.pagination__img
+  width: 8px
+  height: 14px
+  stroke: $color-tomato
+
+.pagination__link--disabled
+  pointer-events: none
+  cursor: default
+
+  & > .pagination__img
+    opacity: .3
+    stroke: $color-gray
+
