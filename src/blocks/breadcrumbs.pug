@@ -1,9 +1,10 @@
-mixin breadcrumbs
+mixin breadcrumbs(parent)
 
   -
     name = 'breadcrumbs'
+    className = getClassName(name, parent)
 
-  ul.breadcrumbs
+  ul(class=className)
     each item, index in data.breadcrumbs
       li.breadcrumbs__item
 
