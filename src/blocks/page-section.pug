@@ -7,7 +7,8 @@ mixin page-section
     const name = 'page-section'
 
   section(class=name)
-    h1(class=`${name}__title`)  #{data['page-section'].title}
-    p(class=`${name}__subtitle`)  #{data['page-section'].subtitle}
+    header(class=`${name}__header`)
+      h1(class=`${name}__title`)  #{data['page-section'].title}
+      p(class=`${name}__subtitle`)  #{data['page-section'].subtitle}
     +catalog(goods)
     +pagination
