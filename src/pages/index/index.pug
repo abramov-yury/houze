@@ -6,7 +6,6 @@ include ../../templates/helpers
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
 include ../../blocks/page-section
-include ../../blocks/popular-offers
 include ../../blocks/page-footer
 
 block variables
@@ -21,7 +20,7 @@ block header
 block main
   main.page-content
     +breadcrumbs
-    +page-section
-    +popular-offers
+    +page-section(data['page-section'][0], goods, false, true)
+    +page-section(data['page-section'][1], [goods[0], goods[4], goods[11], goods[5]], true)
 block footer
   +page-footer

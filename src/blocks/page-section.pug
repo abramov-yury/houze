@@ -1,14 +1,16 @@
 include catalog
 include pagination
 
-mixin page-section
+mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false)
 
   -
     const name = 'page-section'
 
   section(class=name)
     header(class=`${name}__header`)
-      h1(class=`${name}__title`)  #{data['page-section'].title}
-      p(class=`${name}__subtitle`)  #{data['page-section'].subtitle}
-    +catalog(goods)
-    +pagination
+      h1(class=`${name}__title`)  #{header.title}
+      if(header.subtitle)
+        p(class=`${name}__subtitle`)  #{header.subtitle}
+    +catalog(items, isShortCatalog)
+    if(isPagination)
+      +pagination
