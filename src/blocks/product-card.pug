@@ -1,0 +1,13 @@
+mixin product-card
+
+    -
+      const name = 'product-card'
+      const card = data['product-card']
+      const header = card.header
+
+    article(class=name)
+      header(class=`${name}__header`)
+        h1(class=`${name}__title`) #{header.title}
+        p(class=`${name}__time`) #{header.time}
+        p(class=`${name}__location`) #{header.location}
+          a(class=`${name}__map-link` href=header['map-link'])  Смотреть на карте

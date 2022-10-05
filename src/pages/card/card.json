@@ -45,6 +45,38 @@
       "reference": "#"
     }
   ],
+  "product-card": {
+    "header": {
+      "time": "Опубликовано сегодня, 12:30",
+      "title": "2-комн. кв., 64 м2, 3/5 этаж",
+      "location": "г. Краснодар, ул. Пушкина, 17",
+      "map-link": "#"
+    },
+    "pictures": {
+      "main": {
+        "img": "card-photo-1",
+        "alt": "Фото"
+      },
+      "preview-items": [
+        {
+          "img": "card-preview-photo-1",
+          "alt": "Фото 1"
+        },
+        {
+          "img": "card-preview-photo-2",
+          "alt": "Фото 2"
+        },
+        {
+          "img": "card-preview-photo-3",
+          "alt": "Фото 3"
+        },
+        {
+          "img": "card-preview-photo-3",
+          "alt": "Фото 4"
+        }
+      ]
+    }
+  },
   "page-section": [
     {
       "title": "Популярные предложения"
