@@ -1,6 +1,5 @@
 extends ../../templates/staffolding
 
-include ../../templates/variables
 include ../../templates/helpers
 
 include ../../blocks/page-header
@@ -11,8 +10,9 @@ include ../../blocks/page-footer
 block variables
   -
     title = 'Главная страница сервиса недвижимости «Houze»'
+    data = require('./index.json')
+    goods = require('./goods.json')
 
-  +variables
   +helpers
 
 block header

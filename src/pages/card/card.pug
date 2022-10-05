@@ -1,0 +1,20 @@
+extends ../../templates/staffolding
+
+include ../../templates/helpers
+
+include ../../blocks/page-header
+include ../../blocks/page-footer
+
+block variables
+  -
+    title = 'Карточка товара'
+    data = require('./card.json')
+
+  +helpers
+
+block header
+  +page-header
+block main
+  main.page-content
+block footer
+  +page-footer

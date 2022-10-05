@@ -1,5 +1,5 @@
 {
-  "name": "index",
+  "name": "card",
   "site-navigation": [
     {
       "text": "Аренда",
@@ -8,7 +8,7 @@
     },
     {
       "text": "Покупка",
-      "reference": "card.html"
+      "reference": "#"
     },
     {
       "text": "Новостройки",
