@@ -20,7 +20,7 @@ mixin product-preview(product, isShort)
   article(class=className)
     a(class=`${name}__link` href=product.link)
       +product-preview__title(product.description)
-      +picture(product, name)
+      +picture(product.img, 'img/products/', {width: 380, height: 315}, product.title, name)
 
     p(class=`${name}__location`) #{product.location}
 
