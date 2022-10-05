@@ -60,7 +60,8 @@
       "preview-items": [
         {
           "img": "card-preview-photo-1",
-          "alt": "Фото 1"
+          "alt": "Фото 1",
+          "active": true
         },
         {
           "img": "card-preview-photo-2",
@@ -71,7 +72,7 @@
           "alt": "Фото 3"
         },
         {
-          "img": "card-preview-photo-3",
+          "img": "card-preview-photo-4",
           "alt": "Фото 4"
         }
       ]

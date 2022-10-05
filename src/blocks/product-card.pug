@@ -1,13 +1,15 @@
+include slider
+
 mixin product-card
 
     -
       const name = 'product-card'
-      const card = data['product-card']
-      const header = card.header
+      card = data['product-card']
 
     article(class=name)
       header(class=`${name}__header`)
-        h1(class=`${name}__title`) #{header.title}
-        p(class=`${name}__time`) #{header.time}
-        p(class=`${name}__location`) #{header.location}
-          a(class=`${name}__map-link` href=header['map-link'])  Смотреть на карте
+        h1(class=`${name}__title`) #{card.header.title}
+        p(class=`${name}__time`) #{card.header.time}
+        p(class=`${name}__location`) #{card.header.location}
+          a(class=`${name}__map-link` href=card.header['map-link'])  Смотреть на карте
+      +slider(card, name)

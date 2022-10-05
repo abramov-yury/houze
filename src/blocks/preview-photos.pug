@@ -1,0 +1,14 @@
+include ../templates/picture
+
+mixin preview-photos(photos, parent=false)
+
+  -
+    const name = 'preview-photos'
+    className = getClassName(name, parent)
+
+  ul(class=className)
+    -
+      itemClassName = (item) => item.active ? `${name}__item ${name}__item--active` : `${name}__item`
+    each item in photos
+      li(class=itemClassName(item))
+        +picture(item.img, 'img/card/', {width: 240, height: 144}, item.alt, name)
