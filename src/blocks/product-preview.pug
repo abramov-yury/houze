@@ -26,7 +26,7 @@ mixin product-preview(product, isShort)
     p(class=`${name}__location`) #{product.location}
 
     if(!isShort)
-      div(class=`${name}__container`)
+      div(class=`${name}__rate`)
         +rating(product.rating)
         +reviews(product.reviews, product.link)
       +capacity(name, product.capacity)
