@@ -29,7 +29,7 @@ mixin product-preview(product, isShort)
     if(!isShort)
       div(class=`${name}__container`)
         +rating(product.rating, true)
-        +rate(product.reviews, product.link)
+        +rate(product.reviews, product.link, true)
       +capacity(name, product.capacity)
       ul(class=`${name}__features`)
         each item in product.features
