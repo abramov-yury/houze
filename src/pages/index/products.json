@@ -10,7 +10,7 @@
     "link": "#",
     "img": "1",
     "location": "г. Краснодар, ул. Ленина, 12",
-    "rating": 4.95,
+    "rating": "4,95",
     "reviews": 55,
     "capacity" : [
       {
@@ -37,7 +37,7 @@
     "link": "#",
     "img": "2",
     "location": "г. Краснодар, ул. Кирова, 7",
-    "rating": 4.78,
+    "rating": "4,78",
     "reviews": 12,
     "capacity" : [
       {
@@ -67,7 +67,7 @@
     "link": "#",
     "img": "3",
     "location": "г. Краснодар, ул. Южная, 24к1",
-    "rating": 4.68,
+    "rating": "4,68",
     "reviews": 15,
     "capacity" : [
       {
@@ -95,7 +95,7 @@
     "link": "#",
     "img": "4",
     "location": "г. Краснодар, ул. Лермонтова, 1",
-    "rating": 4.86,
+    "rating": "4,86",
     "reviews": 22,
     "capacity" : [
       {
@@ -121,7 +121,7 @@
     "link": "#",
     "img": "5",
     "location": "г. Краснодар, ул. Дмитриева, 12к2",
-    "rating": 4.96,
+    "rating": "4,96",
     "reviews": 34,
     "capacity" : [
       {
@@ -147,7 +147,7 @@
     "link": "#",
     "img": "6",
     "location": "г. Краснодар, ул. Красный Путь, 44",
-    "rating": 4.84,
+    "rating": "4,84",
     "reviews": 13,
     "capacity" : [
       {
@@ -174,7 +174,7 @@
     "link": "#",
     "img": "7",
     "location": "г. Краснодар, ул. Думская, 27",
-    "rating": 4.93,
+    "rating": "4,93",
     "reviews": 23,
     "capacity" : [
       {
@@ -205,7 +205,7 @@
     "link": "#",
     "img": "8",
     "location": "г. Краснодар, ул. Ватутина, 52",
-    "rating": 4.65,
+    "rating": "4,65",
     "reviews": 22,
     "capacity" : [
       {
@@ -235,7 +235,7 @@
     "link": "#",
     "img": "9",
     "location": "г. Краснодар, ул. Пушкина, 17",
-    "rating": 4.96,
+    "rating": "4,96",
     "reviews": 12,
     "capacity" : [
       {
@@ -296,7 +296,7 @@
     "link": "#",
     "img": "11",
     "location": "г. Краснодар, ул. Партизанская, 57",
-    "rating": 4.49,
+    "rating": "4,49",
     "reviews": 25,
     "capacity" : [
       {
@@ -322,7 +322,7 @@
     "link": "#",
     "img": "12",
     "location": "г. Краснодар, ул. Лебедева, 62к4",
-    "rating": 4.95,
+    "rating": "4,95",
     "reviews": 55,
     "capacity" : [
       {
