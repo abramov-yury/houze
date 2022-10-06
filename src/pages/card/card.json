@@ -52,15 +52,6 @@
       "location": "г. Краснодар, ул. Пушкина, 17",
       "map-link": "#"
     },
-    "summary": {
-      "price": 4500,
-      "rating": 4.96,
-      "reviews": {
-        "value": 12,
-        "link": "#"
-      },
-      "favorite": true
-    },
     "pictures": {
       "main": {
         "img": "card-photo-1",

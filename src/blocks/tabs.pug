@@ -1,0 +1,25 @@
+mixin tabs
+
+  .tabs
+
+    ul.tabs__navigation
+
+      li.tabs__navigation-item
+        a.tabs__navigation-link.tabs__navigation-link--active(href='#page-1')
+          | Удобства и услуги
+
+      li.tabs__navigation-item
+        a.tabs__navigation-link(href='#page-2')
+          | Ориентиры
+
+      li.tabs__navigation-item
+        a.tabs__navigation-link(href='#page-3')
+          | Отзывы
+
+    ul.tabs__pages
+
+      li.tabs__pages-item.tabs__pages-item--active(id='page-1')
+
+      li.tabs__pages-item(id='page-2')
+
+      li.tabs__pages-item(id='page-3')

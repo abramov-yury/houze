@@ -1,5 +1,6 @@
 include slider
 include summary
+include tabs
 
 mixin product-card
 
@@ -15,3 +16,4 @@ mixin product-card
           a(class=`${name}__map-link` href=card.header['map-link'])  Смотреть на карте
       +slider(card, name)
       +summary
+      +tabs
