@@ -3,6 +3,7 @@ include ../templates/picture
 include rating
 include reviews
 include capacity
+include price
 include button
 include favorite
 include badge
@@ -34,10 +35,7 @@ mixin product-preview(product, isShort)
         each item in product.features
           li(class=`${name}__feactures-item`) #{item}
 
-    p(class=`${name}__price`) #{product.price.toLocaleString()}
-      span(class=`${name}__price-currency`)  &#8381
-      | /сутки
-
+    +price(product.price, name)
     +button('primary', name)
     +favorite(product.favorite, name)
     +badge(product.badge, name)

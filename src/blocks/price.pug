@@ -1,0 +1,7 @@
+mixin price(value, parent=false)
+
+  -
+    name = 'price'
+    className = getClassName(name, parent)
+
+  p(class=className) #{value.toLocaleString()} &#8381/сутки
