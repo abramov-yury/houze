@@ -1,6 +1,7 @@
 include ../templates/picture
 
 include rating
+include reviews
 include capacity
 include button
 include favorite
@@ -27,13 +28,7 @@ mixin product-preview(product, isShort)
     if(!isShort)
       div(class=`${name}__container`)
         +rating(product.rating)
-        if(product.reviews)
-          a(class=`${name}__reviews` href=product.link)
-            | (&#32;
-            span(class=`${name}__reviews-text`) #{product.reviews} #{inflictWord(product.reviews, ['Отзыв', 'Отзыва', 'Отзывов'])}
-            | &#32;)
-        else
-          span(class=`${name}__reviews ${name}__reviews--empty`) Нет отзывов
+        +reviews(product.reviews, product.link)
       +capacity(name, product.capacity)
       ul(class=`${name}__features`)
         each item in product.features

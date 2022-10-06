@@ -1,0 +1,13 @@
+mixin reviews(value, link='#', parent=false)
+
+  -
+    const name = 'reviews'
+    className = getClassName(name, parent)
+
+  if(value)
+    a(class=className href=link)
+      | (&#32;
+      span(class=`${name}__text`) #{value} #{inflictWord(value, ['Отзыв', 'Отзыва', 'Отзывов'])}
+      | &#32;)
+  else
+    span(class=`${className} ${name}--empty`) Нет отзывов
