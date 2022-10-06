@@ -1,0 +1,135 @@
+mixin table
+
+  -
+    const name = 'table'
+
+  table(class=name)
+    thead(class=`${name}__head`)
+      tr(class=`${name}__row`)
+        th(class=`${name}__cell`) Категория
+        th(class=`${name}__cell`) Название
+        th(class=`${name}__cell`) Расстояние
+        th(class=`${name}__cell`) Время работы
+    tbody(class=`${name}__body`)
+      tr(class=`${name}__row`)
+        td(class=`${name}__cell`) В шаговой доступности
+        td(class=`${name}__cell`)
+          | Памятник Шурику и Лидочке
+          br
+          | Ботанический сад
+          br
+          | Сити Центр, торговый центр
+          br
+          | Чистяковская роща
+          br
+          | Стадион «Краснодар»
+          br
+          | Парк «Краснодар»
+          br
+          | Парк «Солнечный остров»
+          br
+          | Красная площадь, торговый центр
+        td(class=`${name}__cell`)
+          | 0,6 км
+          br
+          | 0,7 км
+          br
+          | 0,8 км
+          br
+          | 1 км
+          br
+          | 1,2 км
+          br
+          | 1,2 км
+          br
+          | 1,7 км
+          br
+          | 2 км
+        td(class=`${name}__cell`)
+          | –
+          br
+          | 10:00 - 20:00
+          br
+          | 09:00 - 22:00
+          br
+          | –
+          br
+          | 10:00 - 20:00
+          br
+          | –
+          br
+          | –
+          br
+          | 10:00 - 20:00
+      tr(class=`${name}__row`)
+        td(class=`${name}__cell`) Рестораны
+        td(class=`${name}__cell`)
+          | Птичка
+          br
+          | Родина
+          br
+          | Вояж
+          br
+          | Шато
+          br
+          | Где же кролик
+        td(class=`${name}__cell`)
+          | 0,3 км
+          br
+          | 0,6 км
+          br
+          | 1,1 км
+          br
+          | 1,2 км
+          br
+          | 1,4 км
+        td(class=`${name}__cell`)
+          | 10:00 - 00:00
+          br
+          | 08:00 - 23:00
+          br
+          | 08:00 - 23:00
+          br
+          | 10:00 - 02:00
+          br
+          | 10:00 - 23:00
+      tr(class=`${name}__row`)
+        td(class=`${name}__cell`) Транспорт
+        td(class=`${name}__cell`)
+          | Аэропорт
+          br
+          | ЖД вокзал
+        td(class=`${name}__cell`)
+          | 10,6 км
+          br
+          | 10,6 км
+        td(class=`${name}__cell`)
+          | –
+          br
+          | –
+      tr(class=`${name}__row`)
+        td(class=`${name}__cell`) Университеты
+        td(class=`${name}__cell`)
+          | Кубанский государственный университет
+          br
+          | Аграрный университет
+          br
+          | Медицинский университет
+          br
+          | Институт культуры
+        td(class=`${name}__cell`)
+          | 0,5 км
+          br
+          | 1,3 км
+          br
+          | 2,4 км
+          br
+          | 3,2 км
+        td(class=`${name}__cell`)
+          | 08:30 - 17:00
+          br
+          | 08:00 - 16:00
+          br
+          | 08:00 - 18:00
+          br
+          | 09:00 - 17:00
