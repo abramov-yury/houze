@@ -1,3 +1,5 @@
+include services
+
 mixin tabs
 
   .tabs
@@ -19,7 +21,7 @@ mixin tabs
     ul.tabs__pages
 
       li.tabs__pages-item.tabs__pages-item--active(id='page-1')
-
+        +services
       li.tabs__pages-item(id='page-2')
 
       li.tabs__pages-item(id='page-3')
