@@ -1,0 +1,24 @@
+include price
+include rating
+include reviews
+include favorite
+include options
+include button
+
+mixin summary
+
+  -
+    const name = 'summary'
+
+  div(class=name)
+    +price(4500)
+    div(class=`${name}__rate`)
+      +rating(4.96)
+      +reviews(12, '#')
+    +favorite(true, name)
+    +options
+    p(class=`${name}__description`)
+      | Уютная и полностью оснащенная всем необходимым для  проживания квартира. Шаговая доступность к основным достопримечательностям города. В квартире есть спальня с кроватью King Size, а также дополнительное спальное место, большая обеденная зона и рабочее место. Есть кондиционер, стиральная машина, оснащенная кухня, посуда, телевизор, Wi-Fi.
+
+    +button('primary')
+    +button('secondary')
