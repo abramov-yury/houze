@@ -1,6 +1,6 @@
 include price
 include rating
-include reviews
+include rate
 include favorite
 include options
 include button
@@ -14,7 +14,7 @@ mixin summary
     +price(4500)
     div(class=`${name}__rate`)
       +rating(4.96)
-      +reviews(12, '#')
+      +rate(12, '#')
     +favorite(true, name)
     +options
     p(class=`${name}__description`)

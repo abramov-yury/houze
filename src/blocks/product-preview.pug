@@ -1,7 +1,7 @@
 include ../templates/picture
 
 include rating
-include reviews
+include rate
 include capacity
 include price
 include button
@@ -29,7 +29,7 @@ mixin product-preview(product, isShort)
     if(!isShort)
       div(class=`${name}__container`)
         +rating(product.rating)
-        +reviews(product.reviews, product.link)
+        +rate(product.reviews, product.link)
       +capacity(name, product.capacity)
       ul(class=`${name}__features`)
         each item in product.features
