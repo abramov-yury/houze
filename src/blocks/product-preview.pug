@@ -27,13 +27,13 @@ mixin product-preview(product, isShort)
     p(class=`${name}__location`) #{product.location}
 
     if(!isShort)
-      div(class=`${name}__rate`)
+      div(class=`${name}__container`)
         +rating(product.rating)
         +reviews(product.reviews, product.link)
       +capacity(name, product.capacity)
       ul(class=`${name}__features`)
         each item in product.features
-          li(class=`${name}__feactures-item`) #{item}
+          li(class=`${name}__features-item`) #{item}
 
     +price(product.price, name)
     +button('primary', name)
