@@ -1,0 +1,20 @@
+include rating
+include accent
+
+mixin review(obj)
+
+  -
+    className = obj.accent ? `review review--accent` : `review`
+
+  article(class=className)
+    header.review__header
+      h3.visually-hidden Отзыв пользователя #{obj.username}
+      .review__profile
+        a.review__profile-link(href=obj['profile-link']) #{obj.username}
+        img.review__avatar(src=obj.avatar width='38' height='38' alt=`Аватар пользователя - ${obj.username}`)
+        time.review__date(datetime=obj.time.datetime) #{obj.time.text}
+      +rating(obj.rating, 'large')
+    p.review__response #{obj.response}
+    if(obj.accent)
+      +accent(name)
+

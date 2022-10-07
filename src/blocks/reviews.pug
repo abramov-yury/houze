@@ -1,0 +1,14 @@
+include review
+
+mixin reviews(arr)
+
+  -
+    name = 'reviews'
+
+  div(class=name)
+    ul(class=`${name}__list`)
+      each item in arr
+        li(class=`${name}__item`)
+          +review(item)
+
+    a(class=`${name}__link` href='#') Показать ещё

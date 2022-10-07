@@ -1,5 +1,6 @@
 include services
 include landmarks
+include reviews
 
 mixin tabs
 
@@ -26,3 +27,4 @@ mixin tabs
       li.tabs__pages-item(id='page-2')
         +landmarks
       li.tabs__pages-item(id='page-3')
+        +reviews(data['product-card'].reviews)
