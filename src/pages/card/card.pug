@@ -5,12 +5,14 @@ include ../../templates/helpers
 include ../../blocks/page-header
 include ../../blocks/breadcrumbs
 include ../../blocks/product-card
+include ../../blocks/page-section
 include ../../blocks/page-footer
 
 block variables
   -
     title = 'Карточка товара'
     data = require('./card.json')
+    products = require('../../templates/products.json')
 
   +helpers
 
@@ -20,5 +22,6 @@ block main
   main.page-content
     +breadcrumbs('page-content')
     +product-card
+    +page-section(data['page-section'][0], [products[0], products[4], products[11], products[5]], true)
 block footer
   +page-footer
