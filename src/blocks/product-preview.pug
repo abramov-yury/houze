@@ -28,7 +28,7 @@ mixin product-preview(product, isShort)
 
     if(!isShort)
       div(class=`${name}__container`)
-        +rating(product.rating, true)
+        +rating(product.rating, 'small')
         +rate(product.reviews, product.link, true)
       +capacity(name, product.capacity)
       ul(class=`${name}__features`)

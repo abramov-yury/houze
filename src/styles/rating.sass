@@ -4,13 +4,7 @@
   gap: 8px
 
 .rating__value
-  font-size: 16px
-  font-weight: 400
   line-height: 1
-
-.rating__star
-  width: 16px
-  height: 16px
 
 .rating--small
 
@@ -20,3 +14,24 @@
   & > .rating__star
     width: 14px
     height: 14px
+    font-weight: 400
+
+.rating--medium
+
+  & > .rating__value
+    font-size: 16px
+    font-weight: 400
+
+  & > .rating__star
+    width: 16px
+    height: 16px
+
+.rating--large
+
+  & > .rating__value
+    font-size: 20px
+    font-weight: 600
+
+  & > .rating__star
+    width: 20px
+    height: 20px
