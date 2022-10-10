@@ -1,0 +1,17 @@
+.product-card
+  display: grid
+  grid-template-columns: auto 1fr
+  grid-template-areas: "header ." "slider summary" "tabs ."
+  gap: 40px
+
+.product-card__header
+  grid-area: header
+
+.product-card__slider
+  grid-area: slider
+
+.product-card__summary
+  grid-area: summary
+
+.product-card__tabs
+  grid-area: tabs

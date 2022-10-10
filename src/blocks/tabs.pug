@@ -2,9 +2,12 @@ include services
 include landmarks
 include reviews
 
-mixin tabs
+mixin tabs(parent)
 
-  .tabs
+  -
+    className = getClassName('tabs', parent)
+
+  div(class=className)
 
     ul.tabs__navigation
 

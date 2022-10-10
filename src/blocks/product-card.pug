@@ -18,5 +18,5 @@ mixin product-card
         p(class=`${name}__location`) #{card.header.location}
           a(class=`${name}__map-link` href=card.header['map-link'])  Смотреть на карте
       +slider(card, name)
-      +summary
-      +tabs
+      +summary(name)
+      +tabs(name)

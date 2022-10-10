@@ -5,12 +5,13 @@ include favorite
 include options
 include button
 
-mixin summary
+mixin summary(parent)
 
   -
     const name = 'summary'
+    className = getClassName(name, parent)
 
-  div(class=name)
+  div(class=className)
     div(class=`${name}__header`)
       +price(4500)
       +rating("4,96")
