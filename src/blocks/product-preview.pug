@@ -33,6 +33,6 @@ mixin product-preview(product, isShort)
           li(class=`${name}__features-item`) #{item}
 
     +price(product.price, name)
-    +button('primary', name)
+    +button('primary', 'Забронировать', name)
     +favorite(product.favorite, name)
     +badge(product.badge, name)

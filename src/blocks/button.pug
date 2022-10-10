@@ -1,13 +1,11 @@
-mixin button(modifier, parent)
+mixin button(modifier, text, parent)
 
   -
     const name = 'button'
     className = getClassName(name, parent)
     className += ` ${name}--${modifier}`
 
-  if(modifier === 'primary')
-    button(class=className type='button') Забронировать
-  if(modifier === 'secondary')
-    button(class=className type='button') Написать хозяину
   if(modifier === 'shortcut')
-    a(class=className href="#") Разместить объявление
+    a(class=className href="#") #{text}
+  else
+    button(class=className type='button') #{text}
