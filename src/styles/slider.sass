@@ -1,6 +1,24 @@
+.slider
+  position: relative
+  display: grid
+  gap: 40px
+
+  width: 1080px
+
+.slider__viewport
+  border-radius: 8px
+  overflow: hidden
+
+.slider__image
+  width: 100%
+  height: auto
+
+  vertical-align: middle
+
 .slider__button
   @include condition
 
+  position: absolute
   display: flex
   justify-content: center
   align-items: center
@@ -19,10 +37,18 @@
     width: 8px
     height: 14px
 
+.slider__button--prev,
+.slider__button--next
+  top: 50%
+  transform: translateY(-50%)
+
+
 .slider__button--prev
+  left: 40px
   & > svg
     transform: translateX(-1px)
 
 .slider__button--next
+  right: 40px
   & > svg
     transform: translateX(1px)
