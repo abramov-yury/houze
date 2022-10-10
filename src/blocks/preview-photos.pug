@@ -8,7 +8,8 @@ mixin preview-photos(photos, parent=false)
 
   ul(class=className)
     -
-      itemClassName = (item) => item.active ? `${name}__item ${name}__item--active` : `${name}__item`
+      linkClassName = (item) => item.active ? `${name}__link ${name}__link--active` : `${name}__link`
     each item in photos
-      li(class=itemClassName(item))
-        +picture(item.img, 'img/card/', {width: 240, height: 144}, item.alt, name)
+      li(class=`${name}__item`)
+        a(class=linkClassName(item))
+          +picture(item.img, 'img/card/', {width: 240, height: 144}, item.alt, name)
