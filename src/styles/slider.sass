@@ -1,0 +1,28 @@
+.slider__button
+  @include condition
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 40px
+  height: 40px
+  padding: 0
+
+  border: none
+  border-radius: 50%
+  background-color: $color-white
+  cursor: pointer
+
+  & > svg
+    position: relative
+    width: 8px
+    height: 14px
+
+.slider__button--prev
+  & > svg
+    transform: translateX(-1px)
+
+.slider__button--next
+  & > svg
+    transform: translateX(1px)
