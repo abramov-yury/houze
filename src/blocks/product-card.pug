@@ -1,5 +1,6 @@
 include ../templates/product-title
 
+include link
 include slider
 include summary
 include tabs
@@ -16,7 +17,7 @@ mixin product-card
           +product-title(card.description)
         p(class=`${name}__time`) #{card.header.time}
         p(class=`${name}__location`) #{card.header.location}
-          a(class=`${name}__map-link` href=card.header['map-link'])  Смотреть на карте
+          +link(card.header.link, 'Смотреть на карте', name)
       +slider(card, name)
       +summary(name)
       +tabs(name)
