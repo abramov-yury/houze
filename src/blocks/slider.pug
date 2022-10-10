@@ -11,12 +11,12 @@ mixin slider(obj, parent = false)
   div(class=className)
     div(class=`${name}__viewport`)
       +picture(obj.pictures.main.img, 'img/card/', {width: 1080, height: 590}, obj.pictures.main.alt, name)
+      button(class=`${name}__button ${name}__button--prev` type='button')
+        svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(d='M7 13 1 7l6-6' stroke='#F85A47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+        span.visually-hidden Назад
+      button(class=`${name}__button ${name}__button--next` type='button')
+        svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(d='m1 13 6-6-6-6' stroke='#F85A47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+        span.visually-hidden Вперёд
     +preview-photos(obj.pictures['preview-items'], name)
-    button(class=`${name}__button ${name}__button--prev` type='button')
-      svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
-        path(d='M7 13 1 7l6-6' stroke='#F85A47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-      span.visually-hidden Назад
-    button(class=`${name}__button ${name}__button--next` type='button')
-      svg(width='8' height='14' fill='none' role='presentation' aria-hidden='true')
-        path(d='m1 13 6-6-6-6' stroke='#F85A47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-      span.visually-hidden Вперёд
