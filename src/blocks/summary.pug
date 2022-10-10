@@ -13,9 +13,9 @@ mixin summary(parent)
 
   div(class=className)
     div(class=`${name}__header`)
-      +price(4500)
-      +rating("4,96")
-      +rate(12, '#')
+      +price(4500, 'summary', 'large')
+      +rating("4,96", 'medium', name)
+      +rate(12, '#', false, name)
       +favorite(true, name)
     +options
     p(class=`${name}__description`)

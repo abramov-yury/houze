@@ -1,7 +1,8 @@
-mixin price(value, parent=false)
+mixin price(value, parent=false, modifier=false)
 
   -
     name = 'price'
     className = getClassName(name, parent)
+    className = modifier ? className += ` ${name}--${modifier}` : className
 
   p(class=className) #{value.toLocaleString()} &#8381/сутки

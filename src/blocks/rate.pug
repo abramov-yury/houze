@@ -1,8 +1,9 @@
-mixin rate(value, link='#', small=false)
+mixin rate(value, link='#', small=false, parent=false)
 
   -
     const name = 'rate'
-    const className = small ? `${name} ${name}--small` : name
+    className = small ? `${name} ${name}--small` : name
+    className = parent ? `${parent}__${name} ${className}` : className
 
   if(value)
     a(class=className href=link)

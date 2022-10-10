@@ -1,8 +1,9 @@
-mixin rating(value, modifier='medium')
+mixin rating(value, modifier='medium', parent=false)
 
   -
     name = 'rating'
     className = `${name} ${name}--${modifier}`
+    className = parent ? `${parent}__${name} ${className}` : className
 
     color = '#F85A47';
     hiddenText = `Рейтинг ${value} из 5`
