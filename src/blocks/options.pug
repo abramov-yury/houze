@@ -1,6 +1,9 @@
-mixin options
+mixin options(parent)
 
-  dl.options
+  -
+    className = getClassName('options', parent)
+
+  dl(class=className)
 
     .options__item
       svg.options__img(width='16' height='18' fill='none' role='presentation' aria-hidden='true')
