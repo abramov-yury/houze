@@ -1,0 +1,51 @@
+.preview-photos
+  display: flex
+  align-items: center
+  gap: 40px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.preview-photos__link
+  $border-radius: 6px
+
+  position: relative
+  display: inline-flex
+  align-items: center
+
+  border-radius: $border-radius
+  overflow: hidden
+
+  &::before
+    position: absolute
+    content: ""
+
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    background-color: rgba($color-white, .4)
+    border-radius: $border-radius
+
+  &:not(.preview-photos__link--active):hover,
+  &:not(.preview-photos__link--active):focus
+    opacity: .7
+
+  &:not(.preview-photos__link--active):active
+    opacity: .5
+
+
+.preview-photos__link--active
+  cursor: default
+
+  &::before
+    background-color: transparent
+
+.preview-photos__image
+  max-width: 100%
+  height: auto
+
+  vertical-align: middle
