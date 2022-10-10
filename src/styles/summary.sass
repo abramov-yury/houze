@@ -1,6 +1,11 @@
+$summary-border-bottom: 1px solid rgb(10, 18, 31, 0.1)
+$summary-podding-bottom: 25px
+
 .summary
   display: grid
-  row-gap: 25px
+  grid-template-columns: 1fr 1fr
+  grid-template-areas: "header header" "options options" "description description" "button button"
+  gap: 24px 20px
 
   padding: 50px 30px
 
@@ -9,13 +14,13 @@
 
 .summary__header
   display: grid
+  grid-area: header
   grid-template-columns: auto 1fr
   grid-template-areas: "price price" "rating rate"
   row-gap: 15px
 
-  padding-bottom: 25px
-
-  border-bottom: $border-summary-element
+  padding-bottom: $summary-podding-bottom
+  border-bottom: $summary-border-bottom
 
 .summary__price
   grid-area: price
@@ -35,5 +40,18 @@
   align-self: start
 
 .summary__options
+  grid-area: options
+
   margin: 0
-  border-bottom: $border-summary-element
+  padding-bottom: $summary-podding-bottom
+  border-bottom: $summary-border-bottom
+
+.summary__description
+  grid-area: description
+
+  margin: 0
+  padding-bottom: $summary-podding-bottom
+  border-bottom: $summary-border-bottom
+
+.summary__button
+  align-self: start
