@@ -1,3 +1,5 @@
+include ../templates/product-title
+
 include slider
 include summary
 include tabs
@@ -10,7 +12,8 @@ mixin product-card
 
     article(class=name)
       header(class=`${name}__header`)
-        h1(class=`${name}__title`) #{card.header.title}
+        h1(class=`${name}__title`)
+          +product-title(card.description)
         p(class=`${name}__time`) #{card.header.time}
         p(class=`${name}__location`) #{card.header.location}
           a(class=`${name}__map-link` href=card.header['map-link'])  Смотреть на карте

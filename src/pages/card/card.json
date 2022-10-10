@@ -48,9 +48,13 @@
   "product-card": {
     "header": {
       "time": "Опубликовано сегодня, 12:30",
-      "title": "2-комн. кв., 64 м2, 3/5 этаж",
       "location": "г. Краснодар, ул. Пушкина, 17",
       "map-link": "#"
+    },
+    "description": {
+      "rooms": 2,
+      "square": 64,
+      "storey": "3/5"
     },
     "pictures": {
       "main": {
