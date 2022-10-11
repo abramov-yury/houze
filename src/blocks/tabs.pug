@@ -12,20 +12,20 @@ mixin tabs(parent)
     ul.tabs__navigation
 
       li.tabs__navigation-item
-        a.tabs__navigation-link.tabs__navigation-link--active(href='#page-1')
+        a.tabs__navigation-link(href='#page-1')
           | Удобства и услуги
 
       li.tabs__navigation-item
-        a.tabs__navigation-link(href='#page-2')
+        a.tabs__navigation-link.tabs__navigation-link--active(href='#page-2')
           | Ориентиры
 
       li.tabs__navigation-item
         a.tabs__navigation-link(href='#page-3')
           | Отзывы
 
-    .tabs__page.tabs__page--active(id='page-1')
+    .tabs__page(id='page-1')
       +services
-    .tabs__page(id='page-2')
+    .tabs__page.tabs__page--active(id='page-2')
       +landmarks
     .tabs__page(id='page-3')
       +reviews(data['product-card'].reviews)

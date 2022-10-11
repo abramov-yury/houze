@@ -4,13 +4,16 @@ mixin table
     const name = 'table'
 
   table(class=name)
-    thead(class=`${name}__head`)
+      colgroup
+        col(class=`${name}__column-1`)
+        col(class=`${name}__column-2`)
+        col(class=`${name}__column-3`)
+        col(class=`${name}__column-4`)
       tr(class=`${name}__row`)
-        th(class=`${name}__cell`) Категория
-        th(class=`${name}__cell`) Название
-        th(class=`${name}__cell`) Расстояние
-        th(class=`${name}__cell`) Время работы
-    tbody(class=`${name}__body`)
+        th(class=`${name}__cell ${name}__cell--head`) Категория
+        th(class=`${name}__cell ${name}__cell--head`) Название
+        th(class=`${name}__cell ${name}__cell--head`) Расстояние
+        th(class=`${name}__cell ${name}__cell--head`) Время работы
       tr(class=`${name}__row`)
         td(class=`${name}__cell`) В шаговой доступности
         td(class=`${name}__cell`)
