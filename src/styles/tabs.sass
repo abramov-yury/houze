@@ -1,0 +1,47 @@
+.tabs
+  display: grid
+  row-gap: 35px
+
+.tabs__navigation
+  justify-self: start
+  display: flex
+  gap: 40px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+  border-bottom: 1px solid $color-gray--light
+
+.tabs__page
+  display: none
+
+.tabs__page--active
+  display: block
+
+.tabs__navigation-link
+  display: inline-flex
+  align-items: center
+
+  padding-bottom: 9px
+
+  font-size: 20px
+  font-weight: 600
+  line-height: 1
+
+  color: $color-gray
+  text-decoration: none
+
+.tabs__navigation-link--active
+  position: relative
+  color: $color-tomato
+
+  &::after
+    position: absolute
+    content: ""
+
+    width: 100%
+    height: 1px
+    bottom: -1px
+    left: 0
+    border-bottom: 1px solid $color-tomato
