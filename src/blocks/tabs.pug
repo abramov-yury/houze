@@ -23,11 +23,9 @@ mixin tabs(parent)
         a.tabs__navigation-link(href='#page-3')
           | Отзывы
 
-    ul.tabs__pages
-
-      li.tabs__pages-item.tabs__pages-item--active(id='page-1')
-        +services
-      li.tabs__pages-item(id='page-2')
-        +landmarks
-      li.tabs__pages-item(id='page-3')
-        +reviews(data['product-card'].reviews)
+    .tabs__page.tabs__page--active(id='page-1')
+      +services
+    .tabs__page(id='page-2')
+      +landmarks
+    .tabs__page(id='page-3')
+      +reviews(data['product-card'].reviews)
