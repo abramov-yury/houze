@@ -1,4 +1,5 @@
 include table
+include link
 
 mixin landmarks
 
@@ -7,4 +8,4 @@ mixin landmarks
 
   div(class=name)
     +table
-    a(class=`${name}__link` href='#')  Показать ещё
+    +link('#', 'Показать ещё')

@@ -17,7 +17,7 @@ mixin product-card
           +product-title(card.description)
         p(class=`${name}__time`) #{card.header.time}
         p(class=`${name}__location`) #{card.header.location}
-          +link(card.header.link, 'Смотреть на карте', name)
+          +link(card.header.link, 'Смотреть на карте', name, true)
       +slider(card, name)
       +summary(name)
       +tabs(name)

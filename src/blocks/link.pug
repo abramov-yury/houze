@@ -1,7 +1,8 @@
-mixin link(link, text, parent)
+mixin link(link, text, parent, decoration=false)
 
   -
     const name = 'link'
     className = getClassName(name, parent)
+    className = decoration ? `${className} ${name}--decoration` : className
 
   a(class=className href=link) #{text}
