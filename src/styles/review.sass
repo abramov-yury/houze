@@ -1,0 +1,57 @@
+.review
+  box-sizing: border-box
+  display: grid
+  row-gap: 15px
+
+  width: 660px
+  padding: 30px
+
+  border: 1px solid rgba(10, 18, 31, 0.1)
+  border-radius: 6px
+  background-color: $color-white
+
+.review__header
+  order: 2
+
+  display: grid
+  align-items: center
+  grid-template-columns: min-content 1fr min-content
+  grid-template-areas: "avatar name rating" "avatar date rating"
+  gap: 8px 10px
+
+.review__profile-link
+  grid-area: name
+
+  font-weight: 600
+  font-size: 16px
+  line-height: 1
+  color: inherit
+  text-decoration: none
+
+.review__avatar
+  grid-area: avatar
+
+  width: 38px
+  height: 38px
+
+.review__date
+  grid-area: date
+
+  font-size: 14px
+  line-height: 1
+  color: $color-gray
+
+.review__rating
+  grid-area: rating
+
+.review__response
+  order: 3
+  margin: 0
+
+  font-size: inherit
+  line-height: 1.4
+
+.review__accent
+  order: 1
+
+
