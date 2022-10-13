@@ -1,13 +1,14 @@
 include rating
 include accent
 
-mixin review(obj)
+mixin review(obj, elementName)
 
   -
     const name = 'review'
     className = obj.accent ? `review review--accent` : name
+    className = elementName ? `${elementName} ${className}` : className
 
-  article(class=className)
+  li(class=className)
     header.review__header
       h3.visually-hidden Отзыв пользователя #{obj.username}
       a.review__profile-link(href=obj['profile-link']) #{obj.username}

@@ -1,14 +1,14 @@
 include review
+include link
 
 mixin reviews(arr)
 
   -
-    name = 'reviews'
+    const name = 'reviews'
 
   div(class=name)
     ul(class=`${name}__list`)
       each item in arr
-        li(class=`${name}__item`)
-          +review(item)
+        +review(item, `${name}__item`)
 
-    a(class=`${name}__link` href='#') Показать ещё
+    +link('#', 'Показать ещё')
