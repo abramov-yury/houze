@@ -4,23 +4,22 @@
 
 .options__item
   display: grid
-  grid-template-columns: 28px 1fr
-  grid-template-areas: "image name" "image value"
   row-gap: 8px
 
-.options__img
-  grid-area: image
-
 .options__name
-  grid-area: name
+  display: inline-grid
+  grid-template-columns: 28px 1fr
+  align-items: center
 
   font-size: 18px
   font-weight: 600
   line-height: 1
 
+.options__img
+  grid-column: 1 / 2
+
 .options__value
-  grid-area: value
-  margin-inline-start: 0
+  margin-inline-start: 28px
 
   line-height: 1.4
   color: $color-gray
