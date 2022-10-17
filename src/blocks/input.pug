@@ -1,7 +1,12 @@
-mixin input(parent)
+mixin input(obj, parent)
 
   -
     const name = 'input'
     className = getClassName(name, parent)
 
-  input(class=className type='text' name='services-search' placeholder='Поиск')
+  input(class=className type='text')&attributes({
+    id: obj.id,
+    name: obj.name,
+    placeholder: obj.placeholder,
+    value: obj.value
+  })
