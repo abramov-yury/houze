@@ -1,3 +1,4 @@
+include filter-range
 include checkbox
 include radiobutton
 
@@ -9,10 +10,16 @@ mixin filters-form
   form(class=name action='#' method='GET')
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Удобства и услуги
+        +filter-range({minValue: 900, maxValue: 15000, firstValue: 1290, secondValue: 5000})
+    fieldset(class=`${name}__fieldset`)
+      legend(class=`${name}__caption`) Удобства и услуги
         +checkbox({service: {name: 'kitchen', text: 'Кухня'}, checked: true})
         +checkbox({service: {name: 'iron', text: 'Утюг'}})
         +checkbox({service: {name: 'breakfast', text: 'Завтрак'}, disabled: true})
         a(class=`${name}__link ${name}__link--collapse` href='#') Скрыть
+    fieldset(class=`${name}__fieldset`)
+      legend(class=`${name}__caption`) Площадь, м2
+      +filter-range({minValue: 20, maxValue: 180, firstValue: 25, secondValue: 90})
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Язык хозяина
         +checkbox({service: {name: 'rus', text: 'Русский'}, checked: true})
