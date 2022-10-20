@@ -1,0 +1,7 @@
+mixin radiobutton(obj)
+
+  - const name = 'radiobutton';
+
+  label(class=name)
+    input(type='radio' name=obj.name value=obj.value)&attributes({checked: obj.checked})
+    span(class=`${name}__label`) #{obj.text}

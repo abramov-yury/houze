@@ -1,4 +1,5 @@
 include checkbox
+include radiobutton
 
 mixin filters-form
 
@@ -14,3 +15,9 @@ mixin filters-form
       legend(class=`${name}__caption`) Язык хозяина
         +checkbox({service: {name: 'rus', text: 'Русский'}, checked: true})
         a(class=`${name}__link ${name}__link--expand` href='#') Смотреть все
+    fieldset(class=`${name}__fieldset`)
+      legend(class=`${name}__caption`) Условия проживания
+        +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
+        +radiobutton({name: 'tenancy', value: 'month', text: 'На несколько месяцев'})
+        +radiobutton({name: 'tenancy', value: 'year', text: 'От года'})
+        +radiobutton({name: 'tenancy', value: 'tenancy-any', text: 'Любой'})
