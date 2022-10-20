@@ -7,5 +7,10 @@ mixin filters-form
 
   form(class=name action='#' method='GET')
     fieldset(class=`${name}__fieldset`)
-      legend(class=`${name}__caption`) Цена, ₽
+      legend(class=`${name}__caption`) Удобства и услуги
         +checkbox({service: {name: 'kitchen', text: 'Кухня'}, checked: true})
+        a(class=`${name}__link ${name}__link--collapse` href='#') Скрыть
+    fieldset(class=`${name}__fieldset`)
+      legend(class=`${name}__caption`) Язык хозяина
+        +checkbox({service: {name: 'rus', text: 'Русский'}, checked: true})
+        a(class=`${name}__link ${name}__link--expand` href='#') Смотреть все
