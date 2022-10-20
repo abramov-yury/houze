@@ -1,7 +1,9 @@
 mixin radiobutton(obj)
 
-  - const name = 'radiobutton';
+  -
+    const name = 'radiobutton';
+    className = obj.disabled ? `${name} ${name}--disabled` : name
 
-  label(class=name)
-    input(type='radio' name=obj.name value=obj.value)&attributes({checked: obj.checked})
+  label(class=className)
+    input(type='radio' name=obj.name value=obj.value)&attributes({checked: obj.checked, disabled: obj.disabled})
     span(class=`${name}__label`) #{obj.text}
