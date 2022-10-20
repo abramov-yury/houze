@@ -1,0 +1,8 @@
+mixin checkbox(obj)
+
+  -
+    const name = 'checkbox';
+
+  label(class=name)
+    input(type='checkbox' name='services' value=obj.service.name)&attributes({checked: obj.checked})
+    span(class=`${name}__label`) #{obj.service.text}
