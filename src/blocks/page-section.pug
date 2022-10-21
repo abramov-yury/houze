@@ -1,7 +1,8 @@
+include filters
 include catalog
 include pagination
 
-mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false)
+mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false, isFilters=false)
 
   -
     const name = 'page-section'
@@ -11,6 +12,8 @@ mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false
       h1(class=`${name}__title`)  #{header.title}
       if(header.subtitle)
         p(class=`${name}__subtitle`)  #{header.subtitle}
+    if(isFilters)
+      +filters
     +catalog(items, isShortCatalog)
     if(isPagination)
       +pagination
