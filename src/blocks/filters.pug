@@ -1,0 +1,11 @@
++filters-form
+
+mixin filters(parent)
+
+  -
+    const name = 'filters';
+    className = getClassName(name, parent)
+
+  section(class=className)
+    h3(class=`${name}__title`)
+    +filters-form
