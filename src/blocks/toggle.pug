@@ -1,0 +1,9 @@
+mixin toggle(text, inputName, value, isChecked = flase)
+
+  -
+    const name = 'toggle'
+
+  label(class=name)
+    span(class=`${name}__label`) #{text}
+    input(type='checkbox' name=inputName value=value)&attributes({checked: isChecked})
+    span(class=`${name}__slider`)

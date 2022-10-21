@@ -1,6 +1,8 @@
 include filter-range
 include checkbox
 include radiobutton
+include toggle
+include button
 
 mixin filters-form
 
@@ -10,23 +12,29 @@ mixin filters-form
   form(class=name action='#' method='GET')
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Удобства и услуги
-        +filter-range({minValue: 900, maxValue: 15000, firstValue: 1290, secondValue: 5000})
+      +filter-range({minValue: 900, maxValue: 15000, firstValue: 1290, secondValue: 5000})
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Удобства и услуги
-        +checkbox({service: {name: 'kitchen', text: 'Кухня'}, checked: true})
-        +checkbox({service: {name: 'iron', text: 'Утюг'}})
-        +checkbox({service: {name: 'breakfast', text: 'Завтрак'}, disabled: true})
-        a(class=`${name}__link ${name}__link--collapse` href='#') Скрыть
+      +checkbox({service: {name: 'kitchen', text: 'Кухня'}, checked: true})
+      +checkbox({service: {name: 'iron', text: 'Утюг'}})
+      +checkbox({service: {name: 'breakfast', text: 'Завтрак'}, disabled: true})
+      a(class=`${name}__link ${name}__link--collapse` href='#') Скрыть
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Площадь, м2
       +filter-range({minValue: 20, maxValue: 180, firstValue: 25, secondValue: 90})
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Язык хозяина
-        +checkbox({service: {name: 'rus', text: 'Русский'}, checked: true})
-        a(class=`${name}__link ${name}__link--expand` href='#') Смотреть все
+      +checkbox({service: {name: 'rus', text: 'Русский'}, checked: true})
+      a(class=`${name}__link ${name}__link--expand` href='#') Смотреть все
+    fieldset(class=`${name}__fieldset`)
+      legend(class=`${name}__caption`) Срок аренды
+      +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
+      +radiobutton({name: 'tenancy', value: 'month', text: 'На несколько месяцев', disabled: true})
+      +radiobutton({name: 'tenancy', value: 'year', text: 'От года'})
+      +radiobutton({name: 'tenancy', value: 'tenancy-any', text: 'Любой'})
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Условия проживания
-        +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
-        +radiobutton({name: 'tenancy', value: 'month', text: 'На несколько месяцев', disabled: true})
-        +radiobutton({name: 'tenancy', value: 'year', text: 'От года'})
-        +radiobutton({name: 'tenancy', value: 'tenancy-any', text: 'Любой'})
+      +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
+      +toggle('Можно с детьми', 'housing-conditions', 'kids')
+      +toggle('Можно курить', 'housing-conditions', 'smoking')
+    +button('simple', 'Сбросить фильтры', false, 'reset')

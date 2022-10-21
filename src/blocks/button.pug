@@ -1,4 +1,4 @@
-mixin button(modifier, text, parent)
+mixin button(modifier, text, parent, type='button')
 
   -
     const name = 'button'
@@ -8,4 +8,4 @@ mixin button(modifier, text, parent)
   if(modifier === 'shortcut')
     a(class=className href="#") #{text}
   else
-    button(class=className type='button') #{text}
+    button(class=className type=type) #{text}
