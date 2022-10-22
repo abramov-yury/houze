@@ -1,9 +1,10 @@
-mixin pagination
+mixin pagination(parent)
 
   -
-    name = 'pagination'
+    const name = 'pagination';
+    className = getClassName(name, parent)
 
-  ul(class=name)
+  ul(class=className)
 
     li(class=`${name}__item`)
       a(class=`${name}__link ${name}__link--arrow-back ${name}__link--disabled` href='#')

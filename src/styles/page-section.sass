@@ -1,7 +1,14 @@
 .page-section
   padding-bottom: 130px
 
+.page-section--grid
+  display: grid
+  grid-template-columns: 360px 1fr
+  grid-template-areas: "header header" "filters catalog" "pagination pagination"
+  column-gap: 60px
+
 .page-section__header
+  grid-area: header
   margin-bottom: 50px
 
 .page-section__title
@@ -17,3 +24,9 @@
   font-weight: 600
   font-size: 16px
   line-height: 1
+
+.page-section__filters
+  grid-area: filters
+
+.page-section__pagination
+  grid-area: pagination

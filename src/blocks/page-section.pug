@@ -6,14 +6,15 @@ mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false
 
   -
     const name = 'page-section'
+    className = isFilters ? `${name} ${name}--grid` : name;
 
-  section(class=name)
+  section(class=className)
     header(class=`${name}__header`)
       h1(class=`${name}__title`)  #{header.title}
       if(header.subtitle)
         p(class=`${name}__subtitle`)  #{header.subtitle}
     if(isFilters)
-      +filters
+      +filters(name)
     +catalog(items, isShortCatalog)
     if(isPagination)
-      +pagination
+      +pagination(name)
