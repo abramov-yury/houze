@@ -5,79 +5,61 @@ include radiobutton
 include toggle
 include button
 
-mixin filters-form
+mixin filters-form(parent)
 
   -
     const name = 'filters-form';
+    className = getClassName(name, parent)
 
-  form(class=name action='#' method='GET')
+  form(class=className action='#' method='GET')
+    h3(class=`${name}__title`) Фильтры
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Цена, ₽
-      +filter-range({minValue: 900, maxValue: 15000, firstValue: 1290, secondValue: 5000})
+      +filter-range({
+        minValue: 900, maxValue: 15000, firstValue: 1290,
+        secondValue: 5000, firstAriaLabel: 'Цена от', secondAriaLabel: 'Цена до', firstHandleText: 'Установить минимальную стоимость', secondHandleText: 'Установить максимальную стоимость',
+      })
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Удобства и услуги
-      div(class=`${name}__search`)
-        +input({name: 'services-search', placeholder: 'Поиск'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'kitchen', text: 'Кухня', checked: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'washer', text: 'Стиральная машина'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'conditioner', text: 'Кондиционер', checked: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'drying-machine', text: 'Сушильная машина'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'dishwasher', text: 'Посудомойка'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'tv', text: 'Телевизор'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'workspace', text: 'Рабочая зона', checked: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'fen', text: 'Фен', checked: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'fireplace', text: 'Камин'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'crib', text: 'Детская кроватка'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'iron', text: 'Утюг'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'breakfast', text: 'Завтрак', disabled: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'services', value: 'beach', text: 'Пляж', disabled: true})
-      a(class=`${name}__link ${name}__link--collapse` href='#') Скрыть
+      +input({name: 'services-search', placeholder: 'Поиск'})
+      +checkbox({name: 'services', value: 'kitchen', text: 'Кухня', checked: true})
+      +checkbox({name: 'services', value: 'washer', text: 'Стиральная машина'})
+      +checkbox({name: 'services', value: 'conditioner', text: 'Кондиционер', checked: true})
+      +checkbox({name: 'services', value: 'drying-machine', text: 'Сушильная машина'})
+      +checkbox({name: 'services', value: 'dishwasher', text: 'Посудомойка'})
+      +checkbox({name: 'services', value: 'tv', text: 'Телевизор'})
+      +checkbox({name: 'services', value: 'workspace', text: 'Рабочая зона', checked: true})
+      +checkbox({name: 'services', value: 'fen', text: 'Фен', checked: true})
+      +checkbox({name: 'services', value: 'fireplace', text: 'Камин'})
+      +checkbox({name: 'services', value: 'crib', text: 'Детская кроватка'})
+      +checkbox({name: 'services', value: 'iron', text: 'Утюг'})
+      +checkbox({name: 'services', value: 'breakfast', text: 'Завтрак', disabled: true})
+      +checkbox({name: 'services', value: 'beach', text: 'Пляж', disabled: true})
+      button(class=`${name}__button ${name}__button--collapse` type='button' href='#') Скрыть
     fieldset(class=`${name}__fieldset`)
-      legend(class=`${name}__caption`) Площадь, м2
-      +filter-range({minValue: 20, maxValue: 180, firstValue: 25, secondValue: 90})
+      legend(class=`${name}__caption`) Площадь, м#[sup 2]
+      +filter-range({
+        minValue: 20, maxValue: 180, firstValue: 25, secondValue: 90,
+        firstAriaLabel: 'Площадь от', secondAriaLabel: 'Площадь до', firstHandleText: 'Установить минимальную площадь',
+        secondHandleText: 'Установить максимальную площадь',
+      })
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Язык хозяина
-      div(class=`${name}__search`)
-        +input({name: 'language-search', placeholder: 'Поиск'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'language', value: 'russian', text: 'Русский', checked: true})
-      div(class=`${name}__option`)
-        +checkbox({name: 'language', value: 'english', text: 'Английский'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'language', value: 'german', text: 'Немецкий'})
-      div(class=`${name}__option`)
-        +checkbox({name: 'language', value: 'french', text: 'Французский'})
-      a(class=`${name}__link ${name}__link--expand` href='#') Смотреть все
+      +input({name: 'language-search', placeholder: 'Поиск'})
+      +checkbox({name: 'language', value: 'russian', text: 'Русский', checked: true})
+      +checkbox({name: 'language', value: 'english', text: 'Английский'})
+      +checkbox({name: 'language', value: 'german', text: 'Немецкий'})
+      +checkbox({name: 'language', value: 'french', text: 'Французский'})
+      button(class=`${name}__button` type='button' href='#') Смотреть все
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Срок аренды
-      div(class=`${name}__option`)
-        +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
-      div(class=`${name}__option`)
-        +radiobutton({name: 'tenancy', value: 'month', text: 'На несколько месяцев', disabled: true})
-      div(class=`${name}__option`)
-        +radiobutton({name: 'tenancy', value: 'year', text: 'От года'})
-      div(class=`${name}__option`)
-        +radiobutton({name: 'tenancy', value: 'tenancy-any', text: 'Любой'})
+      +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
+      +radiobutton({name: 'tenancy', value: 'month', text: 'На несколько месяцев', disabled: true})
+      +radiobutton({name: 'tenancy', value: 'year', text: 'От года'})
+      +radiobutton({name: 'tenancy', value: 'tenancy-any', text: 'Любой'})
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Условия проживания
-      div(class=`${name}__item`)
-        +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
-      div(class=`${name}__item`)
-        +toggle('Можно с детьми', 'housing-conditions', 'kids')
-      div(class=`${name}__item`)
-        +toggle('Можно курить', 'housing-conditions', 'smoking')
-    div(class=`${name}__reset`)
-      +button('simple', 'Сбросить фильтры', false, 'reset')
+      +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
+      +toggle('Можно с детьми', 'housing-conditions', 'kids')
+      +toggle('Можно курить', 'housing-conditions', 'smoking')
+    +button('simple', 'Сбросить фильтры', false, 'reset')

@@ -1,4 +1,4 @@
-include filters
+include filters-form
 include catalog
 include pagination
 
@@ -14,7 +14,7 @@ mixin page-section(header={}, items=[], isShortCatalog=false, isPagination=false
       if(header.subtitle)
         p(class=`${name}__subtitle`)  #{header.subtitle}
     if(isFilters)
-      +filters(name)
+      +filters-form(name)
     +catalog(items, isShortCatalog)
     if(isPagination)
       +pagination(name)

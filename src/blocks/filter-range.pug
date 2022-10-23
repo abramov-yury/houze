@@ -5,21 +5,16 @@ mixin filter-range(obj)
   -
     const name = 'filter-range'
 
-    minValue = 900
-    maxValue = 15000
-
   div(class=name)
     div(class=`${name}__input-interval`)
-      label.visually-hidden(for='filters-form-price-min') От
-      +input({id: 'filters-form-price-min', name: 'filters-form-price-min', value: obj.firstValue}, name)
-      label.visually-hidden(for='filters-form-price-max') От
-      +input({id: 'filters-form-price-max', name: 'filters-form-price-max', value: obj.secondValue}, name)
+      +input({id: 'filters-form-price-min', name: 'filters-form-price-min', value: obj.firstValue, 'aria-label': obj.firstAriaLabel}, name)
+      +input({id: 'filters-form-price-max', name: 'filters-form-price-max', value: obj.secondValue, 'aria-label': obj.secondAriaLabel}, name)
     div(class=`${name}__input-controls`)
       div(class=`${name}__rail`)
         div(class=`${name}__track`)
       button(class=`${name}__handle ${name}__handle-min` type='button')
-        span.visually-hidden  Установить минимальную стоимость
+        span.visually-hidden  #{obj.firstHandleText}
       button(class=`${name}__handle ${name}__handle-max` type='button')
-        span.visually-hidden Установить максимальную стоимость
+        span.visually-hidden #{obj.secondHandleText}
     span(class=`${name}__min-value`) #{obj.minValue.toLocaleString()}
     span(class=`${name}__max-value`) #{obj.maxValue.toLocaleString()}
