@@ -1,0 +1,45 @@
+.radiobutton
+  position: relative
+  display: flex
+  cursor: pointer
+
+.radiobutton__control
+  position: absolute
+  appearance: none
+
+.radiobutton__label
+  display: inline-flex
+  align-items: center
+  gap: 10px
+
+  user-select: none
+
+  .radiobutton__control:focus + &
+    outline: 1px dotted $color-outline-input
+
+  .radiobutton__control:disabled + &
+    color: $color-gray
+
+  &::before
+    box-sizing: border-box
+    content: ""
+
+    display: inline-flex
+    flex-grow: 0
+    flex-shrink: 0
+
+    width: 20px
+    height: 20px
+
+    background-color: transparent
+    border: 1px solid $color-gray--form
+    border-radius: 50%
+
+  .radiobutton__control:checked + &::before
+    background-color: $color-tomato
+    border: 2px solid $color-tomato
+    box-shadow: inset 0 0 0 3px $color-white--matt
+
+  .radiobutton__control:disabled + &::before
+    border: 1px solid rgba($color-gray--form, .6)
+
