@@ -1,0 +1,49 @@
+.checkbox
+  position: relative
+  display: flex
+  cursor: pointer
+
+.checkbox__control
+  position: absolute
+  appearance: none
+
+.checkbox__label
+  display: inline-flex
+  align-items: center
+  gap: 10px
+
+  user-select: none
+
+  .checkbox__control:focus + &
+    outline: 1px dotted #848486
+
+  .checkbox__control:disabled + &
+    color: $color-gray
+    cursor: default
+
+  &::before
+    box-sizing: border-box
+    content: ""
+
+    display: inline-flex
+    flex-grow: 0
+    flex-shrink: 0
+
+    width: 20px
+    height: 20px
+
+    background-color: transparent
+    border: 1px solid $color-gray
+    border-radius: 4px
+
+  .checkbox__control:checked + &::before
+    background-color: $color-tomato
+    background-image: url('#{$path-images}/icons/check-mark.svg')
+    background-repeat: no-repeat
+    background-position: center
+    border-color: $color-tomato
+
+  .checkbox__control:disabled + &::before
+    border: 1px solid rgba($color-gray--form, .6)
+
+
