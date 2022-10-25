@@ -35,7 +35,7 @@ mixin filters-form(parent)
       +checkbox({name: 'services', value: 'iron', text: 'Утюг'})
       +checkbox({name: 'services', value: 'breakfast', text: 'Завтрак', disabled: true})
       +checkbox({name: 'services', value: 'beach', text: 'Пляж', disabled: true})
-      button(class=`${name}__button ${name}__button--collapse` type='button' href='#') Скрыть
+      button(class=`${name}__button ${name}__button--collapse` type='button') Скрыть
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Площадь, м#[sup 2]
       +filter-range({
@@ -50,7 +50,7 @@ mixin filters-form(parent)
       +checkbox({name: 'language', value: 'english', text: 'Английский'})
       +checkbox({name: 'language', value: 'german', text: 'Немецкий'})
       +checkbox({name: 'language', value: 'french', text: 'Французский'})
-      button(class=`${name}__button` type='button' href='#') Смотреть все
+      button(class=`${name}__button` type='button') Смотреть все
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Срок аренды
       +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
