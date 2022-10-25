@@ -5,16 +5,16 @@ mixin filter-range(obj)
   -
     const name = 'filter-range'
 
-  div(class=name)
+  div(class=name id=`${name}--${obj.id}`)
     div(class=`${name}__input-interval`)
       +input({id: 'filters-form-price-min', name: 'filters-form-price-min', value: obj.firstValue, 'aria-label': obj.firstAriaLabel}, name)
       +input({id: 'filters-form-price-max', name: 'filters-form-price-max', value: obj.secondValue, 'aria-label': obj.secondAriaLabel}, name)
-    div(class=`${name}__input-controls`)
+    div(class=`${name}__controls`)
       div(class=`${name}__rail`)
         div(class=`${name}__track`)
-      button(class=`${name}__handle ${name}__handle-min` type='button')
+      button(class=`${name}__handle ${name}__handle--min` type='button')
         span.visually-hidden  #{obj.firstHandleText}
-      button(class=`${name}__handle ${name}__handle-max` type='button')
+      button(class=`${name}__handle ${name}__handle--max` type='button')
         span.visually-hidden #{obj.secondHandleText}
-    span(class=`${name}__min-value`) #{obj.minValue.toLocaleString()}
-    span(class=`${name}__max-value`) #{obj.maxValue.toLocaleString()}
+    span(class=`${name}__value ${name}__value--min`) #{obj.minValue.toLocaleString()}
+    span(class=`${name}__value ${name}__value--max`) #{obj.maxValue.toLocaleString()}

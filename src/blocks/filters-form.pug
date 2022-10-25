@@ -16,7 +16,7 @@ mixin filters-form(parent)
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Цена, ₽
       +filter-range({
-        minValue: 900, maxValue: 15000, firstValue: 1290,
+        minValue: 900, maxValue: 15000, firstValue: 1290, id: 'price',
         secondValue: 5000, firstAriaLabel: 'Цена от', secondAriaLabel: 'Цена до', firstHandleText: 'Установить минимальную стоимость', secondHandleText: 'Установить максимальную стоимость',
       })
     fieldset(class=`${name}__fieldset`)
@@ -39,9 +39,9 @@ mixin filters-form(parent)
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Площадь, м#[sup 2]
       +filter-range({
-        minValue: 20, maxValue: 180, firstValue: 25, secondValue: 90,
+        minValue: 20, maxValue: 180, firstValue: 25, id: 'square', secondValue: 90,
         firstAriaLabel: 'Площадь от', secondAriaLabel: 'Площадь до', firstHandleText: 'Установить минимальную площадь',
-        secondHandleText: 'Установить максимальную площадь',
+        secondHandleText: 'Установить максимальную площадь'
       })
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Язык хозяина

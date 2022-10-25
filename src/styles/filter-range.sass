@@ -1,0 +1,68 @@
+.filter-range
+  position: relative
+  padding-bottom: 25px
+
+.filter-range__input-interval
+  display: flex
+  justify-content: space-between
+  gap: 10px
+  align-items: center
+  padding-bottom: 22px
+
+.filter-range__controls
+  position: relative
+
+.filter-range__rail
+  height: 2px
+  background-color: $color-gray--form
+
+.filter-range__track
+  position: absolute
+  height: 2px
+  top: 0
+  left: 0
+  background-color: $color-tomato
+
+.filter-range__handle
+  position: absolute
+
+  top: 50%
+  transform: translateY(-50%)
+
+  width: 16px
+  height: 16px
+
+  border-radius: 50%
+  border: none
+  background-color: $color-tomato
+  cursor: pointer
+
+.filter-range__value
+  position: absolute
+  bottom: 0
+
+  font-size: 12px
+  line-height: 1
+  color: $color-gray
+
+.filter-range__value--min
+  left: 0
+
+.filter-range__value--max
+  right: 0
+
+/* ширина и положение управляющих элементов для каждого фильтра */
+
+#filter-range--price
+  & .filter-range__track
+    right: 70%
+  & .filter-range__handle--max
+    left: 30%
+    transform: translateY(-50%) translateX(-50%)
+
+#filter-range--square
+  & .filter-range__track
+    right: 50%
+  & .filter-range__handle--max
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)
