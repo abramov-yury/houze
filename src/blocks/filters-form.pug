@@ -17,11 +17,11 @@ mixin filters-form(parent)
       legend(class=`${name}__caption`) Цена, ₽
       +filter-range({
         minValue: 900, maxValue: 15000, firstValue: 1290, id: 'price',
-        secondValue: 5000, firstAriaLabel: 'Цена от', secondAriaLabel: 'Цена до', firstHandleText: 'Установить минимальную стоимость', secondHandleText: 'Установить максимальную стоимость',
+        secondValue: 5000, firstAriaLabel: 'Цена от', secondAriaLabel: 'Цена до', firstHandleText: 'Установить минимальную стоимость', secondHandleText: 'Установить максимальную стоимость'
       })
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Удобства и услуги
-      +input({name: 'services-search', placeholder: 'Поиск'})
+      +input({name: 'services-search', placeholder: 'Поиск'}, name)
       +checkbox({name: 'services', value: 'kitchen', text: 'Кухня', checked: true})
       +checkbox({name: 'services', value: 'washer', text: 'Стиральная машина'})
       +checkbox({name: 'services', value: 'conditioner', text: 'Кондиционер', checked: true})
@@ -45,7 +45,7 @@ mixin filters-form(parent)
       })
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Язык хозяина
-      +input({name: 'language-search', placeholder: 'Поиск'})
+      +input({name: 'language-search', placeholder: 'Поиск'}, name)
       +checkbox({name: 'language', value: 'russian', text: 'Русский', checked: true})
       +checkbox({name: 'language', value: 'english', text: 'Английский'})
       +checkbox({name: 'language', value: 'german', text: 'Немецкий'})
