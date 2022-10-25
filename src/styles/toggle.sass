@@ -1,0 +1,49 @@
+.toggle
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.toggle__control
+  position: absolute
+  appearance: none
+
+.toggle__label
+  font-size: 14px
+  line-height: 1
+
+.toggle__slider
+  position: relative
+
+  width: 38px
+  height: 20px
+
+  border-radius: 16px
+  background-color: $color-gray--form
+
+  transition: background-color .4s
+  cursor: pointer
+
+  &::before
+    position: absolute
+    content: ""
+
+    width: 16px
+    height: 16px
+
+    border-radius: 50%
+    background-color: $color-white
+
+    top: 2px
+    left: 2px
+
+    transition: transform .3s
+
+  .toggle__control:checked + &
+    background-color: $color-tomato
+
+  .toggle__control:checked + &::before
+    transform: translateX(calc(100% + 2px))
+
+  .toggle__control:focus + &
+    box-shadow: 0 0 2px $color-tomato
