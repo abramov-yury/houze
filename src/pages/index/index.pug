@@ -21,7 +21,9 @@ block header
 block main
   main.page-content
     +breadcrumbs('page-content')
-    +page-section(data['page-section'][0], products, false, true, true)
+    +page-section(data['page-section'][0],
+      [products[0], products[1], products[2], products[4], products[5], products[6], products[8], products[9], products[10]],
+      false, true, true)
     +page-section(data['page-section'][1], [products[0], products[4], products[11], products[5]], true)
 block footer
   +page-footer
