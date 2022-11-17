@@ -1,0 +1,30 @@
+{
+  "name": "form",
+  "site-navigation": [
+    {
+      "text": "Аренда",
+      "reference": "#",
+      "active": true
+    },
+    {
+      "text": "Покупка",
+      "reference": "card.html"
+    },
+    {
+      "text": "Новостройки",
+      "reference": "#"
+    },
+    {
+      "text": "Коммерческая",
+      "reference": "#"
+    },
+    {
+      "text": "Ипотека",
+      "reference": "#"
+    }
+  ],
+  "user-navigation": {
+    "favorites": "3",
+    "notifications": "1"
+  }
+}

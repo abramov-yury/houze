@@ -1,0 +1,22 @@
+extends ../../templates/staffolding
+
+include ../../templates/helpers
+
+include ../../blocks/page-header
+include ../../blocks/page-footer
+
+block variables
+  -
+    title = 'Новое объявление'
+    data = require('./form.json')
+
+  +helpers
+
+block header
+  +page-header
+
+block main
+  main.page-content.page-content--form
+
+block footer
+  +page-footer('small')

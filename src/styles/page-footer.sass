@@ -1,8 +1,9 @@
 .page-footer
+  background-color: $color-blue--light
+
+.page-footer--default
   position: relative
   padding-top: 70px
-
-  background-color: $color-blue--light
 
   &::after
     position: absolute
@@ -15,6 +16,19 @@
     bottom: 64px
 
     background-color: rgba($color-blue--dark, .1)
+
+.page-footer--small
+  display: flex
+  align-items: center
+
+  min-height: 76px
+
+.page-footer__container
+  @include container
+
+  display: flex
+  align-items: center
+  justify-content: space-between
 
 .page-footer__content
   @include container
