@@ -1,0 +1,17 @@
+mixin progress
+
+  -
+    stages = [
+      {name: 'Основные данные', condition: 'checked'},
+      {name: 'Удобства и условия', condition: 'active'},
+      {name: 'Цена', condition: 0},
+      {name: 'Тарифы', condition: 0},
+      {name: 'Оплата', condition: 0},
+    ]
+
+  ul.progress
+    each stage, index in stages
+      - cls = stage.condition ? `progress__item--${stage.condition}` : `progress__item`
+      li(className=cls data-value=`stage-${index + 1}`) #{stage.name}
+
+
