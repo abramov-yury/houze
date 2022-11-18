@@ -1,0 +1,46 @@
+.progress
+  display: grid
+  row-gap: 15px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.progress__item
+  display: grid
+  grid-template-columns: auto auto
+  align-items: center
+  justify-content: start
+  column-gap: 10px
+
+  font-size: 14px
+  line-height: 1
+  color: $color-gray
+
+  &::before
+    content: ""
+    box-sizing: border-box
+
+    width: 20px
+    height: 20px
+
+    border-radius: 50%
+    background-color: $color-gray
+
+
+.progress__item--checked
+  color: $color-blue--dark
+
+  &::before
+    background-color: $color-tomato
+    background-image: url("#{$path-images}/icons/check-mark.svg")
+    background-repeat: no-repeat
+    background-position: center
+
+.progress__item--active
+  color: $color-blue--dark
+
+  &::before
+    background-color: transparent
+    border: 2px solid $color-tomato

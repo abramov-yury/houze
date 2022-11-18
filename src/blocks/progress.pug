@@ -9,9 +9,8 @@ mixin progress
       {name: 'Оплата', condition: 0},
     ]
 
+    getItemName = (condition, name) => condition ? `${name} ${name}--${condition}` : name;
+
   ul.progress
     each stage, index in stages
-      - cls = stage.condition ? `progress__item--${stage.condition}` : `progress__item`
-      li(className=cls data-value=`stage-${index + 1}`) #{stage.name}
-
-
+      li(class=getItemName(stage.condition, 'progress__item') data-value=`stage-${index + 1}`) #{stage.name}
