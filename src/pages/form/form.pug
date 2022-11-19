@@ -3,7 +3,7 @@ extends ../../templates/staffolding
 include ../../templates/helpers
 
 include ../../blocks/page-header
-include ../../blocks/select
+include ../../blocks/photo-upload
 include ../../blocks/page-footer
 
 block variables
@@ -18,7 +18,7 @@ block header
 
 block main
   main.page-content.page-content--form
-    +select
+    +photo-upload
 
 block footer
   +page-footer('small')
