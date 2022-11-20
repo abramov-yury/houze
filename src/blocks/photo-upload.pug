@@ -1,8 +1,33 @@
-mixin photo-upload
+mixin photo-upload__item(photo)
 
-  .photo-upload
+  li.photo-upload__item
+    img.photo-upload__img(src=`img/photos/${photo}` width=170 height=120)
+    .photo-upload__buttons
+      button.photo-upload__button(type='button')
+        span.visually-hidden Удалить
+        svg(width='12' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='M1 3.4h1.111m0 0H11m-8.889 0v8.4c0 .318.117.623.326.848.208.226.49.352.785.352h5.556c.294 0 .577-.126.785-.351a1.25 1.25 0 0 0 .326-.849V3.4H2.11Zm1.667 0V2.2c0-.318.117-.623.325-.849.209-.225.491-.351.786-.351H7.11c.295 0 .577.126.786.351.208.226.325.53.325.849v1.2m-1.11 3V10M4.888 6.4V10')
+      button.photo-upload__button(type='button')
+        span.visually-hidden Повернуть
+        svg(width='13' height='12' fill='none' role='presentation' aria-hidden='true')
+          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='M12 1.554v3.334m0 0H8.7m3.3 0L9.453 2.466a4.91 4.91 0 0 0-5.893-.844 4.982 4.982 0 0 0-2.125 2.33 5.045 5.045 0 0 0-.313 3.152 5.009 5.009 0 0 0 1.627 2.71 4.915 4.915 0 0 0 5.941.351 4.993 4.993 0 0 0 1.93-2.5')
+      button.photo-upload__button(type='button')
+        span.visually-hidden Увеличить
+        svg(width='14' height='14' fill='none' role='presentation' aria-hidden='true')
+          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='m13 13-2.9-2.9M6.333 4.333v4m-2-2h4m3.334 0A5.333 5.333 0 1 1 1 6.333a5.333 5.333 0 0 1 10.667 0Z')
+
+mixin photo-upload(isFilled = false)
+
+  -
+    const name = 'photo-upload'
+    className = isFilled ? `${name} ${name}--filled` : name
+
+  div(class=className)
     label.photo-upload__label(for='object-photo')
       span.photo-upload__labe-text  Для загрузки перетащите файл сюда
-    input.photo-upload__control(type='file' id='oject-photo')
-    // контейнер для загруженных фотографий
-    .photo-upload__container
+    input.photo-upload__control(type='file' id='object-photo')
+  if(isFilled)
+      // контейнер для загруженных фотографий
+      ul.photo-upload__container
+        +photo-upload__item('photo-1.jpg')
+        +photo-upload__item('photo-2.jpg')
