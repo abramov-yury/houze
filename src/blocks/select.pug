@@ -1,6 +1,5 @@
-mixin select
+mixin select(obj)
 
-  select.select(name='room-count' id='room-count')
-    option 1
-    option 2
-    option 3
+  select.select(name=obj.name id=obj.id)
+    each item in obj.options
+      option #{item}

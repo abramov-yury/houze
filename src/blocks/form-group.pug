@@ -1,0 +1,9 @@
+include radiobutton
+
+mixin form-group(title, arr)
+
+  .form-group
+    p.form-title #{title}
+    .from-group__controlls
+      each control in arr
+        +radiobutton(control)
