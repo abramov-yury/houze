@@ -1,0 +1,14 @@
+include checkout-form--default
+include checkout-form--payment
+
+mixin checkout-section(title, formName)
+
+  section.checkout-section
+    h2.checkout-section__title #{title}
+    case formName
+      when 'payment'
+        +checkout-form--payment
+      default
+        +checkout-form--default
+
+

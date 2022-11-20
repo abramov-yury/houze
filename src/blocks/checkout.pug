@@ -1,0 +1,14 @@
+include checkout-section
+
+mixin checkout
+
+  article.checkout
+    h1.checkout__title  Новое объявление
+    .checkout__progress
+      // Progress steps
+    .checkout__form
+      //+checkout-section('Основные данные', 'basic data')
+      //+checkout-section('Удобства и условия')
+      //+checkout-section('Цена')
+      //+checkout-section('Тарифы')
+      +checkout-section('Оплата', 'payment')
