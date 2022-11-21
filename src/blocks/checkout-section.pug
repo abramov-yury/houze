@@ -1,6 +1,7 @@
 include checkout-form--default
 include checkout-form--service
 include checkout-form--price
+include checkout-form--tariffs
 
 mixin checkout-section(title, formName)
 
@@ -11,6 +12,8 @@ mixin checkout-section(title, formName)
         +checkout-form--service
       when 'price'
         +checkout-form--price
+      when 'tariffs'
+        +checkout-form--tariffs
       when 'basic'
       default
         +checkout-form--default

@@ -1,0 +1,13 @@
+mixin tariff-plan(obj)
+
+  -
+    const name = 'tariff-plan'
+    className = obj.hit ? `${name} ${name}--hit` : name
+    className = obj.active ? `${className} ${name}--active` : className
+
+  section(class = className id = obj.id tabindex=0)
+    h3.tariff-plan__title #{obj.title}
+    p.tariff-plan__price #{obj.price}
+    ul.tariff-plan__options
+      each item in obj.options
+        li.tariff-plan__option #{item}
