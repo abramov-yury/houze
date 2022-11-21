@@ -5,5 +5,7 @@ mixin checkbox(obj)
     className = obj.disabled ? `${name} ${name}--disabled` : name
 
   label(class=className)
-    input(class=`${name}__control` type='checkbox' name=obj.name value=obj.value)&attributes({checked: obj.checked, disabled: obj.disabled})
+    input(class=`${name}__control` type='checkbox' name=obj.name value=obj.value)&attributes({
+      checked: obj.checked, disabled: obj.disabled, id: obj.id
+    })
     span(class=`${name}__label`) #{obj.text}

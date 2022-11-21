@@ -1,5 +1,6 @@
 include checkout-form--default
 include checkout-form--service
+include checkout-form--price
 
 mixin checkout-section(title, formName)
 
@@ -8,6 +9,8 @@ mixin checkout-section(title, formName)
     case formName
       when 'service'
         +checkout-form--service
+      when 'price'
+        +checkout-form--price
       when 'basic'
       default
         +checkout-form--default
