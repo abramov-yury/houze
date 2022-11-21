@@ -2,4 +2,4 @@ mixin select(obj)
 
   select.select(name=obj.name id=obj.id)
     each item in obj.options
-      option #{item}
+      option&attributes({selected: item.selected}) #{item.text}

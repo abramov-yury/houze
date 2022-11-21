@@ -1,9 +1,15 @@
 include radiobutton
+include checkbox
 
-mixin form-group(title, arr)
+mixin form-group(title, arr, controls)
 
   .form-group
     p.form-title #{title}
     .from-group__controlls
-      each control in arr
-        +radiobutton(control)
+      case controls
+        when 'radiobutton'
+          each control in arr
+            +radiobutton(control)
+        when 'checkbox'
+          each control in arr
+            +checkbox(control)

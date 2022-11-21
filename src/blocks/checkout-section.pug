@@ -1,14 +1,13 @@
 include checkout-form--default
-include checkout-form--payment
+include checkout-form--service
 
 mixin checkout-section(title, formName)
 
   section.checkout-section
-    h2.checkout-section__title #{title}
+    h2.visually-hidden #{title}
     case formName
-      when 'payment'
-        +checkout-form--payment
+      when 'service'
+        +checkout-form--service
+      when 'basic'
       default
         +checkout-form--default
-
-

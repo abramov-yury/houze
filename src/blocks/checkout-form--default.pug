@@ -12,7 +12,7 @@ mixin checkout-form--default
       +form-group('Сдает квартиру', [
         {name: 'landowner', value: 'owner', checked: true, text: 'Собственник'},
         {name: 'landowner', value: 'owner', text: 'Агент'}
-      ])
+      ], 'radiobutton')
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Имя
@@ -29,7 +29,7 @@ mixin checkout-form--default
         {name: 'land-object', value: 'flat', checked: true, text: 'Квартира'},
         {name: 'land-object', value: 'apartment', text: 'Апартаменты'},
         {name: 'land-object', value: 'house', text: 'Дом'},
-      ])
+      ], 'radiobutton')
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Адрес
@@ -37,7 +37,10 @@ mixin checkout-form--default
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Количество комнат
-        +select({name: 'room-count', id: 'room-count', options: [1, 2, 3]})
+
+        +select({name: 'room-count', id: 'room-count', options: [
+            {text: '1'}, {text: '2', selected: true}, {text: '3'},
+          ]})
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Общая площадь

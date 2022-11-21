@@ -1,0 +1,80 @@
+include form-group
+include toggle
+include select
+
+mixin checkout-form--service
+
+  form.checkout-form(action="#" method="POST")
+
+    fieldset.checkout-form__section
+      legend.checkout-form__section-title Удобства и услуги
+
+      .checkout-form__service-wrapper
+
+        +form-group('Общее', [
+          {name: 'services', value: 'furniture-in-a-room', text: 'Мебель в комнатах'},
+          {name: 'services', value: 'furniture-in-a-kitchen', text: 'Мебель на кухне', checked: true},
+          {name: 'services', value: 'courtyard-windows', text: 'Окна во двор'},
+          {name: 'services', value: 'windows-to-the-street', text: 'Окна на улицу', checked: true},
+          {name: 'services', value: 'balcony', text: 'Балкон'},
+          {name: 'services', value: 'loggia', text: 'Лоджия'},
+        ], 'checkbox')
+
+        +form-group('Техника', [
+          {name: 'services', value: 'fridge', text: 'Холодильник', checked: true},
+          {name: 'services', value: 'air-conditioning', text: 'Кондиционер', checked: true},
+          {name: 'services', value: 'washing-machine', text: 'Стиральная машина', checked: true},
+          {name: 'services', value: 'drying-machine', text: 'Сушильная машина'},
+          {name: 'services', value: 'tv', text: 'Телевизор', checked: true},
+          {name: 'services', value: 'hairdryer', text: 'Фен'},
+        ], 'checkbox')
+
+        +form-group('Комфорт', [
+          {name: 'services', value: 'bath', text: 'Ванна'},
+          {name: 'services', value: 'shower-cabin', text: 'Душевая кабина', checked: true},
+          {name: 'services', value: 'internet', text: 'Интернет', checked: true},
+          {name: 'services', value: 'split-bathroom', text: 'Раздельный санузел'},
+          {name: 'services', value: 'bath-combination', text: 'Совмещенный санузел', checked: true},
+        ], 'checkbox')
+
+    fieldset.checkout-form__section
+      legend.checkout-form__section-title Условия проживания
+
+      .checkout-form__condition-wrapper
+
+        +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
+        +toggle('Можно с детьми', 'housing-conditions', 'children', true)
+        +toggle('Можно курить', 'housing-conditions', 'smoking')
+
+    fieldset.checkout-form__section
+      legend.checkout-form__section-title Заселение
+
+      +form-group('Способ заселения', [
+        {name: 'housing-method', value: 'contact', text: 'Контактный', checked: true},
+        {name: 'housing-method', value: 'contact-free', text: 'Бесконтактный'},
+        {name: 'housing-method', value: 'any', text: 'Любой'},
+      ], 'radiobutton')
+
+      .checkout-form__date-wrapper
+
+        label.checkout-form__field
+          span.checkout-form__field-label Время заезда
+          +select({name: 'check-in-time-1', id: 'check-in-time-1', options: [{text: 'до 12:00'}, {text: 'после 14-00', selected: true}]})
+
+        label.checkout-form__field
+          span.checkout-form__field-label Время выезда
+          +select({name: 'check-out-time-1', id: 'check-out-time-1', options: [{text: 'до 12:00', selected: true}, {text: 'после 14-00'}]})
+
+      +form-group('Предпочтительный способ связи', [
+        {name: 'contact-method', value: 'call', text: 'Только звонки', checked: true},
+        {name: 'contact-method', value: 'sms', text: 'Только сообщения'},
+        {name: 'contact-method', value: 'any', text: 'Любой'},
+      ], 'radiobutton')
+
+      label.checkout-form__field
+        span.checkout-form__field-label Комментарий
+        textarea.checkout-form__textarea(name='comment' id='comment')
+
+    .checkout-form__controls
+      button.checkout-form__button.checkout-form__button--back(type='button') Назад
+      button.checkout-form__button.checkout-form__button--forward(type='button') Далее
