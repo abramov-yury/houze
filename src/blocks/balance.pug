@@ -1,0 +1,12 @@
+include radiobutton
+
+mixin balance(radioButtons = [])
+
+  .balance
+    p.balance__caption Ваш баланс: 210 ₽
+    p.balance__warning  Недостаточно средств для выполнения платежа
+    p.balance__options-caption Пополнить баланс:
+    ul.balance__options
+      each item in radioButtons
+        li.balance__option
+          +radiobutton(item)

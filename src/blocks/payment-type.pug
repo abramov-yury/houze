@@ -1,0 +1,34 @@
+include radiobutton
+include credit-card
+include order-params
+include balance
+
+mixin payment-type(obj)
+
+  -
+    const name = 'payment-type'
+    className = obj.active ? `${name} ${name}--active` : name
+
+  div(class=className)
+    div(class=`${name}__headline`)
+      +radiobutton({name: obj.name, value: obj.value, text: obj.text, checked: obj.active})
+      p(class=`${name}__description`) #{obj.description}
+      ul(class=`${name}__icons`)
+        each item in obj.icons
+          li(class=`${name}__icon`)
+            img(src=item.src width=item.width height=item.height alt=item.alt)
+
+    if(obj.active)
+      div(class=`${name}__content`)
+
+        case obj.type
+          when 'credit-card'
+            +credit-card
+          when 'wallet'
+            +balance([
+              {name: 'refill-balance-method', value: 'card', text: 'Банковская карта'},
+              {name: 'refill-balance-method', value: 'yandex.money', text: 'Яндекс.Деньги'},
+              {name: 'refill-balance-method', value: 'apple-pay', text: 'ApplePay'},
+              {name: 'refill-balance-method', value: 'google-pay', text: 'Google Pay'},
+            ])
+        +order-params

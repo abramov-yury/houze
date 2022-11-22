@@ -1,0 +1,17 @@
+include select
+
+mixin order-params
+
+  dl.order-params
+    dt.order-params__caption  Выбранный тариф
+    dd.order-params__value  Стандарт
+    dt.order-params__caption  Стоимость, ₽/сутки
+    dd.order-params__value  15 ₽/сутки
+    dt.order-params__caption  Количество дней
+    dd.order-params__value
+      +select(
+        {name: 'day-count-1', id: 'day-count-1', options: [{text: '30'}, {text: '60'}, {text: '90'}]}
+      )
+    dt.order-params__caption  Сумма к оплате:
+    dd.order-params__value  450 ₽
+

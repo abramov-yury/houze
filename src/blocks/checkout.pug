@@ -1,3 +1,4 @@
+include progress
 include checkout-section
 
 mixin checkout
@@ -5,10 +6,10 @@ mixin checkout
   article.checkout
     h1.checkout__title  Новое объявление
     .checkout__progress
-      // Progress steps
+      +progress
     .checkout__form
-      //+checkout-section('Основные данные', 'basic')
+      +checkout-section('Основные данные', 'basic')
       //+checkout-section('Удобства и условия', 'service')
       //+checkout-section('Цена', 'price')
-      +checkout-section('Тарифы', 'tariffs')
+      //+checkout-section('Тарифы', 'tariffs')
       //+checkout-section('Оплата', 'payment')

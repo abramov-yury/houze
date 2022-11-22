@@ -6,14 +6,14 @@ include logo
 mixin page-footer-copyright
   p.page-footer__copyright  ООО «Хауз» © 2021 Все права защищены
 
-mixin page-footer(isSmall = false)
+mixin page-footer(isCompact = false)
 
   -
     const name = 'page-footer';
-    className = isSmall ? `${name} ${name}--small` : `${name} ${name}--default`
+    className = isCompact ? `${name} ${name}--small` : `${name} ${name}--default`
 
   footer(class=className)
-    if(!isSmall)
+    if(!isCompact)
       .page-footer__content
         .page-footer__contacts
           +logo('page-footer')
