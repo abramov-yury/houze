@@ -4,8 +4,8 @@ include select
 
 mixin checkout-form--service
 
-  form.checkout-form(action="#" method="POST")
-
+  section.checkout-form(id='section-2')
+    h2.visually-hidden Удобства и условия
     fieldset.checkout-form__section
       legend.checkout-form__section-title Удобства и услуги
 
@@ -74,7 +74,3 @@ mixin checkout-form--service
       label.checkout-form__field
         span.checkout-form__field-label Комментарий
         textarea.checkout-form__textarea(name='comment' id='comment')
-
-    .checkout-form__controls
-      button.checkout-form__button.button.button--primary(type='button') Назад
-      button.checkout-form__button.button.button--secondary(type='button') Далее
