@@ -4,6 +4,7 @@ include checkout-section
 include checkout-form--basic
 include checkout-form--service
 include checkout-form--price
+include checkout-form--tariffs
 
 mixin checkout
 
@@ -15,5 +16,5 @@ mixin checkout
       +checkout-form--basic
       +checkout-form--service
       +checkout-form--price
-      +checkout-section('Тарифы', 'tariffs')
+      +checkout-form--tariffs
       +checkout-section('Оплата', 'payment')

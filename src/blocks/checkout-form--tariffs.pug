@@ -2,8 +2,8 @@ include tariff-plan
 
 mixin checkout-form--tariffs
 
-  form.checkout-form(action="#" method="POST")
-
+  section.checkout-form(id='section-4')
+    h2.visually-hidden Тарифы
     fieldset.checkout-form__section
       legend.checkout-form__section-title Тарифы
 
@@ -36,7 +36,3 @@ mixin checkout-form--tariffs
             'Выделение большим размером'
           ]
         })
-
-      .checkout-form__controls
-        button.checkout-form__button.button.button--primary(type='button') Назад
-        button.checkout-form__button.button.button--secondary(type='button') Далее
