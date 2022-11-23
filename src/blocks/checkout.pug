@@ -9,7 +9,7 @@ mixin checkout
       +progress
     .checkout__form
       +checkout-section('Основные данные', 'basic')
-      //+checkout-section('Удобства и условия', 'service')
-      //+checkout-section('Цена', 'price')
-      //+checkout-section('Тарифы', 'tariffs')
-      //+checkout-section('Оплата', 'payment')
+      +checkout-section('Удобства и условия', 'service')
+      +checkout-section('Цена', 'price')
+      +checkout-section('Тарифы', 'tariffs')
+      +checkout-section('Оплата', 'payment')
