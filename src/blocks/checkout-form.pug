@@ -1,0 +1,23 @@
+include checkout-form--basic
+include checkout-form--service
+include checkout-form--price
+include checkout-form--tariffs
+include checkout-form--payment
+
+mixin checkout-form(cls)
+
+  -
+    const name = 'checkout-form';
+    className = `${cls}__form ${name}`;
+
+  form(class=className action='#' method='POST')
+    +checkout-form--basic
+    +checkout-form--service
+    +checkout-form--price
+    +checkout-form--tariffs
+    +checkout-form--payment
+
+    .checkout-form__controls
+      button.checkout-form__button.button.button--primary(type='button') Назад
+      button.checkout-form__button.button.button--secondary(type='button') Далее
+      button.checkout-form__button.button.button--secondary(type='button') Оплатить

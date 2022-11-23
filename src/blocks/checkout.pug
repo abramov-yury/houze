@@ -1,10 +1,5 @@
 include progress
-include checkout-section
-
-include checkout-form--basic
-include checkout-form--service
-include checkout-form--price
-include checkout-form--tariffs
+include checkout-form
 
 mixin checkout
 
@@ -12,9 +7,4 @@ mixin checkout
     h1.checkout__title  Новое объявление
     .checkout__progress
       +progress
-    form.checkout__form(action='#' method='POST')
-      +checkout-form--basic
-      +checkout-form--service
-      +checkout-form--price
-      +checkout-form--tariffs
-      +checkout-section('Оплата', 'payment')
+    +checkout-form('checkout')

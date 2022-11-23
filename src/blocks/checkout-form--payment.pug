@@ -2,8 +2,8 @@ include payment-type
 
 mixin checkout-form--payment
 
-  section.checkout-form
-
+  section.checkout-form__page(id='section-5')
+    h2.visually-hidden Оплата
     fieldset.checkout-form__section
       legend.checkout-form__section-title Оплата
 
@@ -27,7 +27,3 @@ mixin checkout-form--payment
           ],
           type: 'wallet'
         })
-
-    .checkout-form__controls
-      button.checkout-form__button.button.button--primary(type='button') Назад
-      button.checkout-form__button.button.button--secondary(type='button') Оплатить

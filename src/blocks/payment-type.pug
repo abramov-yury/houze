@@ -18,17 +18,16 @@ mixin payment-type(obj)
           li(class=`${name}__icon`)
             img(src=item.src width=item.width height=item.height alt=item.alt)
 
-    if(obj.active)
-      div(class=`${name}__content`)
+    div(class=`${name}__content`)
 
-        case obj.type
-          when 'credit-card'
-            +credit-card
-          when 'wallet'
-            +balance([
-              {name: 'refill-balance-method', value: 'card', text: 'Банковская карта'},
-              {name: 'refill-balance-method', value: 'yandex.money', text: 'Яндекс.Деньги'},
-              {name: 'refill-balance-method', value: 'apple-pay', text: 'ApplePay'},
-              {name: 'refill-balance-method', value: 'google-pay', text: 'Google Pay'},
-            ])
-        +order-params
+      case obj.type
+        when 'credit-card'
+          +credit-card
+        when 'wallet'
+          +balance([
+            {name: 'refill-balance-method', value: 'card', text: 'Банковская карта'},
+            {name: 'refill-balance-method', value: 'yandex.money', text: 'Яндекс.Деньги'},
+            {name: 'refill-balance-method', value: 'apple-pay', text: 'ApplePay'},
+            {name: 'refill-balance-method', value: 'google-pay', text: 'Google Pay'},
+          ])
+      +order-params
