@@ -3,6 +3,7 @@ include checkout-section
 
 include checkout-form--basic
 include checkout-form--service
+include checkout-form--price
 
 mixin checkout
 
@@ -13,6 +14,6 @@ mixin checkout
     form.checkout__form(action='#' method='POST')
       +checkout-form--basic
       +checkout-form--service
-      +checkout-section('Цена', 'price')
+      +checkout-form--price
       +checkout-section('Тарифы', 'tariffs')
       +checkout-section('Оплата', 'payment')

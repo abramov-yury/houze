@@ -3,18 +3,18 @@ include select
 
 mixin checkout-form--price
 
-  form.checkout-form(action="#" method="POST")
-
+  section.checkout-form(id='section-3')
+    h2.visually-hidden Цена
     fieldset.checkout-form__section
       legend.checkout-form__section-title Цена
 
       label.checkout-form__field
         span.checkout-form__field-label Арендная плата
-        input.checkout-form__field-input(type='text' name='rent' id='rent' placeholder='₽')
+        input.checkout-form__field-input.input(type='text' name='rent' id='rent' placeholder='₽')
 
       label.checkout-form__field
         span.checkout-form__field-label Коммунальные платежи
-        input.checkout-form__field-input(type='text' name='utility-bills' id='utility-bills' placeholder='₽')
+        input.checkout-form__field-input.input(type='text' name='utility-bills' id='utility-bills' placeholder='₽')
 
       +checkbox({text: 'Оплата по счетчикам отдельно', name: 'counter-separately', id: 'counter-separately', checked: true})
 
@@ -24,7 +24,7 @@ mixin checkout-form--price
 
       label.checkout-form__field
         span.checkout-form__field-label Залог собственнику
-        input.checkout-form__field-input(type='text' name='deposit' id='deposit' placeholder='₽')
+        input.checkout-form__field-input.input(type='text' name='deposit' id='deposit' placeholder='₽')
 
       +checkbox({text: 'Без залога', name: 'none-deposit', id: 'none-deposit'})
 
@@ -32,7 +32,3 @@ mixin checkout-form--price
       legend.checkout-form__section-title Возможен онлайн-показ
       p.checkout-form__description Выберите, если готовы показать объект онлайн с помощью сервисов видео‑звонков.
       +checkbox({text: 'Готовы показать онлайн', name: 'online-show', checked: true})
-
-    .checkout-form__controls
-      button.checkout-form__button.button.button--primary(type='button') Назад
-      button.checkout-form__button.button.button--secondary(type='button') Далее
