@@ -2,10 +2,10 @@ include form-group
 include select
 include photo-upload
 
-mixin checkout-form--default
+mixin checkout-form--basic
 
-  form.checkout-form(action="#" method="POST")
-
+  section.checkout-form.checkout-form__page--active(id='section-1')
+    h2.visually-hidden Основные данные
     fieldset.checkout-form__section
       legend.checkout-form__section-title Контакты
 
@@ -16,11 +16,11 @@ mixin checkout-form--default
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Имя
-        input.chekout-form__field-control(type='text' name='owner-name' id='owner-name' placeholder='Иван Иванов')
+        input.chekout-form__field-control.input(type='text' name='owner-name' id='owner-name' placeholder='Иван Иванов')
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Подтвердите мобильный телефон
-        input.chekout-form__field-control(type='tel' name='owner-phone' id='owner-phone' placeholder='+7 ( _ _ _ ) _ _ _ - _ _ - _ _')
+        input.chekout-form__field-control.input(type='tel' name='owner-phone' id='owner-phone' placeholder='+7 ( _ _ _ ) _ _ _ - _ _ - _ _')
 
     fieldset.checkout-form__section
       legend.checkout-form__section-title Объект
@@ -33,7 +33,7 @@ mixin checkout-form--default
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Адрес
-        input.chekout-form__field-control(type='text' name='object-address' id='object-address' placeholder='Укажите город, улицу, дом и квартиру')
+        input.chekout-form__field-control.input(type='text' name='object-address' id='object-address' placeholder='Укажите город, улицу, дом и квартиру')
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Количество комнат
@@ -44,12 +44,13 @@ mixin checkout-form--default
 
       label.checkout-form__field.checkout-form__field--required
         span.checkout-form__field-label Общая площадь
-        input.chekout-form__field-control(type='text' name='total-area' id='total-area' placeholder='м2')
+        input.chekout-form__field-control.input(type='text' name='total-area' id='total-area' placeholder='м2')
 
     fieldset.checkout-form__section
       legend.checkout-form__section-title Фото
       p.checkout-form__disclaimer Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
-      +photo-upload
 
-    .checkout-form__controls
-      button.checkout-form__button.button.button--secondary(type='button') Далее
+      +photo-upload(true)
+
+    //.checkout-form__controls
+    //  button.checkout-form__button.button.button--secondary(type='button') Далее
