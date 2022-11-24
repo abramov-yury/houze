@@ -1,8 +1,13 @@
-include checkout-form--basic
-include checkout-form--service
-include checkout-form--price
-include checkout-form--tariffs
-include checkout-form--payment
+include form-fieldset--contacts
+include form-fieldset--object
+include form-fieldset--photo
+include form-fieldset--service
+include form-fieldset--conditions
+include form-fieldset--settlement
+include form-fieldset--price
+include form-fieldset--showing
+include form-fieldset--tariffs
+include form-fieldset--payment
 
 mixin checkout-form(cls)
 
@@ -11,11 +16,26 @@ mixin checkout-form(cls)
     className = `${cls}__form ${name}`;
 
   form(class=className action='#' method='POST')
-    +checkout-form--basic
-    +checkout-form--service
-    +checkout-form--price
-    +checkout-form--tariffs
-    +checkout-form--payment
+    section.checkout-form__page.checkout-form__page--active(id='section-1')
+      h2.visually-hidden Основные данные
+      +form-fieldset--contacts
+      +form-fieldset--object
+      +form-fieldset--photo
+    section.checkout-form__page(id='section-2')
+      h2.visually-hidden Удобства и условия
+      +form-fieldset--service
+      +form-fieldset--conditions
+      +form-fieldset--settlement
+    section.checkout-form__page(id='section-3')
+      h2.visually-hidden Цена
+      +form-fieldset--price
+      +form-fieldset--showing
+    section.checkout-form__page(id='section-4')
+      h2.visually-hidden Тарифы
+      +form-fieldset--tariffs
+    section.checkout-form__page(id='section-5')
+      h2.visually-hidden Оплата
+      +form-fieldset--payment
 
     .checkout-form__controls
       button.checkout-form__button.button.button--primary(type='button') Назад

@@ -1,0 +1,34 @@
+include form-group
+
+mixin form-fieldset--service
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Удобства и услуги
+
+    .form-fieldset__layout
+
+      +form-group('Общее', [
+        {name: 'services', value: 'furniture-in-a-room', text: 'Мебель в комнатах'},
+        {name: 'services', value: 'furniture-in-a-kitchen', text: 'Мебель на кухне', checked: true},
+        {name: 'services', value: 'courtyard-windows', text: 'Окна во двор'},
+        {name: 'services', value: 'windows-to-the-street', text: 'Окна на улицу', checked: true},
+        {name: 'services', value: 'balcony', text: 'Балкон'},
+        {name: 'services', value: 'loggia', text: 'Лоджия'},
+      ], 'checkbox')
+
+      +form-group('Техника', [
+        {name: 'services', value: 'fridge', text: 'Холодильник', checked: true},
+        {name: 'services', value: 'air-conditioning', text: 'Кондиционер', checked: true},
+        {name: 'services', value: 'washing-machine', text: 'Стиральная машина', checked: true},
+        {name: 'services', value: 'drying-machine', text: 'Сушильная машина'},
+        {name: 'services', value: 'tv', text: 'Телевизор', checked: true},
+        {name: 'services', value: 'hairdryer', text: 'Фен'},
+      ], 'checkbox')
+
+      +form-group('Комфорт', [
+        {name: 'services', value: 'bath', text: 'Ванна'},
+        {name: 'services', value: 'shower-cabin', text: 'Душевая кабина', checked: true},
+        {name: 'services', value: 'internet', text: 'Интернет', checked: true},
+        {name: 'services', value: 'split-bathroom', text: 'Раздельный санузел'},
+        {name: 'services', value: 'bath-combination', text: 'Совмещенный санузел', checked: true},
+      ], 'checkbox')

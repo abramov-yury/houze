@@ -1,0 +1,35 @@
+include form-group
+include form-field
+include select
+
+mixin form-fieldset--object
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Объект
+
+    +form-group('Тип жилья', [
+      {name: 'land-object', value: 'flat', checked: true, text: 'Квартира'},
+      {name: 'land-object', value: 'apartment', text: 'Апартаменты'},
+      {name: 'land-object', value: 'house', text: 'Дом'},
+    ], 'radiobutton')
+
+    +form-field(['size-xl', 'required'], {
+      type: 'text', label: 'Адрес', name: 'object-address', id: 'object-address', placeholder: 'Укажите город, улицу, дом и квартиру'
+    })
+
+    label.form-field.form-field--size-s
+      span.form-field__label Количество комнат
+
+      +select({
+        name: 'room-count', id: 'room-count', options: [
+          {text: '1'}, {text: '2', selected: true}, {text: '3'},
+        ]
+      })
+
+    +form-field(['size-s'], {
+      type: 'text',
+      label: 'Общая площадь',
+      name: 'total-area',
+      id: 'total-area',
+      placeholder: 'м2'
+    })

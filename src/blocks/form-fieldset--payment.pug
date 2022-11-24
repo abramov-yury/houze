@@ -1,0 +1,27 @@
+include payment-type
+
+mixin form-fieldset--payment
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Оплата
+
+    .form-fieldset__layout
+
+      +payment-type({
+        name: 'payment-method', value: 'credit-card', text: 'Банковская карта',
+        description: 'Данные вашей карты защищены 256-битным шифрованием',
+        icons: [
+          {src: 'img/icons/visa-color.svg', width: 34, height: 24, alt: 'Visa'},
+          {src: 'img/icons/mastercard-color.svg', width: 34, height: 24, alt: 'Mastercard'},
+        ],
+        type: 'credit-card'
+      })
+
+      +payment-type({
+        active: true, name: 'payment-method', value: 'wallet', text: 'Houze кошелёк',
+        description: 'Оплата из кошелька без комиссии',
+        icons: [
+          {src: 'img/icons/wallet.svg', width: 79, height: 18, alt: 'Houze'},
+        ],
+        type: 'wallet'
+      })

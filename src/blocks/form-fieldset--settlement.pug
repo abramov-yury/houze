@@ -1,0 +1,41 @@
+include form-group
+include select
+
+mixin form-fieldset--settlement
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Заселение
+
+    +form-group('Способ заселения', [
+      {name: 'housing-method', value: 'contact', text: 'Контактный', checked: true},
+      {name: 'housing-method', value: 'contact-free', text: 'Бесконтактный'},
+      {name: 'housing-method', value: 'any', text: 'Любой'},
+    ], 'radiobutton')
+
+    .form-fieldset__layout
+
+      label.form-fieldset__field
+        span.form-fieldset__field-label Время заезда
+        +select({
+          name: 'check-in-time-1',
+          id: 'check-in-time-1',
+          options: [{text: 'до 12:00'}, {text: 'после 14-00', selected: true}]
+        })
+
+      label.form-field.form-field--size-m
+        span.form-field__label Время выезда
+        +select({
+          name: 'check-out-time-1',
+          id: 'check-out-time-1',
+          options: [{text: 'до 12:00', selected: true}, {text: 'после 14-00'}]
+        })
+
+    +form-group('Предпочтительный способ связи', [
+      {name: 'contact-method', value: 'call', text: 'Только звонки', checked: true},
+      {name: 'contact-method', value: 'sms', text: 'Только сообщения'},
+      {name: 'contact-method', value: 'any', text: 'Любой'},
+    ], 'radiobutton')
+
+    label.form-field
+      span.form-field__label Комментарий
+      textarea.form-field__textarea(name='comment' id='comment')

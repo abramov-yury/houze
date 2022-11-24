@@ -1,0 +1,48 @@
+include form-field
+include checkbox
+
+mixin form-fieldset--price
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Цена
+
+    +form-field(['size-m'], {
+      type: 'text',
+      label: 'Арендная плата',
+      name: 'rent',
+      id: 'rent',
+      placeholder: '₽'
+    })
+
+    +form-field(['size-m'], {
+      type: 'text',
+      label: 'Коммунальные платежи',
+      name: 'utility-bills',
+      id: 'utility-bills',
+      placeholder: '₽'
+    })
+
+    +checkbox({
+      text: 'Оплата по счетчикам отдельно',
+      name: 'counter-separately',
+      id: 'counter-separately',
+      checked: true
+    })
+
+    label.form-field.form-field--size-m
+      span.form-field__label Предоплата
+      +select({
+        name: 'deposit-period',
+        id: 'deposit-period',
+        options: [{text: '1 месяц'}, {text: '2 месяца'}, {text: '3 месяца'}]
+      })
+
+    +form-field(['size-m'], {
+      type: 'text',
+      label: 'Залог собственнику',
+      name: 'deposit',
+      id: 'deposit',
+      placeholder: '₽'
+    })
+
+    +checkbox({text: 'Без залога', name: 'none-deposit', id: 'none-deposit'})

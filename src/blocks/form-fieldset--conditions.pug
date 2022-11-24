@@ -1,0 +1,12 @@
+include toggle
+
+mixin form-fieldset--conditions
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Условия проживания
+
+    .form-fieldset__layout
+
+      +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
+      +toggle('Можно с детьми', 'housing-conditions', 'children', true)
+      +toggle('Можно курить', 'housing-conditions', 'smoking')

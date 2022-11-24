@@ -1,0 +1,17 @@
+include form-group
+include form-field
+
+mixin form-fieldset--contacts
+
+  fieldset.form-fieldset
+    legend.form-fieldset__caption Контакты
+
+    +form-group('Сдает квартиру', [
+      {name: 'landowner', value: 'owner', checked: true, text: 'Собственник'},
+      {name: 'landowner', value: 'owner', text: 'Агент'}
+    ], 'radiobutton')
+
+    +form-field(['size-m', 'required'], {type: 'text', label: 'Имя', name: 'owner-name', id: 'owner-name', placeholder: 'Иван Иванов'})
+    +form-field(['size-m', 'required'], {
+      type: 'tel', label: 'Подтвердите мобильный телефон', name: 'owner-phone', id: 'owner-phone', placeholder: '+7 ( _ _ _ ) _ _ _ - _ _ - _ _'
+    })
