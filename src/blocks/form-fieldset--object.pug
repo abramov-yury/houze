@@ -24,12 +24,11 @@ mixin form-fieldset--object
         name: 'room-count', id: 'room-count', options: [
           {text: '1'}, {text: '2', selected: true}, {text: '3'},
         ]
-      })
+      }, 'form-field')
 
     +form-field(['size-s'], {
       type: 'text',
       label: 'Общая площадь',
       name: 'total-area',
-      id: 'total-area',
-      placeholder: 'м2'
-    })
+      id: 'total-area'
+    }, true)

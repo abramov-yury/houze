@@ -1,8 +1,9 @@
-mixin input(obj, parent)
+mixin input(obj, parent, isMU)
 
   -
     const name = 'input'
     className = getClassName(name, parent)
+    className = isMU ? `${className} ${name}--mu` : className
 
   input(class=className type='text')&attributes({
     id: obj.id,

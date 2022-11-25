@@ -1,0 +1,49 @@
+.form-field
+  display: flex
+  flex-direction: column
+  gap: 15px
+
+.form-field--required
+
+  & > .form-field__label
+
+    display: inline-flex
+    align-items: baseline
+    gap: 3px
+
+    &::after
+      content: '*'
+      vertical-align: super
+      font-size: smaller
+
+
+.form-field__container
+  position: relative
+
+.form-field__measuring-unit
+  position: absolute
+  display: flex
+
+  top: 50%
+  right: 14px
+  transform: translateY(-50%)
+
+.form-field--size-s > .form-field__input,
+.form-field--size-s > .form-field__select,
+.form-field--size-s > .form-field__container
+  width: 90px
+
+.form-field--size-m > .form-field__input,
+.form-field--size-m > .form-field__select,
+.form-field--size-m > .form-field__container
+  width: 300px
+
+.form-field--size-l > .form-field__input,
+.form-field--size-l > .form-field__select,
+.form-field--size-l > .form-field__container
+  width: 470px
+
+.form-field--size-xl > .form-field__input,
+.form-field--size-xl > .form-field__select,
+.form-field--size-xl > .form-field__container
+  width: 610px

@@ -1,5 +1,9 @@
-mixin select(obj)
+mixin select(obj, parent)
 
-  select.select(name=obj.name id=obj.id)
+  -
+    const name = 'select'
+    className = getClassName(name, parent)
+
+  select(class = className name=obj.name id=obj.id)
     each item in obj.options
       option&attributes({selected: item.selected}) #{item.text}
