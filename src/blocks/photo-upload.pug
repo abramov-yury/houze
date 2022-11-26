@@ -23,11 +23,16 @@ mixin photo-upload(isFilled = false)
     className = isFilled ? `${name} ${name}--filled` : name
 
   div(class=className)
-    label.photo-upload__label(for='object-photo')
-      span.photo-upload__labe-text  Для загрузки перетащите файл сюда
-    input.photo-upload__control(type='file' id='object-photo')
-  if(isFilled)
-      // контейнер для загруженных фотографий
-      ul.photo-upload__container
-        +photo-upload__item('photo-1.jpg')
-        +photo-upload__item('photo-2.jpg')
+    p.photo-upload__description Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
+    .photo-upload__content
+      if(!isFilled)
+        span.photo-upload__labe-text  Для загрузки перетащите файл сюда
+        label.photo-upload__label(for='object-photo') Выбрать с компьютера
+        input.photo-upload__control(type='file' id='object-photo')
+      else
+        // контейнер для загруженных фотографий
+        label.photo-upload__label(for='object-photo') Добавить фото
+        input.photo-upload__control(type='file' id='object-photo')
+        ul.photo-upload__container
+          +photo-upload__item('photo-1.jpg')
+          +photo-upload__item('photo-2.jpg')

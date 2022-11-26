@@ -1,0 +1,118 @@
+.photo-upload__description
+  margin: 0 0 15px 0
+
+  font-size: 12px
+  line-height: 16px
+  color: $color-gray
+
+.photo-upload__content
+  box-sizing: border-box
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+
+  width: 840px
+  min-height: 160px
+  padding: 40px 20px 20px
+
+  font-size: 14px
+  line-height: 1
+  color: $color-blue--dark
+
+  border: 1px solid $color-gray--form
+  border-radius: 4px
+
+.photo-upload__control
+  display: none
+
+.photo-upload__label
+  display: flex
+  justify-content: center
+  align-items: center
+
+  padding: 13px 24px
+
+  font-weight: 500
+  color: $color-tomato
+
+  border: 1px solid $color-tomato
+  border-radius: 6px
+  cursor: pointer
+
+.photo-upload__container
+  display: flex
+  gap: 15px
+
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.photo-upload__item
+  position: relative
+  border-radius: 4px
+  overflow: hidden
+
+.photo-upload__img
+  vertical-align: middle
+
+.photo-upload__buttons
+  display: none
+  position: absolute
+  flex-direction: column
+  align-items: flex-end
+  justify-content: center
+  gap: 10px
+
+  padding: 10px
+
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  background-color: rgba(10, 18, 31, .4)
+
+.photo-upload__item:hover .photo-upload__buttons
+  display: flex
+
+.photo-upload__button
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0
+  width: 26px
+  height: 26px
+
+  background-color: $color-white
+  border: none
+  border-radius: 50%
+  cursor: pointer
+
+.photo-upload--filled .photo-upload__content
+  flex-direction: row-reverse
+  justify-content: flex-end
+  gap: 15px
+
+  padding-top: 20px
+  padding-bottom: 20px
+
+.photo-upload--filled .photo-upload__label
+  box-sizing: border-box
+  width: 170px
+  height: 120px
+  padding-top: 70px
+
+  font-size: 12px
+  line-height: 1
+
+  background-image: url("#{$path-images}/icons/image.svg")
+  background-repeat: no-repeat
+  background-position: top 30px center
+
+  border: 1px solid $color-tomato
+  border-radius: 4px
+
+
