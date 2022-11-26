@@ -10,7 +10,7 @@ mixin form-field(modifiers = [], obj = {}, measuringUnit = fasle)
   label(class = className)
     if(measuringUnit)
       span(class = `${name}__label`) #{obj.label}
-      p(class = `${name}__container`)
+      span(class = `${name}__control`)
         +input(obj, name, true)
         span(class = `${name}__measuring-unit`) м<sup>2</sup>
     else

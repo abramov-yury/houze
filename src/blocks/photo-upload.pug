@@ -1,7 +1,7 @@
-mixin photo-upload__item(photo)
+mixin photo-upload__item(obj)
 
   li.photo-upload__item
-    img.photo-upload__img(src=`img/photos/${photo}` width=170 height=120)
+    img.photo-upload__img(src=`img/photos/${obj.src}` width=170 height=120 alt=obj.alt)
     .photo-upload__buttons
       button.photo-upload__button(type='button')
         span.visually-hidden Удалить
@@ -34,5 +34,5 @@ mixin photo-upload(isFilled = false)
         label.photo-upload__label(for='object-photo') Добавить фото
         input.photo-upload__control(type='file' id='object-photo')
         ul.photo-upload__container
-          +photo-upload__item('photo-1.jpg')
-          +photo-upload__item('photo-2.jpg')
+          +photo-upload__item({src: 'photo-1.jpg', alt: 'photo-1'})
+          +photo-upload__item({src: 'photo-2.jpg', alt: 'photo-2'})
