@@ -15,7 +15,7 @@ mixin checkout-form(cls)
     const name = 'checkout-form';
     className = `${cls}__form ${name}`;
 
-  form(class=className action='#' method='POST')
+  form(class=className)
     section.checkout-form__page.checkout-form__page--active(id='section-1')
       h2.visually-hidden Основные данные
       +form-fieldset--contacts
@@ -38,6 +38,6 @@ mixin checkout-form(cls)
       +form-fieldset--payment
 
     .checkout-form__controls
-      button.checkout-form__button.button.button--simple(type='button') Назад
-      button.checkout-form__button.button.button--secondary(type='button') Далее
-      button.checkout-form__button.button.button--disable(type='button') Оплатить
+      button.checkout-form__button.button.button--simple.button--hidden(type='button' data-direction='-1') Назад
+      button.checkout-form__button.button.button--secondary(type='button' data-direction='+1') Далее
+      button.checkout-form__button.button.button--disable.button--hidden(type='button') Оплатить
