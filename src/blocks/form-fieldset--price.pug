@@ -7,43 +7,42 @@ mixin form-fieldset--price
   fieldset.checkout-form__fieldset.form-fieldset
     legend.form-fieldset__caption Цена
 
-    +form-field(['size-m'], {
-      type: 'text',
-      label: 'Арендная плата',
-      name: 'rent',
-      id: 'rent',
-      placeholder: '₽'
-    })
+    .form-fieldset__column-layout
 
-    +form-field(['size-m'], {
-      type: 'text',
-      label: 'Коммунальные платежи',
-      name: 'utility-bills',
-      id: 'utility-bills',
-      placeholder: '₽'
-    })
+      +form-field([], {
+        type: 'text',
+        label: 'Арендная плата',
+        name: 'rent',
+        id: 'rent'
+      }, true, '₽')
 
-    +checkbox({
-      text: 'Оплата по счетчикам отдельно',
-      name: 'counter-separately',
-      id: 'counter-separately',
-      checked: true
-    })
+      +form-field([], {
+        type: 'text',
+        label: 'Коммунальные платежи',
+        name: 'utility-bills',
+        id: 'utility-bills'
+      }, true, '₽')
 
-    label.form-field.form-field--size-m
-      span.form-field__label Предоплата
-      +select({
-        name: 'deposit-period',
-        id: 'deposit-period',
-        options: [{text: '1 месяц'}, {text: '2 месяца'}, {text: '3 месяца'}]
-      })
+      +checkbox({
+        text: 'Оплата по счетчикам отдельно',
+        name: 'counter-separately',
+        id: 'counter-separately',
+        checked: true
+      }, 'form-fieldset__control-float')
 
-    +form-field(['size-m'], {
-      type: 'text',
-      label: 'Залог собственнику',
-      name: 'deposit',
-      id: 'deposit',
-      placeholder: '₽'
-    })
+      label.form-field.form-field--size-m
+        span.form-field__label Предоплата
+        +select({
+          name: 'deposit-period',
+          id: 'deposit-period',
+          options: [{text: '1 месяц'}, {text: '2 месяца'}, {text: '3 месяца'}]
+        })
 
-    +checkbox({text: 'Без залога', name: 'none-deposit', id: 'none-deposit'})
+      +form-field([], {
+        type: 'text',
+        label: 'Залог собственнику',
+        name: 'deposit',
+        id: 'deposit'
+      }, true, '₽')
+
+      +checkbox({text: 'Без залога', name: 'none-deposit', id: 'none-deposit'}, 'form-fieldset__control-float')

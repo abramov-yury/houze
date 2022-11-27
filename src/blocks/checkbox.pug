@@ -1,8 +1,9 @@
-mixin checkbox(obj)
+mixin checkbox(obj, cls)
 
   -
     const name = 'checkbox';
     className = obj.disabled ? `${name} ${name}--disabled` : name
+    className = cls ? `${cls} ${className}` : className
 
   label(class=className)
     input(class=`${name}__control` type='checkbox' name=obj.name value=obj.value)&attributes({

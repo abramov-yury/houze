@@ -1,6 +1,6 @@
 include input
 
-mixin form-field(modifiers = [], obj = {}, measuringUnit = fasle)
+mixin form-field(modifiers = [], obj = {}, measuringUnit = fasle, unit = 'м<sup>2</sup>')
 
   -
     const name = 'form-field';
@@ -12,7 +12,7 @@ mixin form-field(modifiers = [], obj = {}, measuringUnit = fasle)
       span(class = `${name}__label`) #{obj.label}
       span(class = `${name}__control`)
         +input(obj, name, true)
-        span(class = `${name}__measuring-unit`) м<sup>2</sup>
+        span(class = `${name}__measuring-unit`) #{unit}
     else
       span(class = `${name}__label`) #{obj.label}
       +input(obj, name)
