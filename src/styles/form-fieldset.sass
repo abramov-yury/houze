@@ -22,8 +22,10 @@
   font-size: 22px
   line-height: 1
 
-.form-field--compact
-  gap: 15px
-
-  & > .form-field__caption
+  .form-fieldset--compact > &
     margin-bottom: 15px
+
+.form-fieldset__column-layout
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 30px 40px

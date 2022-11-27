@@ -5,7 +5,7 @@ mixin form-fieldset--service
   fieldset.checkout-form__fieldset.form-fieldset
     legend.form-fieldset__caption Удобства и услуги
 
-    .form-fieldset__layout
+    .form-fieldset__column-layout
 
       +form-group('Общее', [
         {name: 'services', value: 'furniture-in-a-room', text: 'Мебель в комнатах'},
@@ -14,7 +14,7 @@ mixin form-fieldset--service
         {name: 'services', value: 'windows-to-the-street', text: 'Окна на улицу', checked: true},
         {name: 'services', value: 'balcony', text: 'Балкон'},
         {name: 'services', value: 'loggia', text: 'Лоджия'},
-      ], 'checkbox')
+      ], 'checkbox', true)
 
       +form-group('Техника', [
         {name: 'services', value: 'fridge', text: 'Холодильник', checked: true},
@@ -23,7 +23,7 @@ mixin form-fieldset--service
         {name: 'services', value: 'drying-machine', text: 'Сушильная машина'},
         {name: 'services', value: 'tv', text: 'Телевизор', checked: true},
         {name: 'services', value: 'hairdryer', text: 'Фен'},
-      ], 'checkbox')
+      ], 'checkbox', true)
 
       +form-group('Комфорт', [
         {name: 'services', value: 'bath', text: 'Ванна'},
@@ -31,4 +31,4 @@ mixin form-fieldset--service
         {name: 'services', value: 'internet', text: 'Интернет', checked: true},
         {name: 'services', value: 'split-bathroom', text: 'Раздельный санузел'},
         {name: 'services', value: 'bath-combination', text: 'Совмещенный санузел', checked: true},
-      ], 'checkbox')
+      ], 'checkbox', true)

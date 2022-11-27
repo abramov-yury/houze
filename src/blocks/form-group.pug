@@ -1,9 +1,13 @@
 include radiobutton
 include checkbox
 
-mixin form-group(title, arr, controls)
+mixin form-group(title, arr, controls, isColumn)
 
-  .form-group
+  -
+    const name = 'form-group';
+    className = isColumn ? `${name} ${name}--column` : name
+
+  div(class = className)
     p.form-group__title #{title}
     .from-group__controls
       case controls

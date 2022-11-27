@@ -16,12 +16,12 @@ mixin checkout-form(cls)
     className = `${cls}__form ${name}`;
 
   form(class=className)
-    section.checkout-form__page.checkout-form__page--active(id='section-1')
+    section.checkout-form__page(id='section-1')
       h2.visually-hidden Основные данные
       +form-fieldset--contacts
       +form-fieldset--object
       +form-fieldset--photo
-    section.checkout-form__page(id='section-2')
+    section.checkout-form__page.checkout-form__page--active(id='section-2')
       h2.visually-hidden Удобства и условия
       +form-fieldset--service
       +form-fieldset--conditions
@@ -38,6 +38,6 @@ mixin checkout-form(cls)
       +form-fieldset--payment
 
     .checkout-form__controls
-      button.checkout-form__button.button.button--simple.button--hidden(type='button' data-direction='-1') Назад
+      button.checkout-form__button.button.button--simple(type='button' data-direction='-1') Назад
       button.checkout-form__button.button.button--secondary(type='button' data-direction='+1') Далее
       button.checkout-form__button.button.button--disable.button--hidden(type='button') Оплатить
