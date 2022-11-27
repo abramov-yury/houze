@@ -12,22 +12,22 @@ mixin form-fieldset--settlement
       {name: 'housing-method', value: 'any', text: 'Любой'},
     ], 'radiobutton')
 
-    .form-fieldset__layout
+    .form-fieldset__column-layout
 
-      label.form-fieldset__field
-        span.form-fieldset__field-label Время заезда
+      label.form-field
+        span.form-field__label Время заезда
         +select({
           name: 'check-in-time-1',
           id: 'check-in-time-1',
-          options: [{text: 'до 12:00'}, {text: 'после 14-00', selected: true}]
+          options: [{text: 'до 12:00'}, {text: 'после 14:00', selected: true}]
         })
 
-      label.form-field.form-field--size-m
+      label.form-field
         span.form-field__label Время выезда
         +select({
           name: 'check-out-time-1',
           id: 'check-out-time-1',
-          options: [{text: 'до 12:00', selected: true}, {text: 'после 14-00'}]
+          options: [{text: 'до 12:00', selected: true}, {text: 'после 14:00'}]
         })
 
     +form-group('Предпочтительный способ связи', [
@@ -36,6 +36,6 @@ mixin form-fieldset--settlement
       {name: 'contact-method', value: 'any', text: 'Любой'},
     ], 'radiobutton')
 
-    label.form-field
+    label.form-field.form-field--size-l
       span.form-field__label Комментарий
-      textarea.form-field__textarea(name='comment' id='comment')
+      textarea.form-field__textarea.form-field__control(name='comment' id='comment')

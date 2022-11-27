@@ -28,22 +28,31 @@
   right: 14px
   transform: translateY(-50%)
 
-.form-field--size-s > .form-field__input,
-.form-field--size-s > .form-field__select,
-.form-field--size-s > .form-field__control
-  width: 90px
+.form-field__textarea
+  resize: vertical
 
-.form-field--size-m > .form-field__input,
-.form-field--size-m > .form-field__select,
-.form-field--size-m > .form-field__control
-  width: 300px
+  min-height: 120px
+  padding: 14px 10px
 
-.form-field--size-l > .form-field__input,
-.form-field--size-l > .form-field__select,
-.form-field--size-l > .form-field__control
-  width: 470px
+  font-family: inherit
+  font-size: 14px
+  line-height: 1
 
-.form-field--size-xl > .form-field__input,
-.form-field--size-xl > .form-field__select,
-.form-field--size-xl > .form-field__control
-  width: 610px
+  border: 1px solid $color-gray--form
+  border-radius: 4px
+
+.form-field__input,
+.form-field__select,
+.form-field__control
+
+  .form-field--size-s > &
+    width: 90px
+
+  .form-field--size-m > &
+    width: 300px
+
+  .form-field--size-l > &
+    width: 470px
+
+  .form-field--size-xl > &
+    width: 610px
