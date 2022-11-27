@@ -2,8 +2,7 @@ include checkbox
 
 mixin form-fieldset--showing
 
-
-  fieldset.checkout-form__fieldset.form-fieldset
+  fieldset.checkout-form__fieldset.form-fieldset.form-fieldset--compact
     legend.form-fieldset__caption Возможен онлайн-показ
     p.form-fieldset__description Выберите, если готовы показать объект онлайн с помощью сервисов видео‑звонков.
     +checkbox({text: 'Готовы показать онлайн', name: 'online-show', checked: true})
