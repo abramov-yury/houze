@@ -1,6 +1,4 @@
 .button
-  @include condition
-
   box-sizing: border-box
   display: inline-flex
   justify-content: center
@@ -12,6 +10,9 @@
 
   border: none
   cursor: pointer
+
+  &:not(:disabled)
+    @include condition
 
 .button--shortcut
   padding: 13px 20px
@@ -26,7 +27,8 @@
 
 .button--primary,
 .button--secondary,
-.button--simple
+.button--simple,
+.button:disabled
   padding: 14px 20px
 
   font-weight: 500
@@ -52,3 +54,11 @@
 
 .button--hidden
   display: none
+
+.button:disabled
+  color: #ffffff
+
+  background-color: $color-gray
+  border: 1px solid $color-gray
+
+  cursor: default
