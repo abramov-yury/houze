@@ -1,0 +1,58 @@
+.payment-type
+  padding: 20px 20px 25px
+
+  border: 1px solid $color-gray--form
+  border-radius: 4px
+
+.payment-type__headline
+  display: grid
+  grid-template-columns: 1fr auto
+  grid-template-areas: "name icons" "description description"
+  gap: 7px
+  align-content: start
+
+.payment-type__name
+  grid-area: name
+
+  font-weight: 500
+  font-size: 14px
+  line-height: 1
+
+.payment-type__description
+  grid-area: description
+
+  margin: 0
+  padding-left: 30px
+
+  font-size: 12px
+  line-height: 12px
+  color: $color-gray--form
+
+.payment-type__icons
+  grid-area: icons
+
+  display: flex
+  flex-wrap: wrap
+  justify-self: end
+  gap: 10px
+
+  padding: 0
+  margin: 0
+
+  list-style: none
+
+.payment-type__icon
+  display: flex
+
+.payment-type__content
+  display: none
+  padding-top: 25px
+  border-top: 1px dashed rgba(10, 18, 31, 0.1)
+
+.payment-type--active .payment-type__headline
+  padding-bottom: 25px
+
+.payment-type--active .payment-type__content
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 100px

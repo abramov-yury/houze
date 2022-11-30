@@ -30,14 +30,14 @@ mixin checkout-form(cls)
       h2.visually-hidden Цена
       +form-fieldset--price
       +form-fieldset--showing
-    section.checkout-form__page.checkout-form__page--active(id='section-4')
+    section.checkout-form__page(id='section-4')
       h2.visually-hidden Тарифы
       +form-fieldset--tariffs
-    section.checkout-form__page(id='section-5')
+    section.checkout-form__page.checkout-form__page--active(id='section-5')
       h2.visually-hidden Оплата
       +form-fieldset--payment
 
     .checkout-form__controls
       button.checkout-form__button.button.button--simple(type='button' data-direction='-1') Назад
-      button.checkout-form__button.button.button--secondary(type='button' data-direction='+1') Далее
-      button.checkout-form__button.button.button--disable.button--hidden(type='button') Оплатить
+      button.checkout-form__button.button.button--secondary.button--hidden(type='button' data-direction='+1') Далее
+      button.checkout-form__button.button.button--disable(type='button') Оплатить

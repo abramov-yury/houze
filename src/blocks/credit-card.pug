@@ -10,10 +10,10 @@ mixin credit-card(obj)
       span.credit-card__field-label Номер карты
       input.credit-card__field-control.input(type='text' name='credit-card-number' id='credit-card-number' placeholder='1111 2222 3333 4444')
 
-    li.credit-card__field
+    li.credit-card__field.credit-card__field--half
       span.credit-card__field-label Срок действия карты
       input.credit-card__field-control.input(type='text' name='credit-card-validity-date' id='credit-card-validity-date' placeholder='10/23')
 
-    li.credit-card__field
+    li.credit-card__field.credit-card__field--half
       span.credit-card__field-label CVC/CVV
       input.credit-card__field-control.input(type='password' name='credit-card-cvc' id='credit-card-cvc' placeholder='123')

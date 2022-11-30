@@ -5,7 +5,7 @@ mixin form-fieldset--payment
   fieldset.checkout-form__fieldset.form-fieldset
     legend.form-fieldset__caption Оплата
 
-    .form-fieldset__layout
+    .form-fieldset__payment-types
 
       +payment-type({
         name: 'payment-method', value: 'credit-card', text: 'Банковская карта',
@@ -18,7 +18,8 @@ mixin form-fieldset--payment
       })
 
       +payment-type({
-        active: true, name: 'payment-method', value: 'wallet', text: 'Houze кошелёк',
+        active: true,
+        name: 'payment-method', value: 'wallet', text: 'Houze кошелёк',
         description: 'Оплата из кошелька без комиссии',
         icons: [
           {src: 'img/icons/wallet.svg', width: 79, height: 18, alt: 'Houze'},
