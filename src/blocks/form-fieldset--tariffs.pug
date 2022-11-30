@@ -5,14 +5,15 @@ mixin form-fieldset--tariffs
   fieldset.checkout-form__fieldset.form-fieldset
     legend.form-fieldset__caption Тарифы
 
-    .checkout-form__tariffs-plans
+    .form-fieldset__tariffs-plans
 
-      input(type='radio' name='tariff-plan' value='tariff-plan-standard', aria-describedby='tariff-plan-standard' checked)
-      input(type='radio' name='tariff-plan' value='tariff-plan-premium', aria-describedby='tariff-plan-premium')
-      input(type='radio' name='tariff-plan' value='tariff-plan-max', aria-describedby='tariff-plan-max')
+      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-standard', aria-describedby='tariff-plan-standard' checked)
+      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-premium', aria-describedby='tariff-plan-premium')
+      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-max', aria-describedby='tariff-plan-max')
 
       +tariff-plan({
-        title: 'Стандарт', price: '15 ₽/сутки', id: 'tariff-plan-standard', active: true, options: [
+        active: true,
+        title: 'Стандарт', price: '15 ₽/сутки', id: 'tariff-plan-standard', options: [
           'Стандартное размещение на странице объявлений',
           'Доступ к кабинету Houze Pro',
           'Автопродление объявлений'
