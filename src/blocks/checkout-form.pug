@@ -16,28 +16,28 @@ mixin checkout-form(cls)
     className = `${cls}__form ${name}`;
 
   form(class=className)
-    section.checkout-form__page.checkout-form__page--active(id='section-1')
+    section.checkout-form__page.checkout-form__page--active(data-target='1')
       h2.visually-hidden Основные данные
       +form-fieldset--contacts
       +form-fieldset--object
       +form-fieldset--photo
-    section.checkout-form__page(id='section-2')
+    section.checkout-form__page(data-target='2')
       h2.visually-hidden Удобства и условия
       +form-fieldset--service
       +form-fieldset--conditions
       +form-fieldset--settlement
-    section.checkout-form__page(id='section-3')
+    section.checkout-form__page(data-target='3')
       h2.visually-hidden Цена
       +form-fieldset--price
       +form-fieldset--showing
-    section.checkout-form__page(id='section-4')
+    section.checkout-form__page(data-target='4')
       h2.visually-hidden Тарифы
       +form-fieldset--tariffs
-    section.checkout-form__page(id='section-5')
+    section.checkout-form__page(data-target='5')
       h2.visually-hidden Оплата
       +form-fieldset--payment
 
     .checkout-form__controls
-      button.checkout-form__button.button.button--simple.button--hidden(type='button' data-direction='-1') Назад
-      button.checkout-form__button.button.button--secondary(type='button' data-direction='+1') Далее
-      button.checkout-form__button.button.button--hidden(type='button' disabled) Оплатить
+      button.checkout-form__button.button.button--simple.button--hidden(type='button' data-name='cc-back' data-direction='-1') Назад
+      button.checkout-form__button.button.button--secondary(type='button' data-name='cc-forward' data-direction='+1') Далее
+      button.checkout-form__button.button.button--secondary.button--hidden(type='button' data-name='cc-pay') Оплатить
