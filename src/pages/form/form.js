@@ -1,4 +1,4 @@
 // styles
 import "./form.sass";
 // scripts
-import "./checkout.js";
+import "../../js/checkout.js";

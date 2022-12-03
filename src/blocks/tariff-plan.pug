@@ -3,11 +3,16 @@ mixin tariff-plan(obj)
   -
     const name = 'tariff-plan'
     className = obj.hit ? `${name} ${name}--hit` : name
-    className = obj.active ? `${className} ${name}--active` : className
 
-  section(class = className id = obj.id tabindex=0)
-    h3.tariff-plan__title #{obj.title}
-    p.tariff-plan__price #{obj.price}
-    ul.tariff-plan__options
-      each item in obj.options
-        li.tariff-plan__option #{item}
+  li(class = className)
+
+    input.tariff-plan__control.visually-hidden(
+      type='radio' name='tariff-plan' id=obj.id value=obj.id, aria-describedby=obj.id)&attributes({checked: Boolean(obj.active)}
+    )
+
+    label.tariff-plan__label(for=obj.id)
+      span.tariff-plan__title #{obj.title}
+      span.tariff-plan__price #{obj.price}
+      span.tariff-plan__options
+        each item in obj.options
+          span #{item}

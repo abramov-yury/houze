@@ -5,11 +5,7 @@ mixin form-fieldset--tariffs
   fieldset.checkout-form__fieldset.form-fieldset
     legend.form-fieldset__caption Тарифы
 
-    .form-fieldset__tariffs-plans
-
-      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-standard', aria-describedby='tariff-plan-standard' checked)
-      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-premium', aria-describedby='tariff-plan-premium')
-      input.visually-hidden(type='radio' name='tariff-plan' value='tariff-plan-max', aria-describedby='tariff-plan-max')
+    ul.form-fieldset__tariffs-plans
 
       +tariff-plan({
         active: true,

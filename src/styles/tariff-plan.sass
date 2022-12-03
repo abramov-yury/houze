@@ -1,4 +1,9 @@
 .tariff-plan
+  display: flex
+
+.tariff-plan__label
+  display: grid
+
   padding: 30px 20px
 
   font-size: 14px
@@ -8,11 +13,8 @@
   border-radius: 6px
   cursor: pointer
 
-  &:focus
+  .tariff-plan__control:checked + &
     border-color: $color-tomato
-
-.tariff-plan--active
-  border-color: $color-tomato
 
 .tariff-plan--hit
   position: relative
@@ -41,14 +43,19 @@
 
 
 .tariff-plan__title
-  margin: 0 0 10px 0
+  display: inline-flex
+  align-items: center
+
+  margin-bottom: 10px
 
   font-weight: 600
   font-size: 14px
   line-height: 1
 
 .tariff-plan__price
-  margin: 0
+  display: inline-flex
+  align-items: center
+
   padding-bottom: 20px
 
   font-weight: 600
@@ -58,11 +65,10 @@
   border-bottom: 1px solid $color-gray--light
 
 .tariff-plan__options
-  display: flex
+  display: inline-flex
   flex-direction: column
   gap: 15px
 
-  margin: 0
   padding: 20px 0 0 0
 
   line-height: 1.4
