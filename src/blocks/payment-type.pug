@@ -11,26 +11,27 @@ mixin payment-type(obj)
 
   div(class=className)
     div(class=`${name}__headline`)
-      +radiobutton({name: obj.name, value: obj.value, text: obj.text, checked: obj.active})
+
       p(class=`${name}__description`) #{obj.description}
       ul(class=`${name}__icons`)
         each item in obj.icons
           li(class=`${name}__icon`)
             img(src=item.src width=item.width height=item.height alt=item.alt)
 
-    if(obj.active)
-      div(class=`${name}__content`)
+      +radiobutton({name: obj.name, value: obj.value, text: obj.text, checked: obj.active})
 
-        case obj.type
-          when 'credit-card'
-            +credit-card
+    div(class=`${name}__content`)
 
-          when 'wallet'
-            +balance([
-              {name: 'refill-balance-method', value: 'card', text: 'Банковская карта'},
-              {name: 'refill-balance-method', value: 'yandex.money', text: 'Яндекс.Деньги'},
-              {name: 'refill-balance-method', value: 'apple-pay', text: 'ApplePay'},
-              {name: 'refill-balance-method', value: 'google-pay', text: 'Google Pay'},
-            ])
+      case obj.type
+        when 'credit-card'
+          +credit-card
 
-        +order-params
+        when 'wallet'
+          +balance([
+            {name: 'refill-balance-method', value: 'card', text: 'Банковская карта'},
+            {name: 'refill-balance-method', value: 'yandex.money', text: 'Яндекс.Деньги'},
+            {name: 'refill-balance-method', value: 'apple-pay', text: 'ApplePay'},
+            {name: 'refill-balance-method', value: 'google-pay', text: 'Google Pay'},
+          ])
+
+      +order-params({name: `day-count--${obj.value}`, id: `day-count--${obj.value}`, options: [{text: '30'}, {text: '60'}, {text: '90'}]})

@@ -1,6 +1,6 @@
 include select
 
-mixin order-params
+mixin order-params(obj)
 
   dl.order-params
     dt.order-params__caption  Выбранный тариф
@@ -9,9 +9,7 @@ mixin order-params
     dd.order-params__value  15 ₽/сутки
     dt.order-params__caption  Количество дней
     dd.order-params__value
-      +select(
-        {name: 'day-count-1', id: 'day-count-1', options: [{text: '30'}, {text: '60'}, {text: '90'}]}
-      )
+      +select(obj)
     dt.order-params__caption  Сумма к оплате:
     dd.order-params__value  450 ₽
 
