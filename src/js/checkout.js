@@ -1,5 +1,6 @@
 import { variables } from "./variables.js";
 import { setControls } from "./controls.js";
+import { setProgress } from "./progress.js";
 
 const { controlButtons } = variables;
 const { formPages } = variables;
@@ -42,6 +43,7 @@ const setActivePage = (direction) => {
   nextPage.classList.add(CLASS_NAMES.activePage);
 
   setControls(target);
+  setProgress(target);
 
 };
 

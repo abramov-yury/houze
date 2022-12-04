@@ -2,8 +2,8 @@ mixin progress
 
   -
     stages = [
-      {name: 'Основные данные', condition: 'checked'},
-      {name: 'Удобства и условия', condition: 'active'},
+      {name: 'Основные данные', condition: 'active'},
+      {name: 'Удобства и условия', condition: 0},
       {name: 'Цена', condition: 0},
       {name: 'Тарифы', condition: 0},
       {name: 'Оплата', condition: 0},
@@ -13,4 +13,4 @@ mixin progress
 
   ul.progress
     each stage, index in stages
-      li(class=getItemName(stage.condition, 'progress__item') data-value=`stage-${index + 1}`) #{stage.name}
+      li(class=getItemName(stage.condition, 'progress__item') data-stage=`${index + 1}`) #{stage.name}
