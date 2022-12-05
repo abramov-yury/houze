@@ -1,6 +1,9 @@
+include location
 include main-navigation
 
 mixin page-header
 
   header.page-header
-    +main-navigation
+    .page-header__services
+      +location
+    +main-navigation('page-header')

@@ -3,11 +3,13 @@ include site-navigation
 include button
 include user-navigation
 
-mixin main-navigation
+mixin main-navigation(parent)
 
-  - const name = 'main-navigation'
+  -
+    const name = 'main-navigation'
+    className = getClassName(name, parent)
 
-  nav.main-navigation
+  nav(class=className)
     +logo(name)
     +site-navigation
     +button('shortcut', 'Разместить объявление', name)
