@@ -3,12 +3,12 @@
   "site-navigation": [
     {
       "text": "Аренда",
-      "reference": "#",
-      "active": true
+      "reference": "index.html"
     },
     {
       "text": "Покупка",
-      "reference": "#"
+      "reference": "#",
+      "active": true
     },
     {
       "text": "Новостройки",

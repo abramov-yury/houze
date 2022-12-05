@@ -3,8 +3,7 @@
   "site-navigation": [
     {
       "text": "Аренда",
-      "reference": "#",
-      "active": true
+      "reference": "index.html"
     },
     {
       "text": "Покупка",
@@ -12,7 +11,8 @@
     },
     {
       "text": "Новостройки",
-      "reference": "#"
+      "reference": "#",
+      "active": true
     },
     {
       "text": "Коммерческая",
