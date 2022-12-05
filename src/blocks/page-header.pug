@@ -1,9 +1,13 @@
 include location
+include theme-switcher
 include main-navigation
 
 mixin page-header
 
   header.page-header
+
     .page-header__services
       +location
+      +theme-switcher
+
     +main-navigation('page-header')
