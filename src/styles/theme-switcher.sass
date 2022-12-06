@@ -1,0 +1,34 @@
+.theme-switcher
+  display: flex
+  align-items: center
+  gap: 15px
+
+.theme-switcher__item
+  position: relative
+  cursor: pointer
+
+.theme-switcher__container
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 26px
+  height: 26px
+
+  border-radius: 50%
+  background-color: #ffffff
+
+.theme-switcher__img
+  fill: $color-tomato
+
+.theme-switcher__control
+  position: absolute
+  appearance: none
+
+.theme-switcher__control:checked
+
+  & + .theme-switcher__container
+    background-color: $color-tomato
+
+  & + .theme-switcher__container > .theme-switcher__img
+    fill: $color-white
