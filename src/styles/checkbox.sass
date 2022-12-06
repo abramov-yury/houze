@@ -35,17 +35,17 @@
     height: 20px
 
     background-color: transparent
-    border: 1px solid $color-gray
+    border: 1px solid var(--color-border-control)
     border-radius: 4px
 
   .checkbox__control:checked + &::before
-    background-color: $color-tomato
+    background-color: var(--color-bg-accent)
     background-image: url('#{$path-images}/icons/check-mark.svg')
     background-repeat: no-repeat
     background-position: center
-    border-color: $color-tomato
+    border-color: var(--color-border-accent)
 
   .checkbox__control:disabled + &::before
-    border: 1px solid rgba($color-gray--form, .6)
+    border: 1px solid var(--color-border-control-disabled)
 
 

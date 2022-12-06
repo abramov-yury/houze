@@ -42,14 +42,14 @@
 
 .pagination__link--active
   pointer-events: none
-  color: $color-white
-  background-color: $color-tomato
+  color: var(--color-contrast)
+  background-color: var(--color-bg-accent)
   cursor: default
 
 .pagination__img
   width: 8px
   height: 14px
-  stroke: $color-tomato
+  stroke: var(--color-accent)
 
 .pagination__link--disabled
   pointer-events: none
@@ -57,4 +57,4 @@
 
   & > .pagination__img
     opacity: .3
-    stroke: $color-gray
+    stroke: var(--color-disable)

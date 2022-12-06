@@ -1,7 +1,7 @@
 .filters-form
   padding: 40px 30px 50px
 
-  background-color: $color-white
+  background-color: var(--color-bg-card)
   border-radius: 8px
 
 .filters-form__title
@@ -44,31 +44,19 @@
   align-items: center
   gap: 10px
 
+  margin-top: 5px
   padding: 0
 
   font-family: inherit
   font-size: 14px
   font-weight: 600
   line-height: 1
-  color: $color-tomato
+  color: var(--color-accent)
 
   border: none
-  background-color: $color-white
+  background-color: transparent
   cursor: pointer
 
-  &::after
-    position: relative
-    content: ""
-
-    top: 1px
-    width: 10px
-    height: 6px
-
-    background-color: transparent
-    background-image: url("#{$path-images}/icons/arrow-down.svg")
-    background-repeat: no-repeat
-    background-size: cover
-
 .filters-form__button--collapse
-  &::after
-    transform: rotate(180deg) translateY(-1px)
+  & > svg
+    transform: scale(1, -1)

@@ -20,9 +20,9 @@
   font-weight: 500
   font-size: 14px
   line-height: 1
-  color: $color-white
+  color: var(--color-contrast)
 
-  background-color: $color-tomato
+  background-color: var(--color-bg-accent)
   border-radius: 30px
 
 .button--primary,
@@ -38,19 +38,21 @@
   border-radius: 6px
 
 .button--primary
-  color: $color-tomato
+  color: var(--color-accent)
 
   background-color: transparent
-  border: 1px solid $color-tomato
+  border: 1px solid var(--color-border-accent)
 
 .button--secondary
-  color: $color-white
+  color: var(--color-contrast)
 
-  background-color: $color-tomato
+  background-color: var(--color-bg-accent)
 
 .button--simple
+  color: inherit
+
   background-color: transparent
-  border: 1px solid $color-gray--form
+  border: 1px solid var(--color-border-control)
 
 .button--hidden
   display: none
@@ -62,3 +64,6 @@
   border: 1px solid $color-gray
 
   cursor: default
+
+.button--reset-form
+  width: 100%

@@ -1,4 +1,5 @@
 include favicon
+include sprite
 
 doctype html
 
@@ -11,7 +12,10 @@ html(lang="ru")
     +favicon
     link(rel="manifest", href="manifest.json")
     title #{title}
-  body
+  body(class = 'theme theme--dark')
+
+    +sprite
+
     block header
     block main
     block footer

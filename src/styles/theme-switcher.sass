@@ -16,10 +16,10 @@
   height: 26px
 
   border-radius: 50%
-  background-color: #ffffff
+  background-color: var(--color-bg-card)
 
 .theme-switcher__img
-  fill: $color-tomato
+  fill: var(--color-bg-accent)
 
 .theme-switcher__control
   position: absolute
@@ -28,7 +28,7 @@
 .theme-switcher__control:checked
 
   & + .theme-switcher__container
-    background-color: $color-tomato
+    background-color: var(--color-bg-accent)
 
   & + .theme-switcher__container > .theme-switcher__img
-    fill: $color-white
+    fill: #ffffff

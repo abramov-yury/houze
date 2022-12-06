@@ -9,17 +9,23 @@
   height: 36px
   padding: 0
 
-  background-color: $color-white
+  background-color: #ffffff
   border: none
   border-radius: 50%
 
   cursor: pointer
 
-.favorite--active
-  background-color: $color-tomato
-
   & .favorite__img
-    fill: $color-white
+    fill: #ffffff
 
   & .favorite__img-path
-    stroke: $color-white
+    stroke: var(--color-bg-accent)
+
+.favorite--active
+  background-color: var(--color-bg-accent)
+
+  & .favorite__img
+    fill: #ffffff
+
+  & .favorite__img-path
+    stroke: #ffffff

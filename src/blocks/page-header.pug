@@ -7,7 +7,8 @@ mixin page-header
   header.page-header
 
     .page-header__services
-      +location
-      +theme-switcher
-
-    +main-navigation('page-header')
+      .page-header__services-wrapper
+        +location
+        +theme-switcher
+    .page-header__navigation
+      +main-navigation

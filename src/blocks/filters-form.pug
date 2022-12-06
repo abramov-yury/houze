@@ -3,7 +3,6 @@ include input
 include checkbox
 include radiobutton
 include toggle
-include button
 
 mixin filters-form(parent)
 
@@ -35,7 +34,12 @@ mixin filters-form(parent)
       +checkbox({name: 'services', value: 'iron', text: 'Утюг'})
       +checkbox({name: 'services', value: 'breakfast', text: 'Завтрак', disabled: true})
       +checkbox({name: 'services', value: 'beach', text: 'Пляж', disabled: true})
-      button(class=`${name}__button ${name}__button--collapse` type='button') Скрыть
+
+      button(class=`${name}__button ${name}__button--collapse` type='button')
+        | Скрыть
+        svg(width='10' height='6' role='presentation' hidden='true')
+          use(href="#arrow-down-icon")
+
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Площадь, м#[sup 2]
       +filter-range({
@@ -50,7 +54,12 @@ mixin filters-form(parent)
       +checkbox({name: 'language', value: 'english', text: 'Английский'})
       +checkbox({name: 'language', value: 'german', text: 'Немецкий'})
       +checkbox({name: 'language', value: 'french', text: 'Французский'})
-      button(class=`${name}__button` type='button') Смотреть все
+
+      button(class=`${name}__button` type='button')
+        | Смотреть все
+        svg(width='10' height='6' role='presentation' hidden='true')
+          use(href="#arrow-down-icon")
+
     fieldset(class=`${name}__fieldset`)
       legend(class=`${name}__caption`) Срок аренды
       +radiobutton({name: 'tenancy', value: 'day', text: 'Посуточно', checked: true})
@@ -62,4 +71,4 @@ mixin filters-form(parent)
       +toggle('Можно с питомцами', 'housing-conditions', 'pets', true)
       +toggle('Можно с детьми', 'housing-conditions', 'kids')
       +toggle('Можно курить', 'housing-conditions', 'smoking')
-    +button('simple', 'Сбросить фильтры', false, 'reset')
+    button(class='button button--simple button--reset-form' type='reset') Сбросить фильтры

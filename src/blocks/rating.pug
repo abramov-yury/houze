@@ -5,16 +5,19 @@ mixin rating(value, modifier='medium', parent=false)
     className = `${name} ${name}--${modifier}`
     className = parent ? `${parent}__${name} ${className}` : className
 
-    color = '#F85A47';
+    color = 'var(--color-accent)';
     hiddenText = `Рейтинг ${value} из 5`
 
     if (!value) {
-      color = '#979899';
+      color = 'var(--color-disable)';
       hiddenText = 'Нет рейтинга'
     }
 
   div(class = className)
     span.visually-hidden #{hiddenText}
-    img.rating__star(src=require('../../assets/img/icons/star.svg') width='14' height='14' alt='Рейтинг')
+
+    svg.rating__star(width='14' height='14' role='presentation' hidden='true' style=`fill: ${color}`)
+      use(href='#rating-icon')
+
     if(value)
       span(class=`${name}__value`) #{value}
