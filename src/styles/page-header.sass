@@ -1,9 +1,19 @@
-.page-header
+.page-header__main-navigation,
+.page-header__services
+  @include container
+
+.page-header__main-navigation
   padding-top: 30px
   padding-bottom: 29px
 
   border-bottom: 1px solid rgba($color-blue--dark, .1)
 
-.page-header__main-navigation,
 .page-header__services
-  @include container
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  padding-top: 15px
+  padding-bottom: 14px
+
+  border-bottom: 1px solid $color-gray--light
