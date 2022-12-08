@@ -11,8 +11,9 @@ mixin tariff-plan(obj)
     )
 
     label.tariff-plan__label(for=obj.id)
-      span.tariff-plan__title #{obj.title}
-      span.tariff-plan__price #{obj.price}
+      span.tarrif-plan__header
+        span.tariff-plan__title #{obj.title}
+        span.tariff-plan__price #{obj.price}
       span.tariff-plan__options
         each item in obj.options
           span #{item}

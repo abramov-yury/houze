@@ -3,7 +3,7 @@
 
   font-size: 12px
   line-height: 16px
-  color: $color-gray
+  color: var(--color-secondary)
 
 .photo-upload__content
   box-sizing: border-box
@@ -19,10 +19,18 @@
 
   font-size: 14px
   line-height: 1
-  color: $color-blue--dark
+  color: inherit
 
-  border: 1px solid $color-gray--form
+  border: 1px solid var(--color-border-control)
   border-radius: 4px
+
+  .photo-upload--filled &
+    flex-direction: row-reverse
+    justify-content: flex-end
+    gap: 15px
+
+    padding-top: 20px
+    padding-bottom: 20px
 
 .photo-upload__control
   display: none
@@ -35,11 +43,35 @@
   padding: 13px 24px
 
   font-weight: 500
-  color: $color-tomato
+  color: var(--color-accent)
 
-  border: 1px solid $color-tomato
+  border: 1px solid var(--color-bg-accent)
   border-radius: 6px
   cursor: pointer
+
+  .photo-upload--filled &
+    box-sizing: border-box
+    position: relative
+
+    width: 170px
+    height: 120px
+    padding-top: 70px
+
+    font-size: 12px
+    line-height: 1
+
+    border: 1px solid var(--color-border-accent)
+    border-radius: 4px
+
+.photo-upload__image
+  position: absolute
+
+  display: inline-flex
+  align-items: center
+
+  top: 30px
+  left: 50%
+  transform: translateX(-50%)
 
 .photo-upload__container
   display: flex
@@ -86,33 +118,7 @@
   width: 26px
   height: 26px
 
-  background-color: $color-white
+  background-color: var(--color-bg-card)
   border: none
   border-radius: 50%
   cursor: pointer
-
-.photo-upload--filled .photo-upload__content
-  flex-direction: row-reverse
-  justify-content: flex-end
-  gap: 15px
-
-  padding-top: 20px
-  padding-bottom: 20px
-
-.photo-upload--filled .photo-upload__label
-  box-sizing: border-box
-  width: 170px
-  height: 120px
-  padding-top: 70px
-
-  font-size: 12px
-  line-height: 1
-
-  background-image: url("#{$path-images}/icons/image.svg")
-  background-repeat: no-repeat
-  background-position: top 30px center
-
-  border: 1px solid $color-tomato
-  border-radius: 4px
-
-

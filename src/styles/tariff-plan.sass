@@ -2,19 +2,26 @@
   display: flex
 
 .tariff-plan__label
-  display: grid
+  display: flex
+  flex-direction: column
+  gap: 20px
 
   padding: 30px 20px
 
   font-size: 14px
   line-height: 1
 
-  border: 1px solid $color-gray--form
+  border: 1px solid var(--color-border-control)
   border-radius: 6px
   cursor: pointer
 
   .tariff-plan__control:checked + &
-    border-color: $color-tomato
+    border-color: var(--color-border-accent)
+
+.tarrif-plan__header
+  display: inline-flex
+  flex-direction: column
+  gap: 10px
 
 .tariff-plan--hit
   position: relative
@@ -32,21 +39,18 @@
     font-size: 12px
     line-height: 1
     text-transform: uppercase
-    color: $color-white
+    color: var(--color-contrast)
 
-    background-color: $color-tomato
+    background-color: var(--color-bg-accent)
     background-image: url("#{$path-images}/icons/fire.svg")
     background-repeat: no-repeat
     background-position: left 10px center
 
     border-radius: 30px
 
-
 .tariff-plan__title
   display: inline-flex
   align-items: center
-
-  margin-bottom: 10px
 
   font-weight: 600
   font-size: 14px
@@ -62,14 +66,12 @@
   font-size: 24px
   line-height: 1
 
-  border-bottom: 1px solid $color-gray--light
+  border-bottom: 1px solid var(--color-border-line)
 
 .tariff-plan__options
   display: inline-flex
   flex-direction: column
   gap: 15px
-
-  padding: 20px 0 0 0
 
   line-height: 1.4
   list-style: none

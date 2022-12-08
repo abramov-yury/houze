@@ -25,3 +25,19 @@
     right: $right
     top: 50%
     transform: translateX(100%) translateY(-50%)
+
+@mixin field-text
+  font-family: inherit
+  font-size: 14px
+  line-height: 1
+  color: inherit
+
+@mixin field-appearance
+  background-color: transparent
+  border: 1px solid var(--color-border-control)
+  border-radius: 4px
+
+  &:focus
+    outline: none
+    box-shadow: 0 0 0 2px var(--color-focus-input)
+    border-color: var(--color-focus-input)

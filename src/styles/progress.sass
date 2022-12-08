@@ -16,7 +16,7 @@
 
   font-size: 14px
   line-height: 1
-  color: $color-gray
+  color: var(--color-secondary)
 
   &::before
     content: ""
@@ -26,21 +26,20 @@
     height: 20px
 
     border-radius: 50%
-    background-color: $color-gray
-
+    background-color: var(--color-control-disabled)
 
 .progress__item--checked
-  color: $color-blue--dark
+  color: var(--color)
 
   &::before
-    background-color: $color-tomato
+    background-color: var(--color-bg-accent)
     background-image: url("#{$path-images}/icons/check-mark.svg")
     background-repeat: no-repeat
     background-position: center
 
 .progress__item--active
-  color: $color-blue--dark
+  color: var(--color)
 
   &::before
     background-color: transparent
-    border: 2px solid $color-tomato
+    border: 2px solid var(--color-border-accent)

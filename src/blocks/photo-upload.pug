@@ -6,15 +6,15 @@ mixin photo-upload__item(obj)
       button.photo-upload__button(type='button')
         span.visually-hidden Удалить
         svg(width='12' height='14' fill='none' role='presentation' aria-hidden='true')
-          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='M1 3.4h1.111m0 0H11m-8.889 0v8.4c0 .318.117.623.326.848.208.226.49.352.785.352h5.556c.294 0 .577-.126.785-.351a1.25 1.25 0 0 0 .326-.849V3.4H2.11Zm1.667 0V2.2c0-.318.117-.623.325-.849.209-.225.491-.351.786-.351H7.11c.295 0 .577.126.786.351.208.226.325.53.325.849v1.2m-1.11 3V10M4.888 6.4V10')
+          path(stroke-linecap='round' stroke-linejoin='round' d='M1 3.4h1.111m0 0H11m-8.889 0v8.4c0 .318.117.623.326.848.208.226.49.352.785.352h5.556c.294 0 .577-.126.785-.351a1.25 1.25 0 0 0 .326-.849V3.4H2.11Zm1.667 0V2.2c0-.318.117-.623.325-.849.209-.225.491-.351.786-.351H7.11c.295 0 .577.126.786.351.208.226.325.53.325.849v1.2m-1.11 3V10M4.888 6.4V10' style='stroke: var(--color-accent)')
       button.photo-upload__button(type='button')
         span.visually-hidden Повернуть
         svg(width='13' height='12' fill='none' role='presentation' aria-hidden='true')
-          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='M12 1.554v3.334m0 0H8.7m3.3 0L9.453 2.466a4.91 4.91 0 0 0-5.893-.844 4.982 4.982 0 0 0-2.125 2.33 5.045 5.045 0 0 0-.313 3.152 5.009 5.009 0 0 0 1.627 2.71 4.915 4.915 0 0 0 5.941.351 4.993 4.993 0 0 0 1.93-2.5')
+          path(stroke-linecap='round' stroke-linejoin='round' d='M12 1.554v3.334m0 0H8.7m3.3 0L9.453 2.466a4.91 4.91 0 0 0-5.893-.844 4.982 4.982 0 0 0-2.125 2.33 5.045 5.045 0 0 0-.313 3.152 5.009 5.009 0 0 0 1.627 2.71 4.915 4.915 0 0 0 5.941.351 4.993 4.993 0 0 0 1.93-2.5' style='stroke: var(--color-accent)')
       button.photo-upload__button(type='button')
         span.visually-hidden Увеличить
         svg(width='14' height='14' fill='none' role='presentation' aria-hidden='true')
-          path(stroke='#F85A47' stroke-linecap='round' stroke-linejoin='round' d='m13 13-2.9-2.9M6.333 4.333v4m-2-2h4m3.334 0A5.333 5.333 0 1 1 1 6.333a5.333 5.333 0 0 1 10.667 0Z')
+          path(stroke-linecap='round' stroke-linejoin='round' d='m13 13-2.9-2.9M6.333 4.333v4m-2-2h4m3.334 0A5.333 5.333 0 1 1 1 6.333a5.333 5.333 0 0 1 10.667 0Z' style='stroke: var(--color-accent)')
 
 mixin photo-upload(isFilled = false)
 
@@ -32,6 +32,9 @@ mixin photo-upload(isFilled = false)
       else
         // контейнер для загруженных фотографий
         label.photo-upload__label(for='object-photo') Добавить фото
+          svg.photo-upload__image(width='28' height='28' fill='none')
+            path(stroke-linecap='round' stroke-linejoin='round' d='M4.12 4.12A3.12 3.12 0 0 0 1 7.24v16.64A3.12 3.12 0 0 0 4.12 27h16.64a3.12 3.12 0 0 0 3.12-3.12M4.12 4.12v16.64m0-16.64A3.12 3.12 0 0 1 7.24 1h16.64A3.12 3.12 0 0 1 27 4.12v16.64a3.12 3.12 0 0 1-3.12 3.12m0 0H7.24a3.12 3.12 0 0 1-3.12-3.12m19.76 3.12a3.121 3.121 0 0 0 3.031-2.378.475.475 0 0 0-.135-.446l-3.048-3.048a.52.52 0 0 0-.736 0l-1.961 1.961a.52.52 0 0 1-.751-.016l-7.457-8.135a.52.52 0 0 0-.766 0l-7.8 8.51a.52.52 0 0 0-.137.35v.082M17.018 7.24a2.702 2.702 0 1 1 5.404 0 2.702 2.702 0 0 1-5.404 0Z' style='stroke: var(--color-accent)')
+
         input.photo-upload__control(type='file' id='object-photo')
         ul.photo-upload__container
           +photo-upload__item({src: 'photo-1.jpg', alt: 'photo-1'})

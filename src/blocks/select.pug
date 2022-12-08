@@ -4,6 +4,9 @@ mixin select(obj, parent)
     const name = 'select'
     className = getClassName(name, parent)
 
-  select(class = className name=obj.name id=obj.id)
-    each item in obj.options
-      option&attributes({selected: item.selected}) #{item.text}
+  div(class = className)
+    select(class=`${name}__control` name=obj.name id=obj.id)
+      each item in obj.options
+        option&attributes({selected: item.selected}) #{item.text}
+    svg.select__arrow(width='10' height='6' role='presentation' hidden='true')
+      use(href='#arrow-down-icon')

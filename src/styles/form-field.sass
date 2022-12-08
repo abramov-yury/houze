@@ -29,17 +29,13 @@
   transform: translateY(-50%)
 
 .form-field__textarea
+  @include field-text
+  @include field-appearance
+
   resize: vertical
 
   min-height: 120px
   padding: 14px 10px
-
-  font-family: inherit
-  font-size: 14px
-  line-height: 1
-
-  border: 1px solid $color-gray--form
-  border-radius: 4px
 
 .form-field__input,
 .form-field__select,
