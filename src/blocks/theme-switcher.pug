@@ -5,7 +5,7 @@ mixin theme-switcher
     // light theme
     label.theme-switcher__item
 
-      input.theme-switcher__control(area-label='Переключатель светлой темы' type = 'radio' name = 'theme' value = 'light' checked)
+      input.theme-switcher__control(aria-label='Переключатель светлой темы' type = 'radio' name = 'theme' value = 'light' checked)
 
       span.theme-switcher__container
         svg.theme-switcher__img(width='14' height='14' fill='#000000' role='presentation' aria-hidden='true')
@@ -14,7 +14,7 @@ mixin theme-switcher
     // system theme
     label.theme-switcher__item
 
-      input.theme-switcher__control(area-label='Переключатель системной темы' type = 'radio' name = 'theme' value = 'system')
+      input.theme-switcher__control(aria-label='Переключатель системной темы' type = 'radio' name = 'theme' value = 'system')
 
       span.theme-switcher__container
         svg.theme-switcher__img(width='14' height='14' fill='#000000' role='presentation' aria-hidden='true')
@@ -23,7 +23,7 @@ mixin theme-switcher
     // dark theme
     label.theme-switcher__item
 
-      input.theme-switcher__control(area-label='Переключатель тёмной темы' type = 'radio' name = 'theme' value = 'dark')
+      input.theme-switcher__control(aria-label='Переключатель тёмной темы' type = 'radio' name = 'theme' value = 'dark')
 
       span.theme-switcher__container
         svg.theme-switcher__img(width='14' height='14' fill='#000000' role='presentation' aria-hidden='true')

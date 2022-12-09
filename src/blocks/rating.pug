@@ -16,7 +16,7 @@ mixin rating(value, modifier='medium', parent=false)
   div(class = className)
     span.visually-hidden #{hiddenText}
 
-    svg.rating__star(width='14' height='14' role='presentation' hidden='true' style=`fill: ${color}`)
+    svg.rating__star(width='14' height='14' role='presentation' aria-hidden='true' style=`fill: ${color}`)
       use(href='#rating-icon')
 
     if(value)

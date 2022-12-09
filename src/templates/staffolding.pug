@@ -5,14 +5,14 @@ doctype html
 
 block variables
 
-html(lang="ru")
+html(lang="ru" data-theme-name='dark')
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     +favicon
     link(rel="manifest", href="manifest.json")
     title #{title}
-  body(class = 'theme theme--dark')
+  body
 
     +sprite
 

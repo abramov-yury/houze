@@ -37,7 +37,7 @@ mixin filters-form(parent)
 
       button(class=`${name}__button ${name}__button--collapse` type='button')
         | Скрыть
-        svg(width='10' height='6' role='presentation' hidden='true')
+        svg(width='10' height='6' role='presentation' aria-hidden='true')
           use(href="#arrow-down-icon")
 
     fieldset(class=`${name}__fieldset`)
@@ -57,7 +57,7 @@ mixin filters-form(parent)
 
       button(class=`${name}__button` type='button')
         | Смотреть все
-        svg(width='10' height='6' role='presentation' hidden='true')
+        svg(width='10' height='6' role='presentation' aria-hidden='true')
           use(href="#arrow-down-icon")
 
     fieldset(class=`${name}__fieldset`)
