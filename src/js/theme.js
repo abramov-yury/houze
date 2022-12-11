@@ -1,42 +1,82 @@
-const container = document.querySelector(".theme-switcher");
-const controlThemeLight = container.querySelector(".theme-switcher__control[value='light']");
-const controlThemeSystem = container.querySelector(".theme-switcher__control[value='system']");
-const controlThemeDark = container.querySelector(".theme-switcher__control[value='dark']");
+const lightStyles = document.querySelectorAll("style[media*=prefers-color-scheme][media*=light]");
+const darkStyles = document.querySelectorAll("style[media*=prefers-color-scheme][media*=dark]");
+const darkSchemeMedia = matchMedia("(prefers-color-scheme: dark)");
+const switchers = document.querySelectorAll(".theme-switcher__control");
 
-const controlThemeLightHandler = () => {
+const saveScheme = (scheme) => localStorage.setItem("color-scheme", scheme);
+const getScheme = () => localStorage.getItem("color-scheme");
+const clearScheme = () => localStorage.removeItem("color-scheme");
 
-  document.documentElement.dataset.themeName = "light";
+const getSystemScheme = () => {
+
+  const isDarkScheme = darkSchemeMedia.matches;
+
+  return isDarkScheme ? "dark" : "light";
 
 };
 
-const controlThemeDarkHandler = () => {
+const switchMedia = (scheme) => {
 
-  document.documentElement.dataset.themeName = "dark";
+  let lightMedia;
+  let darkMedia;
 
-};
+  if (scheme === "auto") {
 
-const controlThemeSystemHandler = () => {
-
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-  if (prefersDarkScheme.matches) {
-
-    document.documentElement.dataset.themeName = "dark";
+    lightMedia = "(prefers-color-scheme: light)";
+    darkMedia = "(prefers-color-scheme: dark)";
 
   } else {
 
-    document.documentElement.dataset.themeName = "light";
+    lightMedia = (scheme === "light") ? "all" : "not all";
+    darkMedia = (scheme === "dark") ? "all" : "not all";
 
   }
 
-};
-
-const init = () => {
-
-  controlThemeLight.addEventListener("change", controlThemeLightHandler);
-  controlThemeSystem.addEventListener("change", controlThemeSystemHandler);
-  controlThemeDark.addEventListener("change", controlThemeDarkHandler);
+  [...lightStyles].forEach((node) => node.media = lightMedia);
+  [...darkStyles].forEach((node) => node.media = darkMedia);
 
 };
 
-init();
+const setScheme = (scheme) => {
+
+  switchMedia(scheme);
+
+  if (scheme === "auto") {
+
+    clearScheme();
+    return;
+
+  }
+
+  saveScheme(scheme);
+
+};
+
+const setupScheme = () => {
+
+  const scheme = getScheme();
+  const systemScheme = getSystemScheme();
+
+  if (scheme === null) return;
+
+  if (systemScheme !== scheme) setScheme(scheme);
+
+};
+
+const setupSwitcher = () => {
+
+  const scheme = getScheme();
+
+  if (scheme !== null) {
+
+    const currentSwitcher = document.querySelector(`.theme-switcher__control[value=${scheme}]`);
+    currentSwitcher.checked = true;
+
+  }
+
+  [...switchers].forEach((switcher) => switcher.addEventListener("change", (evt) => setScheme(evt.target.value)));
+
+};
+
+setupSwitcher();
+setupScheme();

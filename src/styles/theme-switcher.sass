@@ -3,6 +3,10 @@
   align-items: center
   gap: 15px
 
+  margin: 0
+  padding: 0
+  border: none
+
 .theme-switcher__item
   position: relative
   cursor: pointer
@@ -24,6 +28,9 @@
 .theme-switcher__control
   position: absolute
   appearance: none
+
+  &:focus
+    outline: none
 
 .theme-switcher__control:checked
 
